@@ -2,13 +2,16 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Buildings
+  - PlayerChar
+  - EnemyMob
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
@@ -41,3 +44,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: L1
+    uniqueID: 3510410665
+    locked: 0
+  - name: L2
+    uniqueID: 1236508583
+    locked: 0
+  - name: L3
+    uniqueID: 2149826103
+    locked: 0
+  - name: L4
+    uniqueID: 246957227
+    locked: 0
+  - name: L5
+    uniqueID: 3656656139
+    locked: 0
+  - name: L6
+    uniqueID: 2712550285
+    locked: 0
+  m_RenderingLayers:
+  - Default
