@@ -12,9 +12,18 @@ namespace Player {
 		private Animator _animator;
 
 		public Checkpoint current_checkpoint = null;
+		public static codaScript Instance { get; private set; }
 
 		private void Awake()
 		{
+			if (Instance != null && Instance != this)
+			{
+				Destroy(gameObject);
+				return;
+			}
+
+			Instance = this;
+
 			_animator = GetComponent<Animator>();
 		}
 
@@ -65,16 +74,17 @@ namespace Player {
 		{
 			dead = true; 
 			revivable = true;
+			death_text.SetActive(true);
 			print("Player died!"); 
-			death_text.SetActive(true); 
 			sprite.enabled = false;
 		}
 
 		private IEnumerator DeathSequence(float value) {
-			death_text.SetActive(true);
+			Debug.Log("Playing Death");
 			_animator.SetTrigger("Death");
 			
 			yield return new WaitForSeconds(value);
+			death_text.SetActive(true);
 			revivable = true;
 			sprite.enabled = false;
 		}

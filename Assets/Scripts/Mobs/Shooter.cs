@@ -10,6 +10,8 @@ namespace Mobs
         [SerializeField] private float firingSpeed = 3f; 
         [SerializeField] private float health = 20; 
         [SerializeField] private GameObject bulletPrefab; 
+        [SerializeField] private float alignOffsetRange = 0.5f;
+        public float yOffset = 0f;
         private Transform shootPoint;
         private float difficulty = 1; //multiplier for HP/Damage
 
@@ -18,6 +20,8 @@ namespace Mobs
         private Animator anim; 
         private new BoxCollider2D collider; 
         private bool deathTriggered = false;
+        private bool inContact = false;
+        
 
 
         private void Awake()
@@ -56,6 +60,8 @@ namespace Mobs
             anim = GetComponent<Animator>();
             collider = GetComponent<BoxCollider2D>();
 
+            yOffset = Random.Range(-alignOffsetRange, alignOffsetRange);
+
             difficultyScale();
         }
 
@@ -64,9 +70,13 @@ namespace Mobs
             timer += Time.deltaTime;
 
             // Align Y position with the player
-            Vector3 pos = transform.position;
-            pos.y = Mathf.MoveTowards(pos.y, player.position.y, alignSpeed * Time.deltaTime);
-            transform.position = pos;
+            if (!inContact)
+            {
+                Vector3 pos = transform.position;
+                float targetY = player.position.y + yOffset;
+                pos.y = Mathf.MoveTowards(pos.y, targetY, alignSpeed * Time.deltaTime);
+                transform.position = pos;
+            }
 
             // Fire bullet when the timer exceeds the firing speed
             if (timer >= firingSpeed && !deathTriggered)
@@ -79,7 +89,7 @@ namespace Mobs
         private void OnTriggerEnter2D(Collider2D collision)
         {
             Debug.Log("Triggered Collision");
-            if (collision.gameObject.name.Contains("Bullet"))
+            if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 health -= bullet.GetDamage();
@@ -101,6 +111,19 @@ namespace Mobs
                 Debug.Log("Triggered Player");
                 DroneMovement drone = collision.gameObject.GetComponent<DroneMovement>();
                 drone?.KillPlayer();
+            }
+
+            if (collision.gameObject.CompareTag("EnemyMob"))
+            {
+                inContact = true;
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("EnemyMob"))
+            {
+                inContact = false;
             }
         }
 

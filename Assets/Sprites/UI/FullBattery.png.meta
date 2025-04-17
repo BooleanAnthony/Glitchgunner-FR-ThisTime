@@ -1,25 +1,37 @@
 fileFormatVersion: 2
-guid: 1340f7a0620641d4db9c98b1ad15481e
+guid: 94c63167680d6ef4e9b8c3447d4d863c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 458378925337966215
-    second: drone_idle_mech_0
+      213: -4912038380763264071
+    second: FullBattery_0
   - first:
-      213: -6697680719269777315
-    second: drone_idle_mech_1
+      213: -7605732340782765569
+    second: FullBattery_1
   - first:
-      213: 7864826931157200025
-    second: drone_idle_mech_2
+      213: 7484937799837648077
+    second: FullBattery_2
   - first:
-      213: -5202062969593656670
-    second: drone_idle_mech_3
+      213: 7581330177972549492
+    second: FullBattery_3
   - first:
-      213: 6523489782046725449
-    second: drone_idle_mech_4
+      213: -4215711805743403607
+    second: FullBattery_4
   - first:
-      213: -8004895947124893928
-    second: drone_idle_mech_5
+      213: 3655803720069313505
+    second: FullBattery_5
+  - first:
+      213: -6274686789446261241
+    second: FullBattery_6
+  - first:
+      213: 4733566393888707893
+    second: FullBattery_7
+  - first:
+      213: -1136330848428605807
+    second: FullBattery_8
+  - first:
+      213: -3732449012760262808
+    second: FullBattery_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +73,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -90,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: drone_idle_mech_0
+      name: FullBattery_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 51
-        height: 43
+        x: 1
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7867b49343d7c5600800000000000000
-      internalID: 458378925337966215
+      spriteID: 9bb45872e1fe4dbb0800000000000000
+      internalID: -4912038380763264071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drone_idle_mech_1
+      name: FullBattery_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 1
-        width: 51
-        height: 43
+        x: 65
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5031f42fde0d03a0800000000000000
-      internalID: -6697680719269777315
+      spriteID: ff961f2abb2037690800000000000000
+      internalID: -7605732340782765569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drone_idle_mech_2
+      name: FullBattery_2
       rect:
         serializedVersion: 2
-        x: 123
-        y: 1
-        width: 52
-        height: 43
+        x: 129
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 99cec8b9c6a752d60800000000000000
-      internalID: 7864826931157200025
+      spriteID: dc48735a547dfd760800000000000000
+      internalID: 7484937799837648077
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drone_idle_mech_3
+      name: FullBattery_3
       rect:
         serializedVersion: 2
-        x: 185
-        y: 1
-        width: 51
-        height: 43
+        x: 193
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aa08267a4f8ec7b0800000000000000
-      internalID: -5202062969593656670
+      spriteID: 477b00711ab463960800000000000000
+      internalID: 7581330177972549492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drone_idle_mech_4
+      name: FullBattery_4
       rect:
         serializedVersion: 2
-        x: 247
-        y: 1
-        width: 52
-        height: 43
+        x: 257
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 94519c2d467188a50800000000000000
-      internalID: 6523489782046725449
+      spriteID: 9ad6e3fc278ce75c0800000000000000
+      internalID: -4215711805743403607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: drone_idle_mech_5
+      name: FullBattery_5
       rect:
         serializedVersion: 2
-        x: 309
-        y: 1
-        width: 51
-        height: 43
+        x: 321
+        y: 13
+        width: 63
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -240,8 +252,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 81718af3c85e8e090800000000000000
-      internalID: -8004895947124893928
+      spriteID: 1e378473d160cb230800000000000000
+      internalID: 3655803720069313505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBattery_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 13
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70628361c95dbe8a0800000000000000
+      internalID: -6274686789446261241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBattery_7
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 13
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53596744e8101b140800000000000000
+      internalID: 4733566393888707893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBattery_8
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 13
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e38182d11fa30f0800000000000000
+      internalID: -1136330848428605807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullBattery_9
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 13
+        width: 63
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867ca24f56da33cc0800000000000000
+      internalID: -3732449012760262808
       vertices: []
       indices: 
       edges: []
@@ -250,7 +350,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      drone_idle_mech_0: 458378925337966215
-      drone_idle_mech_1: -6697680719269777315
-      drone_idle_mech_2: 7864826931157200025
-      drone_idle_mech_3: -5202062969593656670
-      drone_idle_mech_4: 6523489782046725449
-      drone_idle_mech_5: -8004895947124893928
+      FullBattery_0: -4912038380763264071
+      FullBattery_1: -7605732340782765569
+      FullBattery_2: 7484937799837648077
+      FullBattery_3: 7581330177972549492
+      FullBattery_4: -4215711805743403607
+      FullBattery_5: 3655803720069313505
+      FullBattery_6: -6274686789446261241
+      FullBattery_7: 4733566393888707893
+      FullBattery_8: -1136330848428605807
+      FullBattery_9: -3732449012760262808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

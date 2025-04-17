@@ -4,28 +4,25 @@ using Player;
 public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+    [SerializeField] private float debugCurrentHealth;
+    public float CurrentHealth { get; private set; }
     private DroneMovement playerScript;
 
     void Awake()
     {
-        // If GameManager already has a health value, use it. Otherwise, use startingHealth.
         if (GameManager.instance != null)
         {
-            currentHealth = GameManager.instance.playerHealth > 0 ? GameManager.instance.playerHealth : startingHealth;
+            CurrentHealth = GameManager.instance.playerHealth > 0 ? GameManager.instance.playerHealth : startingHealth;
         }
         else
         {
-            currentHealth = startingHealth;
+            CurrentHealth = startingHealth;
         }
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            TakeDamage(1);
-        }
+        debugCurrentHealth = CurrentHealth;
     }
 
     public void TakeDamage(float _damage)
@@ -35,16 +32,16 @@ public class Health : MonoBehaviour
             playerScript = Object.FindAnyObjectByType<DroneMovement>();
         }
 
-        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+        CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, startingHealth);
 
         // Update GameManager so health persists across scenes
         if (GameManager.instance != null)
         {
-            GameManager.instance.playerHealth = currentHealth;
+            GameManager.instance.playerHealth = CurrentHealth;
         }
 
         print("Lost " + _damage + " hearts"); // debug text
-        if (currentHealth > 0)
+        if (CurrentHealth > 0)
         {
             print("Player still alive");
         }
@@ -66,7 +63,7 @@ public class Health : MonoBehaviour
             playerScript = Object.FindAnyObjectByType<DroneMovement>();
         }
         
-        currentHealth = startingHealth;
+        CurrentHealth = startingHealth;
 
         // Update GameManager to reflect full heal
         if (GameManager.instance != null)

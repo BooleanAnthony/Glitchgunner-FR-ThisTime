@@ -10,8 +10,10 @@ namespace EnemyMob
         [SerializeField] private float alignDuration = 4f;
         [SerializeField] private float health = 30;  
         [SerializeField] private int damage = 2;  
+        [SerializeField] private float alignOffsetRange = 0.5f;
+        public float yOffset = 0f;
         private float difficulty = 1; //multiplier for HP/Damage
-
+ 
 
         private float timer = 0f;
         private bool isDashing = false;
@@ -43,7 +45,7 @@ namespace EnemyMob
                 difficulty = DifficultyManager.Instance.CurrentDifficulty;
             }
             else
-            {
+            { 
                 Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
             }
 
@@ -57,7 +59,8 @@ namespace EnemyMob
             if (!isDashing)
             {
                 Vector3 pos = transform.position;
-                pos.y = Mathf.MoveTowards(pos.y, player.position.y, alignSpeed * Time.deltaTime);
+                float targetY = player.position.y + yOffset;
+                pos.y = Mathf.MoveTowards(pos.y, targetY, alignSpeed * Time.deltaTime);
                 transform.position = pos;
 
                 if (timer >= alignDuration)

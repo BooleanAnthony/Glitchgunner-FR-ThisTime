@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 namespace BossFights {
 	public class MiniBoss : MonoBehaviour
@@ -13,6 +12,7 @@ namespace BossFights {
 		[SerializeField] public Question[] questions;
 		[SerializeField] TMP_Text question_text;
 		[SerializeField] TMP_Text question_status;
+		[SerializeField] string nextScene;
 
 		private int questions_size;
 
@@ -55,6 +55,7 @@ namespace BossFights {
 
 			gameObject.SetActive(false);
 			question_text.gameObject.SetActive(false);
+			SceneManager.LoadScene(nextScene); //loads the game scene upon death
 		}
 
 		public void SubmitAnswer(int answer) {
@@ -85,7 +86,7 @@ namespace BossFights {
 
 			NextQuestion();
 		}
-	}
+    }
 
 	[System.Serializable]
 	public struct Question {

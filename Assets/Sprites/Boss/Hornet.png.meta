@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 5eae627ced2702744b743a2b1c39f7d0
+guid: d91cb90f42f9a13489181518803ac5f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6675522121754639342
-    second: drone_fire_final_0
-  - first:
-      213: -3043011877148221166
-    second: drone_fire_final_1
-  - first:
-      213: -3748308778102994766
-    second: drone_fire_final_2
-  - first:
-      213: -5591608988360489852
-    second: drone_fire_final_3
+      213: 3946515025828126117
+    second: Hornet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -109,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: drone_fire_final_0
+      name: Hornet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 12
-        width: 61
-        height: 76
+        x: 170
+        y: 161
+        width: 326
+        height: 298
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,74 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eeb7275500834ac50800000000000000
-      internalID: 6675522121754639342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: drone_fire_final_1
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 12
-        width: 59
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 211294ff1dc05c5d0800000000000000
-      internalID: -3043011877148221166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: drone_fire_final_2
-      rect:
-        serializedVersion: 2
-        x: 137
-        y: 12
-        width: 59
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2b841b496055bfbc0800000000000000
-      internalID: -3748308778102994766
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: drone_fire_final_3
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 12
-        width: 62
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 48444ed204d9662b0800000000000000
-      internalID: -5591608988360489852
+      spriteID: 5ad1a37a186d4c630800000000000000
+      internalID: 3946515025828126117
       vertices: []
       indices: 
       edges: []
@@ -209,11 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      drone_fire_final_0: 6675522121754639342
-      drone_fire_final_1: -3043011877148221166
-      drone_fire_final_2: -3748308778102994766
-      drone_fire_final_3: -5591608988360489852
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

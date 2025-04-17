@@ -9,6 +9,8 @@ namespace Player
         [SerializeField] private float acceleration;
         [SerializeField] private float deceleration;
         [SerializeField] private SpriteRenderer[] allSprites;
+        [SerializeField] private Vector2 minBounds; // bottom-left world position
+        [SerializeField] private Vector2 maxBounds; // top-right world position
 
         private Vector2 _movementInput;
         
@@ -53,6 +55,17 @@ namespace Player
             var speedDifference = targetSpeed - _rigidbody.linearVelocity;
             
             _rigidbody.AddForce(_rigidbody.mass * accelerationRate * speedDifference);
+            ClampPosition();
+        }
+
+        private void ClampPosition()
+        {
+            Vector3 pos = transform.position;
+
+            pos.x = Mathf.Clamp(pos.x, minBounds.x, maxBounds.x);
+            pos.y = Mathf.Clamp(pos.y, minBounds.y, maxBounds.y);
+
+            transform.position = pos;
         }
 
         public void KillPlayer() {

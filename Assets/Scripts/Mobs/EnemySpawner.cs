@@ -4,51 +4,41 @@ using UnityEngine.Rendering;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] float maxSpawnRateInSeconds;
-    [SerializeField] public GameObject EnemyDasher;
-    [SerializeField] public GameObject EnemyShooter;
+    [SerializeField] public GameObject[] enemies;
+    [SerializeField] Vector2 minSpawnPosition; // Serialized min position
+    [SerializeField] Vector2 maxSpawnPosition; // Serialized max position
 
-    private GameObject[] enemies = new GameObject[2];
     private GameObject enemy;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Invoke(nameof(SpawnEnemy), maxSpawnRateInSeconds);
-        enemies = new GameObject[] { EnemyDasher, EnemyShooter};
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
 
     void SpawnEnemy()
     {
-        Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0.7f, 0));
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(0.7f, 1));
-
-        if (enemies.Length > 0) // Ensure array is not empty
+        if (enemies.Length > 0)
         {
             enemy = enemies[Random.Range(0, enemies.Length)];
-            Instantiate(enemy);
+            GameObject spawnedEnemy = Instantiate(enemy);
+            spawnedEnemy.transform.position = new Vector2(
+                Random.Range(minSpawnPosition.x, maxSpawnPosition.x),
+                Random.Range(minSpawnPosition.y, maxSpawnPosition.y)
+            );
         }
-        enemy.transform.position = new Vector2(min.x, Random.Range(min.y, max.y));
-    
+
         ScheduleNextEnemySpawn();
     }
 
     void ScheduleNextEnemySpawn()
     {
-        float spawnInSeconds;
-
-        if (maxSpawnRateInSeconds > 1f)
-        {
-            spawnInSeconds = Random.Range(1f, maxSpawnRateInSeconds);
-        }
-        else 
-        {
-            spawnInSeconds = 1f;
-        }
+        float spawnInSeconds = maxSpawnRateInSeconds > 1f
+            ? Random.Range(1f, maxSpawnRateInSeconds)
+            : 1f;
 
         Invoke(nameof(SpawnEnemy), spawnInSeconds);
     }

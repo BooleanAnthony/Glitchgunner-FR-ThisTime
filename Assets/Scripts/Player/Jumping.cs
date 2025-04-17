@@ -32,9 +32,11 @@ namespace Player
         private float _lastGroundTime = float.MaxValue;
 
         private Rigidbody2D _rigidbody;
+        private Animator _animator;
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
+            _animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -69,6 +71,7 @@ namespace Player
 
         private void Jump()
         {
+            _animator.SetTrigger("Jump");
             _isJumping = true;
             _isJumpFalling = false;
             _isJumpCutting = false;

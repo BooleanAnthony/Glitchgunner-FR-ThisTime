@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEditor.UI;
-using UnityEngine;
-using Player;
+﻿using UnityEngine;
 
 namespace Environment
 {

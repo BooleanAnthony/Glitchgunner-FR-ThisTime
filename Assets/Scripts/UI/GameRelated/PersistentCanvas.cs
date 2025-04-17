@@ -12,6 +12,7 @@ public class PersistentCanvas : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
@@ -21,24 +22,26 @@ public class PersistentCanvas : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftAlt) || Input.GetKeyDown(KeyCode.RightAlt))
+        
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Main Menu") // Replace with your actual scene name
         {
-            ChangeScene();
+            DestroySelf();
         }
     }
 
-    public void ChangeScene()
+
+    public void DestroySelf()
     {
-        SceneManager.LoadScene(nextScene);
+        instance = null;
+        Destroy(gameObject);
+    }
 
-        if (nextScene == "Actual Game")
-        {
-            nextScene = "Testing Place";
-        }
-
-        if (nextScene == "Testing Place")
-        {
-            nextScene = "Actual Game";
-        }
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 }
