@@ -24,14 +24,17 @@ namespace Environment
         }
 
 		private void OnTriggerEnter2D(Collider2D collision) {
-			BossFights.WeakpointChoice weakpoint = collision.GetComponent<BossFights.WeakpointChoice>();
+            if (!collision.gameObject.CompareTag("Collider"))
+            {
+                BossFights.WeakpointChoice weakpoint = collision.GetComponent<BossFights.WeakpointChoice>();
 
-			if (weakpoint != null) {
-				if (!weakpoint.invulnerable)
-					weakpoint.ChangeHealth(-damage);
-			}
+                if (weakpoint != null) {
+                    if (!weakpoint.invulnerable)
+                        weakpoint.ChangeHealth(-damage);
+                }
 
-			Destroy(gameObject);
+                Destroy(gameObject);
+            }
 		}
 
 		private void Update()

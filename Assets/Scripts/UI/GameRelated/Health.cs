@@ -5,6 +5,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
     [SerializeField] private float debugCurrentHealth;
+    [SerializeField] private float invincibilityDuration = 1f; 
+    [SerializeField] private float invincibilityTimer = 0f; 
     public float CurrentHealth { get; private set; }
     private DroneMovement playerScript;
 
@@ -23,6 +25,11 @@ public class Health : MonoBehaviour
     void Update()
     {
         debugCurrentHealth = CurrentHealth;
+
+        if (invincibilityTimer > 0)
+        {
+            invincibilityTimer -= Time.deltaTime; 
+        }
     }
 
     public void TakeDamage(float _damage)
@@ -31,28 +38,39 @@ public class Health : MonoBehaviour
         {
             playerScript = Object.FindAnyObjectByType<DroneMovement>();
         }
-
-        CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, startingHealth);
-
-        // Update GameManager so health persists across scenes
-        if (GameManager.instance != null)
+        
+        if (invincibilityTimer <= 0)
         {
-            GameManager.instance.playerHealth = CurrentHealth;
-        }
+            CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, startingHealth);
 
-        print("Lost " + _damage + " hearts"); // debug text
-        if (CurrentHealth > 0)
-        {
-            print("Player still alive");
+            // Update GameManager so health persists across scenes
+            if (GameManager.instance != null)
+            {
+                GameManager.instance.playerHealth = CurrentHealth;
+            }
+
+            print("Lost " + _damage + " hearts");
+
+            if (CurrentHealth > 0)
+            {
+                print("Player still alive");
+            }
+            else
+            {
+                if (playerScript != null && !playerScript.dead)
+                {
+                    playerScript.KillPlayer();
+                    print("You died");
+                    playerScript.dead = true;
+                }
+            }
+
+            // Reset invincibility timer **before exiting**
+            invincibilityTimer = invincibilityDuration;
         }
         else
         {
-            if (playerScript != null && !playerScript.dead)
-            {
-                playerScript.KillPlayer();
-                print("You died");
-                playerScript.dead = true;
-            }
+            print("Player is invincible, can't take damage yet.");
         }
     }
 

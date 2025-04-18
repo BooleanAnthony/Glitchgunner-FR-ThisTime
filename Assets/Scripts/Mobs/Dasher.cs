@@ -103,8 +103,7 @@ namespace EnemyMob
             if (collision.gameObject.CompareTag("Player"))
             {
                 Debug.Log("Triggered Player");
-                Health drone = collision.gameObject.GetComponent<Health>();
-                if (drone != null)
+                if (collision.gameObject.TryGetComponent<Health>(out var drone))
                 {
                     drone.TakeDamage(damage);
                 }
