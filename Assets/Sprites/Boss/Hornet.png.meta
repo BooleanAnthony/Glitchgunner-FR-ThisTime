@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hornet_0: 3946515025828126117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
