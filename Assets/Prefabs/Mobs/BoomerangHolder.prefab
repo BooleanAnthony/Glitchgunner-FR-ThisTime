@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 10646954092178409}
   - component: {fileID: 8853005775174105008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BoomerangHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,6 +150,10 @@ PrefabInstance:
     - target: {fileID: 799339707613729474, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
       propertyPath: m_Name
       value: EnemyBoomerang
+      objectReference: {fileID: 0}
+    - target: {fileID: 799339707613729474, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7988666183882072934, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
       propertyPath: detectionBox

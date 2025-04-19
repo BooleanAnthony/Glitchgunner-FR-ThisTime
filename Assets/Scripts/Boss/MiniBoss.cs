@@ -13,6 +13,7 @@ namespace BossFights {
 		[SerializeField] TMP_Text question_text;
 		[SerializeField] TMP_Text question_status;
 		[SerializeField] string nextScene;
+		[SerializeField] ScriptActivator activator;
 
 		private int questions_size;
 
@@ -47,6 +48,11 @@ namespace BossFights {
 			}
 			else {
 				EndBossFight();
+			}
+
+			if (current_question == questions_size-1)
+			{
+				activator.ActivateAllScripts();
 			}
 		}
 

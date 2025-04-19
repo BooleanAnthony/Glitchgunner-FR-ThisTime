@@ -30,10 +30,16 @@ public class Health : MonoBehaviour
         {
             invincibilityTimer -= Time.deltaTime; 
         }
+
+        if (Input.GetKeyDown(KeyCode.Q)) 
+        {
+            TakeDamage(1);
+        }
     }
 
     public void TakeDamage(float _damage)
     {
+        Debug.Log("Took damage");
         if (playerScript == null)
         {
             playerScript = Object.FindAnyObjectByType<DroneMovement>();

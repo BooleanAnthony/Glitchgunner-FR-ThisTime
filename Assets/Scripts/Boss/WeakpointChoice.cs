@@ -17,7 +17,7 @@ namespace BossFights {
 			sprite_renderer = GetComponent<SpriteRenderer>();
 		}
 
-		public void InitializeWeakpoint(MiniBoss boss, int c) {
+        public void InitializeWeakpoint(MiniBoss boss, int c) {
 			boss_parent = boss;
 			choice = c;
 

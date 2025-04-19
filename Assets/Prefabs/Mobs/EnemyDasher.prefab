@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3168414200565014520}
   - component: {fileID: 3116415240816936069}
   - component: {fileID: 6698347086827486241}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyDasher
   m_TagString: EnemyMob
   m_Icon: {fileID: 0}
@@ -54,6 +54,8 @@ MonoBehaviour:
   alignDuration: 5
   health: 30
   damage: 2
+  alignOffsetRange: 0.5
+  yOffset: 0
 --- !u!61 &3168414200565014520
 BoxCollider2D:
   m_ObjectHideFlags: 0

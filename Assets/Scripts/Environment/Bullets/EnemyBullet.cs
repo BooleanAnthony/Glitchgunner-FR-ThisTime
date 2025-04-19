@@ -5,7 +5,8 @@ namespace Environment
     public class EnemyBullet : Bullet
     {
 		private void OnTriggerEnter2D(Collider2D collision) {
-            if ((!collision.gameObject.CompareTag("EnemyMob") && !collision.gameObject.name.Contains("EnemyBullet")) || !collision.gameObject.CompareTag("Collider"))
+            int layer = collision.gameObject.layer;
+            if (layer != LayerMask.NameToLayer("Enemy"))
             {
                 if (collision.gameObject.CompareTag("Player"))
                 {

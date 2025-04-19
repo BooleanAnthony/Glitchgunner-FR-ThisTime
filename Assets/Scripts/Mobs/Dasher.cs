@@ -55,6 +55,10 @@ namespace EnemyMob
         private void Update()
         {
             timer += Time.deltaTime;
+            if (deathTriggered)
+            {
+                return;
+            }
 
             if (!isDashing)
             {

@@ -4,11 +4,11 @@ namespace Environment
 {
     public class Bullet : MonoBehaviour
     {
-        [SerializeField] protected float speed;
+        [SerializeField] public float speed;
         [SerializeField] protected float lifetime;
 		[SerializeField] protected float damage;
 		
-        protected float _age;
+        public float _age;
         
         protected Rigidbody2D _rigidbody;
 
