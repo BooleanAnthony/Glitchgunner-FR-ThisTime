@@ -93,6 +93,7 @@ public class Health : MonoBehaviour
         if (GameManager.instance != null)
         {
             GameManager.instance.playerHealth = startingHealth;
+            GameManager.instance.justhealed = true;
         }
     }
 }

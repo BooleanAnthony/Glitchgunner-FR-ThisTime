@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public float playerHealth = 10f; // Default health
+    public bool justhealed = false;
 
     void Awake()
     {

@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnRateInSeconds: 5
+  maxSpawnRateInSeconds: 2
   enemies:
   - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
   minSpawnPosition: {x: -0.5, y: -5}
