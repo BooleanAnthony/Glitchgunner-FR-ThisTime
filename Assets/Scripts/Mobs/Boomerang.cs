@@ -61,6 +61,7 @@ namespace Mobs
                     Debug.Log("enemy died");
                     if (!deathTriggered)
                     {
+                        anim.SetBool("isDead", true);
                         anim.SetTrigger("dead");
                         collider.enabled = false;
                         deathTriggered = true;

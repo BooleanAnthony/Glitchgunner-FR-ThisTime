@@ -20,8 +20,6 @@ namespace BossFights {
         public void InitializeWeakpoint(MiniBoss boss, int c) {
 			boss_parent = boss;
 			choice = c;
-
-			print("Initalized weakpoint!");
 		}
 
 		public void BreakWeakpoint() {

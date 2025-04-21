@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -10,8 +11,9 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject enemy;
 
-    void Start()
+    IEnumerator Start()
     {
+        yield return null;
         Invoke(nameof(SpawnEnemy), maxSpawnRateInSeconds);
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BulletAttack : MonoBehaviour
@@ -19,6 +20,11 @@ public class BulletAttack : MonoBehaviour
     private GameObject spawnedBullet;
     private float timer = 0f;
 
+    IEnumerator Start()
+    { 
+        yield return new WaitForSeconds(3f);
+    }
+
     void Update()
     {
         timer += Time.deltaTime;
@@ -35,7 +41,8 @@ public class BulletAttack : MonoBehaviour
         if (directionalBullet)
         {
             spawnedBullet = Instantiate(directionalBullet, firePoint.position, Quaternion.identity);
-            spawnedBullet.GetComponent<DirectionalBullet>()._age = bulletLife;
+            if(spawnedBullet.GetComponent<DirectionalBullet>() != null)
+                spawnedBullet.GetComponent<DirectionalBullet>()._age = bulletLife;
 
             if (spawnerType == SpawnerType.Aim && player != null)
             {

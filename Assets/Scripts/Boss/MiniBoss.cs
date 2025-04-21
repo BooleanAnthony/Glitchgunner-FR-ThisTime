@@ -17,7 +17,8 @@ namespace BossFights {
 
 		private int questions_size;
 
-		void Start() {
+		IEnumerator Start() {
+			yield return null;
 			// Time to get shit done.
 			questions_size = questions.Length;
 
