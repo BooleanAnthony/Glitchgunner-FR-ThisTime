@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e412fd4aa285ae43b4bf8298b02f04a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetime: 3
+  lifetime: 2
   beam: {fileID: 7877410730913844371}
   _age: 0
 --- !u!95 &2314965994586802762

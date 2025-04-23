@@ -23,4 +23,9 @@ public class Beam : MonoBehaviour
             }
         }
     }
+
+    private void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
 }

@@ -91,7 +91,7 @@ namespace EnemyMob
                 {
                     health -= bullet.GetDamage();
                     Debug.Log("enemy took damage: " + bullet.GetDamage());
-                    if (health <= 0)
+                    if (health <= 0 && isDashing)
                     {
                         Debug.Log("enemy died");
                         if (!deathTriggered)
