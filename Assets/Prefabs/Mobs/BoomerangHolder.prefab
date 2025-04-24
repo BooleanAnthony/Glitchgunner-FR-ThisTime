@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8853005775174105008}
   m_Layer: 6
   m_Name: BoomerangHolder
-  m_TagString: Untagged
+  m_TagString: EnemyMob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 7074622886938444547}
   - component: {fileID: 8875126329956174915}
   - component: {fileID: 6501779106188583760}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Detector
   m_TagString: Collider
   m_Icon: {fileID: 0}
@@ -153,7 +153,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 799339707613729474, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954315318241603622, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3954315318241603622, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
+      propertyPath: m_TagString
+      value: EnemyMob
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180164857299185710, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5180164857299185710, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
+      propertyPath: m_TagString
+      value: EnemyMob
       objectReference: {fileID: 0}
     - target: {fileID: 7988666183882072934, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
       propertyPath: detectionBox

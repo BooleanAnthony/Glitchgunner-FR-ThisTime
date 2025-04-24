@@ -14,10 +14,12 @@ namespace BossFights {
 		[SerializeField] TMP_Text question_status;
 		[SerializeField] string nextScene;
 		[SerializeField] ScriptActivator activator;
+		[SerializeField] Health playerHealth;
 
 		private int questions_size;
 
-		void Start() {
+		IEnumerator Start() {
+			yield return null;
 			// Time to get shit done.
 			questions_size = questions.Length;
 
@@ -82,6 +84,7 @@ namespace BossFights {
 			question_status.gameObject.SetActive(true);
 			if (answer == correct_answer) {
 				question_status.SetText($"Correct!");
+				playerHealth.HealDamage(1f);
 			}
 			else {
 				question_status.SetText($"Wrong!\nAnswer: Weakpoint {correct_answer + 1}");

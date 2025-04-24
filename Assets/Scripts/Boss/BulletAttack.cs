@@ -1,8 +1,9 @@
+using System.Collections;
 using UnityEngine;
 
 public class BulletAttack : MonoBehaviour
 {
-    enum SpawnerType {Straight, Spin, Aim}
+    enum SpawnerType {Straight, Spin, Aim, Shotgun}
 
     [Header("BulletAttributes")]
     [SerializeField] private GameObject directionalBullet;
@@ -15,9 +16,16 @@ public class BulletAttack : MonoBehaviour
     [SerializeField] private int range = 10;
     [SerializeField] private float firingSpeed = 0.5f;
     [SerializeField] private DifficultyManager difficultyManager;
+    [SerializeField] private int pelletCount = 5;      // Number of bullets in the shotgun blast
+    [SerializeField] private float spreadAngle = 60f;  // Total spread angle (degrees)
 
     private GameObject spawnedBullet;
     private float timer = 0f;
+
+    IEnumerator Start()
+    { 
+        yield return new WaitForSeconds(3f);
+    }
 
     void Update()
     {
@@ -34,21 +42,43 @@ public class BulletAttack : MonoBehaviour
     {
         if (directionalBullet)
         {
-            spawnedBullet = Instantiate(directionalBullet, firePoint.position, Quaternion.identity);
-            spawnedBullet.GetComponent<DirectionalBullet>()._age = bulletLife;
-
-            if (spawnerType == SpawnerType.Aim && player != null)
+            if (spawnerType == SpawnerType.Aim && player != null || spawnerType == SpawnerType.Shotgun)
             {
                 Vector2 direction = (player.position - firePoint.position).normalized;
+                float baseAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-                // Fix rotation direction by adding 180 degrees
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                firePoint.rotation = Quaternion.Euler(0f, 0f, angle); 
-                spawnedBullet.transform.rotation = Quaternion.Euler(0f, 0f, angle + 180f + Random.Range(-range + (int)difficultyManager.CurrentDifficulty, range - (int)difficultyManager.CurrentDifficulty));
+                if (spawnerType == SpawnerType.Aim)
+                {
+                    // Single aimed shot
+                    firePoint.rotation = Quaternion.Euler(0f, 0f, baseAngle);
+                    spawnedBullet = Instantiate(directionalBullet, firePoint.position, Quaternion.Euler(0f, 0f, baseAngle + 180f + Random.Range(-range + (int)difficultyManager.CurrentDifficulty, range - (int)difficultyManager.CurrentDifficulty)));
+
+                    if (spawnedBullet.TryGetComponent(out DirectionalBullet bullet))
+                        bullet._age = bulletLife;
+                }
+                else if (spawnerType == SpawnerType.Shotgun)
+                {
+                    // Shotgun spread
+                    float halfSpread = spreadAngle / 2f;
+                    for (int i = 0; i < pelletCount; i++)
+                    {
+                        float offset = Random.Range(-halfSpread, halfSpread);
+                        float finalAngle = baseAngle + 180f + offset;
+                        Quaternion rot = Quaternion.Euler(0f, 0f, finalAngle);
+                        GameObject pellet = Instantiate(directionalBullet, firePoint.position, rot);
+
+                        if (pellet.TryGetComponent(out DirectionalBullet bullet))
+                            bullet._age = bulletLife;
+                    }
+                }
             }
             else
             {
-                spawnedBullet.transform.rotation = firePoint.rotation;
+                // Default behavior
+                spawnedBullet = Instantiate(directionalBullet, firePoint.position, firePoint.rotation);
+
+                if (spawnedBullet.TryGetComponent(out DirectionalBullet bullet))
+                    bullet._age = bulletLife;
             }
         }
     }

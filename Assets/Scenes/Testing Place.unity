@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnRateInSeconds: 5
+  maxSpawnRateInSeconds: 2
   enemies:
   - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
   minSpawnPosition: {x: -0.5, y: -5}
@@ -380,6 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   text: {fileID: 858162553}
+  shotgunPoint: {fileID: 696533765}
   invulnerable: 0
 --- !u!212 &72813109
 SpriteRenderer:
@@ -719,6 +720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   text: {fileID: 1904981642}
+  shotgunPoint: {fileID: 466241354}
   invulnerable: 0
 --- !u!212 &219810246
 SpriteRenderer:
@@ -858,6 +860,8 @@ MonoBehaviour:
   range: 10
   firingSpeed: 5
   difficultyManager: {fileID: 627654972}
+  pelletCount: 5
+  spreadAngle: 60
 --- !u!1 &347960741
 GameObject:
   m_ObjectHideFlags: 0
@@ -979,6 +983,114 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1283095809}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &363949128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 363949129}
+  - component: {fileID: 363949130}
+  m_Layer: 6
+  m_Name: ShotgunPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &363949129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363949128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: -2.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065702300}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &363949130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363949128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
+  bulletLife: 2
+  spawnerType: 3
+  firePoint: {fileID: 363949129}
+  player: {fileID: 1283095809}
+  range: 10
+  firingSpeed: 0
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 3
+  spreadAngle: 60
+--- !u!1 &466241354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 466241356}
+  - component: {fileID: 466241355}
+  m_Layer: 6
+  m_Name: ShotgunPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &466241355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466241354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
+  bulletLife: 2
+  spawnerType: 3
+  firePoint: {fileID: 466241356}
+  player: {fileID: 1283095809}
+  range: 10
+  firingSpeed: 0
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 3
+  spreadAngle: 60
+--- !u!4 &466241356
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466241354}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.35, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065702300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530186850
 GameObject:
@@ -1310,6 +1422,7 @@ MonoBehaviour:
   question_status: {fileID: 1600841507}
   nextScene: Main Menu
   activator: {fileID: 679155663}
+  playerHealth: {fileID: 1283095812}
 --- !u!4 &679155661
 Transform:
   m_ObjectHideFlags: 0
@@ -1323,6 +1436,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1065702300}
   - {fileID: 219810247}
   - {fileID: 72813110}
   - {fileID: 1557382607}
@@ -1365,6 +1479,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptsToActivate:
   - {fileID: 219810249}
+--- !u!1 &696533765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 696533766}
+  - component: {fileID: 696533767}
+  m_Layer: 6
+  m_Name: ShotgunPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &696533766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696533765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1065702300}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &696533767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 696533765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
+  bulletLife: 2
+  spawnerType: 3
+  firePoint: {fileID: 696533766}
+  player: {fileID: 1283095809}
+  range: 10
+  firingSpeed: 0
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 3
+  spreadAngle: 60
 --- !u!1 &796021237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1860,40 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1557382607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1065702299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065702300}
+  m_Layer: 6
+  m_Name: ShotgunPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065702300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065702299}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 466241356}
+  - {fileID: 696533766}
+  - {fileID: 363949129}
+  m_Father: {fileID: 679155661}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283095805
 GameObject:
   m_ObjectHideFlags: 0
@@ -1856,7 +2058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75966e32060e3648a4d41537097c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
   debugCurrentHealth: 0
   invincibilityDuration: 1
   invincibilityTimer: 0
@@ -2103,6 +2305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   text: {fileID: 43919310}
+  shotgunPoint: {fileID: 363949128}
   invulnerable: 0
 --- !u!212 &1557382606
 SpriteRenderer:
@@ -2214,7 +2417,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 9.6}
+    oldSize: {x: 12.8, y: 9.599999}
     newSize: {x: 2.82, y: 1.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2242,6 +2445,8 @@ MonoBehaviour:
   range: 10
   firingSpeed: 3
   difficultyManager: {fileID: 627654972}
+  pelletCount: 5
+  spreadAngle: 60
 --- !u!1 &1600841505
 GameObject:
   m_ObjectHideFlags: 0

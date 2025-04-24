@@ -16,7 +16,6 @@ namespace Player
         
         private Rigidbody2D _rigidbody;
         private Animator _animator;
-        private SpriteRenderer sprite;
         private Shooting shootingScript;
         private Health healthScript;
         public bool dead = false;
@@ -24,7 +23,6 @@ namespace Player
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
-            sprite = GetComponent<SpriteRenderer>();
             shootingScript = GetComponent<Shooting>();
             healthScript = GetComponent<Health>();
             _animator = GetComponent<Animator>();
@@ -50,11 +48,14 @@ namespace Player
 
         private void FixedUpdate()
         {
-            var targetSpeed = movementSpeed * _movementInput;
-            var accelerationRate = (targetSpeed.sqrMagnitude > Mathf.Epsilon) ? acceleration : deceleration;
-            var speedDifference = targetSpeed - _rigidbody.linearVelocity;
-            
-            _rigidbody.AddForce(_rigidbody.mass * accelerationRate * speedDifference);
+            if (!dead)
+            {
+                var targetSpeed = movementSpeed * _movementInput;
+                var accelerationRate = (targetSpeed.sqrMagnitude > Mathf.Epsilon) ? acceleration : deceleration;
+                var speedDifference = targetSpeed - _rigidbody.linearVelocity;
+                
+                _rigidbody.AddForce(_rigidbody.mass * accelerationRate * speedDifference);
+            }
             ClampPosition();
         }
 
@@ -70,7 +71,6 @@ namespace Player
 
         public void KillPlayer() {
             dead = true;
-            Debug.Log("Player died!");
             SetAllSpritesVisible(false);
 
             if (shootingScript != null) {
@@ -80,7 +80,6 @@ namespace Player
 
         public void RevivePlayer() {
             dead = false;
-            Debug.Log("Player revived!");
             SetAllSpritesVisible(true);
             shootingScript.OnRevive();
             healthScript.FullHeal();

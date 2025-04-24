@@ -52,7 +52,7 @@ MonoBehaviour:
   alignSpeed: 3
   dashSpeed: 10
   alignDuration: 5
-  health: 30
+  health: 20
   damage: 2
   alignOffsetRange: 0.5
   yOffset: 0
