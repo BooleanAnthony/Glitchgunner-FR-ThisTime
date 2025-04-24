@@ -11,6 +11,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         totalHealthbar.fillAmount = GameManager.instance.playerHealth / 10;
+        healthbarOutline.fillAmount = GameManager.instance.playerHealth / 10;
     }
 
     void Update()

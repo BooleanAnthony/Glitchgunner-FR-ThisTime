@@ -96,4 +96,21 @@ public class Health : MonoBehaviour
             GameManager.instance.justhealed = true;
         }
     }
+
+    public void HealDamage(float _healed)
+    {
+        if (playerScript == null)
+        {
+            playerScript = Object.FindAnyObjectByType<DroneMovement>();
+        }
+        
+        CurrentHealth = Mathf.Clamp(CurrentHealth + _healed, 0, startingHealth);
+
+        // Update GameManager to reflect full heal
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.playerHealth = CurrentHealth;
+            GameManager.instance.justhealed = true;
+        }
+    }
 }

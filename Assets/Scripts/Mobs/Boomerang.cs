@@ -98,9 +98,6 @@ namespace Mobs
 
         private void difficultyScale()
         {
-            health *= difficulty;
-            damage = Mathf.RoundToInt(damage * difficulty);
-
             float dampening = Mathf.Pow(difficulty, 0.5f); // square root of difficulty
 
             alignSpeed *= dampening;

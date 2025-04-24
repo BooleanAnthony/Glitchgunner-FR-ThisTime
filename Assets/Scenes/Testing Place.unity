@@ -1422,6 +1422,7 @@ MonoBehaviour:
   question_status: {fileID: 1600841507}
   nextScene: Main Menu
   activator: {fileID: 679155663}
+  playerHealth: {fileID: 1283095812}
 --- !u!4 &679155661
 Transform:
   m_ObjectHideFlags: 0
