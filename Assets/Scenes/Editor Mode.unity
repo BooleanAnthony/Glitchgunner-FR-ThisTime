@@ -1339,7 +1339,6 @@ GameObject:
   - component: {fileID: 551920335}
   - component: {fileID: 551920334}
   - component: {fileID: 551920333}
-  - component: {fileID: 551920336}
   m_Layer: 5
   m_Name: QuestionInput
   m_TagString: Untagged
@@ -1506,21 +1505,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551920331}
   m_CullTransparentMesh: 1
---- !u!114 &551920336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551920331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5735357b58433b24bb5ed00faaf58019, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inputText: 
-  reactionGroup: {fileID: 0}
-  reactionTextBox: {fileID: 0}
 --- !u!1 &580074183
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,7 +3658,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 704.64496, y: -421.8}
+  m_AnchoredPosition: {x: 692, y: -421.66}
   m_SizeDelta: {x: 290.347, y: 102.69}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1325758215
@@ -4240,7 +4224,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1492781590}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -4297,12 +4281,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1492781585}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c48b66fda665dd24b8efe6b6abe05973, type: 3}
+  m_Script: {fileID: 11500000, guid: c53655520d6683b46a32c0a5d4c17240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cancelButton: {fileID: 0}
+  cancelButton: {fileID: 1492781587}
 --- !u!1 &1516444194
 GameObject:
   m_ObjectHideFlags: 0
