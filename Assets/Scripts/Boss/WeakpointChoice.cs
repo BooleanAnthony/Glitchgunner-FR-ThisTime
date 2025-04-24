@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,6 +7,7 @@ namespace BossFights {
 	{
 		[SerializeField] float health = 100;
 		[SerializeField] public TMP_Text text;
+		[SerializeField] public GameObject shotgunPoint;
 
 		private SpriteRenderer sprite_renderer;
 		private MiniBoss boss_parent;
@@ -24,7 +26,14 @@ namespace BossFights {
 
 		public void BreakWeakpoint() {
 			boss_parent.StartCoroutine("SubmitAnswer", choice);
+			StartCoroutine(nameof(ShotgunFire));
+		}
 
+		private IEnumerator ShotgunFire()
+		{
+			shotgunPoint.SetActive(true);
+			yield return new WaitForSeconds(0);
+			shotgunPoint.SetActive(false);
 			gameObject.SetActive(false);
 		}
 

@@ -55,10 +55,10 @@ namespace EnemyMob
         private void Update()
         {
             timer += Time.deltaTime;
-            if (deathTriggered)
-            {
-                return;
-            }
+            //if (deathTriggered)
+            //{
+            //    return;
+            //}
 
             if (!isDashing)
             {
@@ -91,7 +91,7 @@ namespace EnemyMob
                 {
                     health -= bullet.GetDamage();
                     Debug.Log("enemy took damage: " + bullet.GetDamage());
-                    if (health <= 0 && isDashing)
+                    if (health <= 0 && !isDashing)
                     {
                         Debug.Log("enemy died");
                         if (!deathTriggered)
