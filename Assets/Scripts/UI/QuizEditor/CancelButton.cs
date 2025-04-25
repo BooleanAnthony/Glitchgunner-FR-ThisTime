@@ -11,12 +11,6 @@ public class CancelButton : MonoBehaviour
         cancelButton.onClick.AddListener(MenuLoad);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void MenuLoad()
     {
         SceneManager.LoadScene("Main Menu");
