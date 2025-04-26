@@ -84,7 +84,7 @@ namespace BossFights {
 			question_status.gameObject.SetActive(true);
 			if (answer == correct_answer) {
 				question_status.SetText($"Correct!");
-				playerHealth.HealDamage(1f);
+				playerHealth.HealDamage(1);
 			}
 			else {
 				question_status.SetText($"Wrong!\nAnswer: Weakpoint {correct_answer + 1}");
