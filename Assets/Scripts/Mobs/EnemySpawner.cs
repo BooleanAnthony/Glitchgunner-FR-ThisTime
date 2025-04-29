@@ -16,11 +16,7 @@ public class EnemySpawner : MonoBehaviour
         yield return null;
         Invoke(nameof(SpawnEnemy), maxSpawnRateInSeconds);
     }
-
-    void Update()
-    {
-    }
-
+    
     void SpawnEnemy()
     {
         if (enemies.Length > 0)
