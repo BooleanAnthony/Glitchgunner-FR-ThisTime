@@ -328,11 +328,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnRateInSeconds: 2
+  maxSpawnRateInSeconds: 10
   enemies:
   - {fileID: 27407864014962235, guid: 1adbae7c7cb5e7e449c2b0b1a57deb49, type: 3}
-  minSpawnPosition: {x: -0.5, y: -5}
-  maxSpawnPosition: {x: 2.5, y: 5}
+  minSpawnPosition: {x: -0.5, y: -4}
+  maxSpawnPosition: {x: 2.5, y: 4}
 --- !u!4 &57345537
 Transform:
   m_ObjectHideFlags: 0
@@ -1467,6 +1467,7 @@ GameObject:
   - component: {fileID: 679155663}
   - component: {fileID: 679155662}
   - component: {fileID: 679155664}
+  - component: {fileID: 679155665}
   m_Layer: 6
   m_Name: MiniBoss
   m_TagString: EnemyBoss
@@ -1490,24 +1491,21 @@ MonoBehaviour:
   - {fileID: 219810244}
   - {fileID: 1557382604}
   questions:
-  - question: Test
+  - question: 1 + 1 = 2
     choices:
     - True
     - False
-    - Test C
     correct_answer: 0
-  - question: Tes
+  - question: 5 * 5 = 30
     choices:
     - True
     - False
-    - Tes C
     correct_answer: 1
-  - question: Te
+  - question: 7^2 = 49
     choices:
     - True
     - False
-    - Te C
-    correct_answer: 1
+    correct_answer: 0
   question_text: {fileID: 1635583788}
   question_status: {fileID: 1600841507}
   nextScene: Main Menu
@@ -1588,6 +1586,20 @@ MonoBehaviour:
   maxAttackPos: {x: 0, y: -4}
   moveSpeed: 10
   cooldown: 10
+--- !u!114 &679155665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679155658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724f00703866f47429d7902c5a64dc5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerDuration: 5
+  flickerInterval: 0.1
 --- !u!1 &796021237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,7 +1791,7 @@ MonoBehaviour:
   - {fileID: 207783541}
   - {fileID: 530186852}
   minBounds: {x: -7.5, y: -5}
-  maxBounds: {x: 8, y: 5}
+  maxBounds: {x: 2, y: 5}
   dead: 0
 --- !u!50 &1283095807
 Rigidbody2D:
@@ -1901,7 +1913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f75966e32060e3648a4d41537097c4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 3
+  startingHealth: 5
   debugCurrentHealth: 0
   invincibilityDuration: 1
   invincibilityTimer: 0

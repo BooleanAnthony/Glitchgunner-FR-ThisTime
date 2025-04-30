@@ -26,7 +26,6 @@ namespace BossFights {
 
 		public void BreakWeakpoint() {
 			boss_parent.StartCoroutine("SubmitAnswer", choice);
-			StartCoroutine(nameof(ShotgunFire));
 		}
 
 		private IEnumerator ShotgunFire()
@@ -37,8 +36,17 @@ namespace BossFights {
 			gameObject.SetActive(false);
 		}
 
+		private IEnumerator Death()
+		{
+			yield return new WaitForSeconds(0);
+			gameObject.SetActive(false);
+		}
+
 		public void ChangeHealth(float h) {
-			health += h;
+			if (!invulnerable)
+			{
+				health += h;
+			}
 
 			if (health <= 0) {
 				BreakWeakpoint();

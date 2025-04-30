@@ -1376,6 +1376,7 @@ GameObject:
   - component: {fileID: 679155659}
   - component: {fileID: 679155663}
   - component: {fileID: 679155662}
+  - component: {fileID: 679155664}
   m_Layer: 6
   m_Name: MiniBoss
   m_TagString: EnemyBoss
@@ -1479,6 +1480,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scriptsToActivate:
   - {fileID: 219810249}
+--- !u!114 &679155664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679155658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724f00703866f47429d7902c5a64dc5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flickerDuration: 5
+  flickerInterval: 0.1
 --- !u!1 &696533765
 GameObject:
   m_ObjectHideFlags: 0

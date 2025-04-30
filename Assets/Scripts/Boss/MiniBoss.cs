@@ -15,6 +15,8 @@ namespace BossFights {
 		[SerializeField] string nextScene;
 		[SerializeField] ScriptActivator activator;
 		[SerializeField] Health playerHealth;
+		
+		private InvincibilityFlicker flicker;
 
 		private int questions_size;
 
@@ -26,6 +28,8 @@ namespace BossFights {
 			for (int i = 0; i < weakpoints.Length; i++) {
 				weakpoints[i].GetComponent<WeakpointChoice>().InitializeWeakpoint(this, i);
 			}
+
+			flicker = GetComponent<InvincibilityFlicker>();
 
 			NextQuestion();
 		}
@@ -41,8 +45,6 @@ namespace BossFights {
 					weakpoints[i].SetActive(true);
 
 					w.SetText(questions[current_question].choices[i]);
-
-					w.invulnerable = false;
 					w.SetHealth(100);
 				}
 
@@ -79,21 +81,34 @@ namespace BossFights {
 		}
 
 		IEnumerator ProcessAnswer(int answer) {
+			WeakpointChoice weakpoint = weakpoints[answer].GetComponent<WeakpointChoice>();
 			yield return new WaitForSeconds(1);
 
 			question_status.gameObject.SetActive(true);
 			if (answer == correct_answer) {
 				question_status.SetText($"Correct!");
 				playerHealth.HealDamage(1);
+				weakpoint.StartCoroutine("Death");
 			}
 			else {
 				question_status.SetText($"Wrong!\nAnswer: Weakpoint {correct_answer + 1}");
+				weakpoint.StartCoroutine("ShotgunFire");
 			}
 
 			yield return new WaitForSeconds(3);
 			question_status.gameObject.SetActive(false);
 
 			NextQuestion();
+
+			if (current_question < questions_size) {
+				flicker.StartCoroutine("Flicker");
+				yield return new WaitForSeconds(5);
+				for (int i = 0; i < weakpoints.Length; i++) 
+				{
+					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
+					w.invulnerable = false;
+				}
+			}
 		}
     }
 
