@@ -1400,30 +1400,12 @@ MonoBehaviour:
   - {fileID: 219810244}
   - {fileID: 72813107}
   - {fileID: 1557382604}
-  questions:
-  - question: Test
-    choices:
-    - Test A
-    - Test B
-    - Test C
-    correct_answer: 0
-  - question: Tes
-    choices:
-    - Tes A
-    - Tes B
-    - Tes C
-    correct_answer: 2
-  - question: Te
-    choices:
-    - Te A
-    - Te B
-    - Te C
-    correct_answer: 1
   question_text: {fileID: 1635583788}
   question_status: {fileID: 1600841507}
   nextScene: Main Menu
   activator: {fileID: 679155663}
   playerHealth: {fileID: 1283095812}
+  jsonReader: {fileID: 1706951562}
 --- !u!4 &679155661
 Transform:
   m_ObjectHideFlags: 0
@@ -2738,6 +2720,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635583786}
   m_CullTransparentMesh: 1
+--- !u!1 &1706951561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706951563}
+  - component: {fileID: 1706951562}
+  m_Layer: 0
+  m_Name: Reader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1706951562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706951561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ed47e5aa5dcc184ebd1d426e0393838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jsonData: {fileID: 4900000, guid: 6dbc5ee713bc3a04586163f605c862ee, type: 3}
+  questions: []
+--- !u!4 &1706951563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706951561}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 511.25882, y: 263.7108, z: 2.14933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887476610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3145,3 +3173,4 @@ SceneRoots:
   - {fileID: 57345537}
   - {fileID: 569910192}
   - {fileID: 627654973}
+  - {fileID: 1706951563}

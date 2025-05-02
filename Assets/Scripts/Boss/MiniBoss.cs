@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -9,21 +10,21 @@ namespace BossFights {
 		int correct_answer = 0;
 		int current_question = -1;
 		[SerializeField] public GameObject[] weakpoints;
-		[SerializeField] public Question[] questions;
 		[SerializeField] TMP_Text question_text;
 		[SerializeField] TMP_Text question_status;
 		[SerializeField] string nextScene;
 		[SerializeField] ScriptActivator activator;
 		[SerializeField] Health playerHealth;
+		[SerializeField] JSONReader jsonReader;
 		
 		private InvincibilityFlicker flicker;
 
 		private int questions_size;
 
 		IEnumerator Start() {
-			yield return null;
+			yield return new WaitForSeconds(1f);
 			// Time to get shit done.
-			questions_size = questions.Length;
+			questions_size = jsonReader.questions.Length;
 
 			for (int i = 0; i < weakpoints.Length; i++) {
 				weakpoints[i].GetComponent<WeakpointChoice>().InitializeWeakpoint(this, i);
@@ -38,17 +39,17 @@ namespace BossFights {
 			current_question++;
 			
 			if (current_question < questions_size) {
-				correct_answer = questions[current_question].correct_answer;
+				correct_answer = jsonReader.questions[current_question].correct_answer;
 
 				for (int i = 0; i < weakpoints.Length; i++) {
 					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
 					weakpoints[i].SetActive(true);
 
-					w.SetText(questions[current_question].choices[i]);
+					w.SetText(jsonReader.questions[current_question].choices[i]);
 					w.SetHealth(100);
 				}
 
-				question_text.SetText($"Question {current_question + 1}:\n{questions[current_question].question}");
+				question_text.SetText($"Question {current_question + 1}:\n{jsonReader.questions[current_question].questionInput}");
 			}
 			else {
 				EndBossFight();
@@ -111,11 +112,4 @@ namespace BossFights {
 			}
 		}
     }
-
-	[System.Serializable]
-	public struct Question {
-		public string question;
-		public string[] choices;
-		public int correct_answer;
-	}
 }

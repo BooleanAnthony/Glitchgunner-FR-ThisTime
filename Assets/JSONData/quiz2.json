@@ -1,0 +1,40 @@
+{
+    "questions": [
+        {
+            "choices": [
+                "21",
+                "19"
+            ],
+            "correct_answer": 1,
+            "questionNumber": 1,
+            "questionInput": "9 + 10",
+            "answerInput": "19",
+            "filler1Input": "21",
+            "filler2Input": "19"
+        },
+        {
+            "choices": [
+                "25",
+                "16"
+            ],
+            "correct_answer": 0,
+            "questionNumber": 2,
+            "questionInput": "5 * 5",
+            "answerInput": "25",
+            "filler1Input": "25",
+            "filler2Input": "16"
+        },
+        {
+            "choices": [
+                "4",
+                "9"
+            ],
+            "correct_answer": 0,
+            "questionNumber": 3,
+            "questionInput": "2^2",
+            "answerInput": "4",
+            "filler1Input": "4",
+            "filler2Input": "9"
+        }
+    ]
+}

@@ -1062,6 +1062,8 @@ MonoBehaviour:
   answer: {fileID: 44281931}
   filler1: {fileID: 1240642774}
   filler2: {fileID: 2044578850}
+  fileName: quiz2
+  questionManager: {fileID: 730020001}
   questionReflect: 
   answerReflect: 
   filler1Reflect: 
@@ -1884,6 +1886,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689086161}
   m_CullTransparentMesh: 1
+--- !u!1 &730020000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730020002}
+  - component: {fileID: 730020001}
+  m_Layer: 0
+  m_Name: QuestionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &730020001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730020000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba406bd5b3b005488b4cb9d44de1fd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionNumber: 1
+--- !u!4 &730020002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730020000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 511.25882, y: 263.7108, z: 2.14933}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &988219377
 GameObject:
   m_ObjectHideFlags: 0
@@ -5503,3 +5550,4 @@ SceneRoots:
   - {fileID: 1311673789}
   - {fileID: 1887549932}
   - {fileID: 288933510}
+  - {fileID: 730020002}
