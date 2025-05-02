@@ -2379,12 +2379,12 @@ GameObject:
   - component: {fileID: 1600841508}
   - component: {fileID: 1600841507}
   m_Layer: 5
-  m_Name: QustionStatus
+  m_Name: QuestionStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1600841506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2430,8 +2430,8 @@ MonoBehaviour:
 
     Answer: C'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
+  m_sharedMaterial: {fileID: -267997401350402584, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2566,8 +2566,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Question: \nInsert Question here!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
+  m_sharedMaterial: {fileID: -267997401350402584, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

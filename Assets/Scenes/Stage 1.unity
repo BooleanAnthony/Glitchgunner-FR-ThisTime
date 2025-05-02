@@ -2456,7 +2456,7 @@ GameObject:
   - component: {fileID: 1600841508}
   - component: {fileID: 1600841507}
   m_Layer: 5
-  m_Name: QustionStatus
+  m_Name: QuestionStatus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2507,7 +2507,7 @@ MonoBehaviour:
 
     Answer: C'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -130.27832, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1600841508
@@ -2643,8 +2643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Question: \nInsert Question here!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
+  m_sharedMaterial: {fileID: -267997401350402584, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2749,7 +2749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed47e5aa5dcc184ebd1d426e0393838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonData: {fileID: 4900000, guid: 6dbc5ee713bc3a04586163f605c862ee, type: 3}
+  jsonData: {fileID: 4900000, guid: ff8f8f38b8ea21141bb4e413bf25f2b1, type: 3}
   questions: []
 --- !u!4 &1706951563
 Transform:

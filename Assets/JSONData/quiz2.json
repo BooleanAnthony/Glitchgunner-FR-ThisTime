@@ -2,39 +2,45 @@
     "questions": [
         {
             "choices": [
-                "21",
-                "19"
+                "True",
+                "False",
+                "0"
             ],
-            "correct_answer": 1,
+            "correct_answer": 0,
             "questionNumber": 1,
-            "questionInput": "9 + 10",
-            "answerInput": "19",
-            "filler1Input": "21",
-            "filler2Input": "19"
+            "questionInput": "100 + 10 = 110",
+            "answerInput": "True",
+            "filler1Input": "True",
+            "filler2Input": "False",
+            "filler3Input": "0"
         },
         {
             "choices": [
-                "25",
-                "16"
+                "False",
+                "True",
+                "0"
             ],
             "correct_answer": 0,
             "questionNumber": 2,
-            "questionInput": "5 * 5",
-            "answerInput": "25",
-            "filler1Input": "25",
-            "filler2Input": "16"
+            "questionInput": "Square Root of 49 is 8",
+            "answerInput": "False",
+            "filler1Input": "True",
+            "filler2Input": "False",
+            "filler3Input": "0"
         },
         {
             "choices": [
-                "4",
-                "9"
+                "False",
+                "True",
+                "0"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 3,
-            "questionInput": "2^2",
-            "answerInput": "4",
-            "filler1Input": "4",
-            "filler2Input": "9"
+            "questionInput": "600 / 5 * 3 = 360",
+            "answerInput": "True",
+            "filler1Input": "True",
+            "filler2Input": "False",
+            "filler3Input": "0"
         }
     ]
 }

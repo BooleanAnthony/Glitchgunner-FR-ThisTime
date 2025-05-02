@@ -44,7 +44,7 @@ namespace BossFights {
 				for (int i = 0; i < weakpoints.Length; i++) {
 					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
 					weakpoints[i].SetActive(true);
-
+				
 					w.SetText(jsonReader.questions[current_question].choices[i]);
 					w.SetHealth(100);
 				}
