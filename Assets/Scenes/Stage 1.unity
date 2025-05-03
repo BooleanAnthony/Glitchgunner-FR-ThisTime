@@ -546,6 +546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.4
+  parallaxController: {fileID: 0}
 --- !u!23 &176591669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,7 @@ MonoBehaviour:
   - {fileID: 1557382604}
   question_text: {fileID: 1635583788}
   question_status: {fileID: 1600841507}
-  nextScene: Main Menu
+  nextScene: Stage 2
   activator: {fileID: 679155663}
   playerHealth: {fileID: 1283095812}
   jsonReader: {fileID: 1706951562}
@@ -2113,6 +2114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  parallaxController: {fileID: 0}
 --- !u!23 &1528412161
 MeshRenderer:
   m_ObjectHideFlags: 0
