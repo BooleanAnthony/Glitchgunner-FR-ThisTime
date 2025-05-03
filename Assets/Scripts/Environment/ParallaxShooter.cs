@@ -4,10 +4,10 @@ public class ParallaxMovement : MonoBehaviour
 {
     Material mat;
     float distance;
-    private bool continueParallax = true;
 
     [Range(0f, 0.5f)]
     [SerializeField] private float speed = 0.2f;
+    [SerializeField] private ParallaxController parallaxController;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,7 +17,7 @@ public class ParallaxMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (continueParallax)
+        if (parallaxController.continueParallax)
         {
             distance += Time.deltaTime*speed;
             mat.SetTextureOffset("_MainTex", Vector2.right * distance);

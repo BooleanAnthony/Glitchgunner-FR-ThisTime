@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
+  parallaxController: {fileID: 1552000389}
 --- !u!23 &12697293
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1931,6 +1932,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.15
+  parallaxController: {fileID: 1552000389}
 --- !u!23 &1009602702
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2062,6 +2064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  parallaxController: {fileID: 1552000389}
 --- !u!23 &1160797867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2595,6 +2598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  parallaxController: {fileID: 1552000389}
 --- !u!23 &1443516474
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2828,9 +2832,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1552000387}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35191bb12c6dc624390172f6e124ecb6, type: 3}
+  m_Script: {fileID: 11500000, guid: 4794abadc7611cf47aab192feba0418d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2020213432}
+  continueParallax: 1
 --- !u!1 &1566916073
 GameObject:
   m_ObjectHideFlags: 0
@@ -3803,6 +3809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.4
+  parallaxController: {fileID: 1552000389}
 --- !u!23 &2012024382
 MeshRenderer:
   m_ObjectHideFlags: 0
