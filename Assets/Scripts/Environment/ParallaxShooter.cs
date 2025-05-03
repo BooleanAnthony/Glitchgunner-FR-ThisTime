@@ -17,10 +17,19 @@ public class ParallaxMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (parallaxController.continueParallax)
+        if (parallaxController != null)
+        {
+            if (parallaxController.continueParallax)
+            {
+                distance += Time.deltaTime*speed;
+                mat.SetTextureOffset("_MainTex", Vector2.right * distance);
+            }
+        } 
+        else 
         {
             distance += Time.deltaTime*speed;
             mat.SetTextureOffset("_MainTex", Vector2.right * distance);
         }
+        
     }
 }
