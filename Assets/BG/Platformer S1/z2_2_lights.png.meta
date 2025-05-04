@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: ce730d933f2c37e41b0a150344c9de27
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6049675676603848153
+    second: z2_2_lights_0
+  - first:
+      213: 5617058893006410219
+    second: z2_2_lights_1
+  - first:
+      213: 4601133474011183166
+    second: z2_2_lights_2
+  - first:
+      213: 4513573878842472365
+    second: z2_2_lights_3
+  - first:
+      213: -7373248161141666870
+    second: z2_2_lights_4
+  - first:
+      213: -20661365856463827
+    second: z2_2_lights_5
+  - first:
+      213: -2699421387178577808
+    second: z2_2_lights_6
+  - first:
+      213: 4941062118900704436
+    second: z2_2_lights_7
+  - first:
+      213: 8145374727132331439
+    second: z2_2_lights_8
+  - first:
+      213: -7970002798456530594
+    second: z2_2_lights_9
+  - first:
+      213: -7696393070016751659
+    second: z2_2_lights_10
+  - first:
+      213: 7176871793221464935
+    second: z2_2_lights_11
+  - first:
+      213: 959417647515189553
+    second: z2_2_lights_12
+  - first:
+      213: 6871694191069111426
+    second: z2_2_lights_13
+  - first:
+      213: -8188138206618608280
+    second: z2_2_lights_14
+  - first:
+      213: -1441572532689515415
+    second: z2_2_lights_15
+  - first:
+      213: -4858539616157492227
+    second: z2_2_lights_16
+  - first:
+      213: -3172865588649484126
+    second: z2_2_lights_17
+  - first:
+      213: 8246049896698509414
+    second: z2_2_lights_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: z2_2_lights_0
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 861
+        width: 98
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d51b4ea9f3c4f350800000000000000
+      internalID: 6049675676603848153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 444
+        width: 732
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be198108d4dc3fd40800000000000000
+      internalID: 5617058893006410219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 308
+        height: 460
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38789a44828adf30800000000000000
+      internalID: 4601133474011183166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_3
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 0
+        width: 8
+        height: 470
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da733e3678f63ae30800000000000000
+      internalID: 4513573878842472365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_4
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 555
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acb4952dcd5fca990800000000000000
+      internalID: -7373248161141666870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_5
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 540
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d241d83e89896bff0800000000000000
+      internalID: -20661365856463827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_6
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 534
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 070f02eec8ab98ad0800000000000000
+      internalID: -2699421387178577808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_7
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 463
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4273a71dd229440800000000000000
+      internalID: 4941062118900704436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_8
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 391
+        width: 189
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadba25882f2a0170800000000000000
+      internalID: 8145374727132331439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_9
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 429
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5911238eacd46190800000000000000
+      internalID: -7970002798456530594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_10
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 338
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d79fd1b74be03590800000000000000
+      internalID: -7696393070016751659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_11
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 0
+        width: 8
+        height: 392
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7637c790fde599360800000000000000
+      internalID: 7176871793221464935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_12
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 317
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13142676449805d00800000000000000
+      internalID: 959417647515189553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_13
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 273
+        width: 73
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2842acf75792d5f50800000000000000
+      internalID: 6871694191069111426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_14
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 215
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d91b60fa3ed5e80800000000000000
+      internalID: -8188138206618608280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_15
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 200
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96cc4175b618efbe0800000000000000
+      internalID: -1441572532689515415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_16
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 87
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfb15c3f5fff29cb0800000000000000
+      internalID: -4858539616157492227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_17
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 75
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0ac74ce87b7f3d0800000000000000
+      internalID: -3172865588649484126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: z2_2_lights_18
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 39
+        width: 208
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6687cdc01badf6270800000000000000
+      internalID: 8246049896698509414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      z2_2_lights_0: 6049675676603848153
+      z2_2_lights_1: 5617058893006410219
+      z2_2_lights_10: -7696393070016751659
+      z2_2_lights_11: 7176871793221464935
+      z2_2_lights_12: 959417647515189553
+      z2_2_lights_13: 6871694191069111426
+      z2_2_lights_14: -8188138206618608280
+      z2_2_lights_15: -1441572532689515415
+      z2_2_lights_16: -4858539616157492227
+      z2_2_lights_17: -3172865588649484126
+      z2_2_lights_18: 8246049896698509414
+      z2_2_lights_2: 4601133474011183166
+      z2_2_lights_3: 4513573878842472365
+      z2_2_lights_4: -7373248161141666870
+      z2_2_lights_5: -20661365856463827
+      z2_2_lights_6: -2699421387178577808
+      z2_2_lights_7: 4941062118900704436
+      z2_2_lights_8: 8145374727132331439
+      z2_2_lights_9: -7970002798456530594
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
