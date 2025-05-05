@@ -2161,7 +2161,7 @@ GameObject:
   - component: {fileID: 701171633}
   - component: {fileID: 701171632}
   m_Layer: 5
-  m_Name: Death Text
+  m_Name: DeathText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6239,11 +6239,11 @@ SceneRoots:
   - {fileID: 702703029}
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 656961052}
   - {fileID: 1566916078}
   - {fileID: 1920981824}
   - {fileID: 1984497200}
   - {fileID: 2020213430}
   - {fileID: 69797145}
+  - {fileID: 656961052}
   - {fileID: 1644587477}
   - {fileID: 1154980683}
