@@ -2,17 +2,17 @@
     "questions": [
         {
             "choices": [
-                "21",
-                "20",
-                "19"
+                "string function",
+                "regular function",
+                "main function"
             ],
             "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "9 + 10",
-            "answerInput": "19",
-            "filler1Input": "19",
-            "filler2Input": "20",
-            "filler3Input": "21"
+            "questionInput": "int main() is what?",
+            "answerInput": "main function",
+            "filler1Input": "main function",
+            "filler2Input": "string function",
+            "filler3Input": "regular function"
         },
         {
             "choices": [
