@@ -64,5 +64,8 @@ TagManager:
   - name: L6
     uniqueID: 2712550285
     locked: 0
+  - name: foreground
+    uniqueID: 1000256041
+    locked: 0
   m_RenderingLayers:
   - Default

@@ -14,7 +14,7 @@ namespace Player {
 		public Checkpoint current_checkpoint = null;
 		public static codaScript Instance { get; private set; }
 
-		private void Awake()
+		private void Start()
 		{
 			if (Instance != null && Instance != this)
 			{
@@ -25,7 +25,8 @@ namespace Player {
 			Instance = this;
 
 			_animator = GetComponent<Animator>();
-		}
+
+        }
 
 		void Update()
 		{
@@ -34,7 +35,35 @@ namespace Player {
 					RestartToCheckpoint(current_checkpoint);
 				}
 			}
-		}
+
+            if (hud == null)
+            {
+                hud = GameObject.Find("Canvas").GetComponent<Canvas>();
+            }
+
+            if (death_text == null)
+            {
+				//death_text = GameObject.Find("Canvas/Death Text");
+				Transform canvasTransform = GameObject.Find("Canvas").transform;
+
+				if (canvasTransform != null)
+				{
+					Transform deathTextTransform = canvasTransform.Find("DeathText");
+					if (deathTextTransform != null)
+					{
+						death_text = deathTextTransform.gameObject;
+					}
+					else
+					{
+						Debug.Log("deathtext transform not found");
+					}
+				}
+                else
+                {
+                    Debug.Log("canvastext transform not found");
+                }
+            }
+        }
 
 		public void RestartToCheckpoint(Checkpoint checkpoint) {
 			if (checkpoint != null) {

@@ -11,7 +11,7 @@ public class SceneLoader : MonoBehaviour
     }
 
     // Update is called once per frame - k
-    void Update()
+    void LateUpdate()
     {
         if (Input.anyKeyDown && !Input.GetMouseButton(0) && !Input.GetKeyDown(KeyCode.E) && !isEditorOpen) {
             SceneLoad();
