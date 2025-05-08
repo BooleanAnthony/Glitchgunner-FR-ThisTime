@@ -548,6 +548,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 5
   justhealed: 0
+  baseHealth: 3
 --- !u!4 &69797145
 Transform:
   m_ObjectHideFlags: 0
