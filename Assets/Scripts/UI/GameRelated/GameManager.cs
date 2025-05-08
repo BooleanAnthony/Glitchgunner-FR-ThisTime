@@ -45,5 +45,6 @@ public class GameManager : MonoBehaviour
     public void HealPlayer(float healing)
     {
         playerHealth += healing;
+        justhealed = true;
     }
 }

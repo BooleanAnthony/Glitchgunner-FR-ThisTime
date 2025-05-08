@@ -9,7 +9,6 @@ public class HealthCollectible : MonoBehaviour
         if (collision.CompareTag("PlayerChar"))
         {
             GameManager.instance.HealPlayer(healthValue);
-            GameManager.instance.justhealed = true;
             gameObject.SetActive(false);
         }
     }
