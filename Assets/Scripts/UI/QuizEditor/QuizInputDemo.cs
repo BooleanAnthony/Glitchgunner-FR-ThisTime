@@ -5,15 +5,15 @@ using Unity.VisualScripting;
 
 public class QuizInputDemo : MonoBehaviour
 {   
-    [SerializeField] private TMP_InputField question, answer, filler1, filler2, filler3; // Easily assign input field objects in Unity Inspector
+    [SerializeField] private TMP_InputField question, answer, filler1, filler2; // Easily assign input field objects in Unity Inspector
     [SerializeField] private string[] fileNames;
     [SerializeField] private QuestionManager questionManager;
     [SerializeField] private StageManager stageManager;
 
     [Header("Recorded Input Values")]
-    [SerializeField] private string questionReflect, answerReflect, filler1Reflect, filler2Reflect, filler3Reflect; // For debugging input values
+    [SerializeField] private string questionReflect, answerReflect, filler1Reflect, filler2Reflect; // For debugging input values
 
-    public QuizItem quizItem1 = new();
+    public QuizItem quizItem1 = new(); //Is this needed here? - Kaizen
 
     public void ReflectDemo() // Debugging method to reflect user input
     {
@@ -21,7 +21,6 @@ public class QuizInputDemo : MonoBehaviour
         answerReflect = answer.text;
         filler1Reflect = filler1.text;
         filler2Reflect = filler2.text;
-        filler2Reflect = filler3.text;
     }
 
     public void writeJSON() 
@@ -110,16 +109,15 @@ public class QuizInputDemo : MonoBehaviour
         newQuizItem.questionInput = question.text;
         newQuizItem.answerInput = answer.text;
         newQuizItem.filler1Input = filler1.text;
-        newQuizItem.filler2Input = filler2.text;
         if (stageManager.GetStageNumber() == 1)
         {
-            newQuizItem.filler3Input = filler3.text;
+            newQuizItem.filler2Input = filler2.text;
         } 
         else if (stageManager.GetStageNumber() == 2)
         {
-            newQuizItem.filler3Input = "0";
+            newQuizItem.filler2Input = "0";
         }
-        newQuizItem.choices = new string[] { newQuizItem.filler1Input, newQuizItem.filler2Input, newQuizItem.filler3Input };
+        newQuizItem.choices = new string[] {newQuizItem.filler1Input, newQuizItem.filler2Input, newQuizItem.answerInput};
         newQuizItem.correct_answer = System.Array.IndexOf(newQuizItem.choices, newQuizItem.answerInput);
     }
 }

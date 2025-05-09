@@ -2,45 +2,42 @@
     "questions": [
         {
             "choices": [
-                "string function",
-                "regular function",
-                "main function"
+                "3",
+                "4",
+                "2"
             ],
             "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "int main() is what?",
-            "answerInput": "main function",
-            "filler1Input": "main function",
-            "filler2Input": "string function",
-            "filler3Input": "regular function"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         },
         {
             "choices": [
-                "16",
-                "25",
-                "36"
+                "3",
+                "4",
+                "2"
             ],
-            "correct_answer": 1,
+            "correct_answer": 2,
             "questionNumber": 2,
-            "questionInput": "5 * 5",
-            "answerInput": "25",
-            "filler1Input": "16",
-            "filler2Input": "25",
-            "filler3Input": "36"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         },
         {
             "choices": [
-                "30",
-                "25",
-                "20"
+                "3",
+                "4",
+                "2"
             ],
             "correct_answer": 2,
             "questionNumber": 3,
-            "questionInput": "500 / 25",
-            "answerInput": "20",
-            "filler1Input": "30",
-            "filler2Input": "25",
-            "filler3Input": "20"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         }
     ]
 }
