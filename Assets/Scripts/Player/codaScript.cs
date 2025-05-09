@@ -97,6 +97,10 @@ namespace Player {
 			print("Player died!");
 			
 			StartCoroutine(DeathSequence(1f));
+			if (ScoreManager.instance != null)
+			{
+				ScoreManager.instance.AddToScore(-75);
+			}
 		}
 
 		public void PlayerOutOfBounds() //separated from KillPlayer to avoid playing animations when the player cannot be seen in the first place (if someone can optimize this, please do)
@@ -106,6 +110,10 @@ namespace Player {
 			death_text.SetActive(true);
 			print("Player died!"); 
 			sprite.enabled = false;
+			if (ScoreManager.instance != null)
+			{
+				ScoreManager.instance.AddToScore(-75);
+			}
 		}
 
 		private IEnumerator DeathSequence(float value) {

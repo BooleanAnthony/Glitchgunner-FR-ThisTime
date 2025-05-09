@@ -109,7 +109,15 @@ namespace EnemyMob
                 Debug.Log("Triggered Player");
                 if (collision.gameObject.TryGetComponent<Health>(out var drone))
                 {
-                    drone.TakeDamage(damage);
+                    if (isDashing)
+                    {
+                        drone.TakeDamage(damage);
+                    }
+                    else 
+                    {
+                        drone.TakeDamage(damage - 1);
+                    }
+                    
                 }
                 else
                 {

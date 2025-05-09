@@ -78,6 +78,11 @@ public class Health : MonoBehaviour
         {
             print("Player is invincible, can't take damage yet.");
         }
+
+        if (ScoreManager.instance != null)
+        {
+            ScoreManager.instance.AddToScore(Mathf.RoundToInt(_damage) * -10);
+        }
     }
 
     public void FullHeal()
@@ -111,6 +116,11 @@ public class Health : MonoBehaviour
         {
             GameManager.instance.playerHealth = CurrentHealth;
             GameManager.instance.justhealed = true;
+        }
+
+        if (ScoreManager.instance != null)
+        {
+            ScoreManager.instance.AddToScore(Mathf.RoundToInt(_healed) * 10);
         }
     }
 }

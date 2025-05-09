@@ -30,16 +30,16 @@
         },
         {
             "choices": [
-                "False",
-                "True",
+                "YES",
+                "NO",
                 "0"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 3,
-            "questionInput": "600 / 5 * 3 = 360",
-            "answerInput": "True",
-            "filler1Input": "True",
-            "filler2Input": "False",
+            "questionInput": "BSCS is in CECS",
+            "answerInput": "YES",
+            "filler1Input": "YES",
+            "filler2Input": "NO",
             "filler3Input": "0"
         }
     ]

@@ -10,6 +10,11 @@ public class HealthCollectible : MonoBehaviour
         {
             GameManager.instance.HealPlayer(healthValue);
             gameObject.SetActive(false);
+
+            if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.AddToScore(Mathf.RoundToInt(healthValue) * 5);
+            }
         }
     }
 }

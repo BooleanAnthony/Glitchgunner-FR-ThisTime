@@ -82,6 +82,7 @@ namespace BossFights {
 		}
 
 		IEnumerator ProcessAnswer(int answer) {
+			int value = 25;
 			WeakpointChoice weakpoint = weakpoints[answer].GetComponent<WeakpointChoice>();
 			yield return new WaitForSeconds(1);
 
@@ -94,6 +95,12 @@ namespace BossFights {
 			else {
 				question_status.SetText($"Wrong!\nAnswer: Weakpoint {correct_answer + 1}");
 				weakpoint.StartCoroutine("ShotgunFire");
+				value *= -1;
+			}
+
+			if (ScoreManager.instance != null)
+			{
+				ScoreManager.instance.AddToScore(value);
 			}
 
 			yield return new WaitForSeconds(3);
