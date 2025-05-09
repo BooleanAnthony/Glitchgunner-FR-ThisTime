@@ -120,10 +120,6 @@ public class QuizInputDemo : MonoBehaviour
             newQuizItem.filler3Input = "0";
         }
         newQuizItem.choices = new string[] { newQuizItem.filler1Input, newQuizItem.filler2Input, newQuizItem.filler3Input };
-        if (newQuizItem.filler3Input != "0")
-        {
-            newQuizItem.ShuffleChoices(); //Because of Kaizen
-        }
         newQuizItem.correct_answer = System.Array.IndexOf(newQuizItem.choices, newQuizItem.answerInput);
     }
 }
