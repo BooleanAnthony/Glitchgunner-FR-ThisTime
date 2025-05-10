@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Stage 2.unity
     guid: a0d412f844c3b9a47aa40f886ddc04ac
   - enabled: 1
-    path: Assets/Scenes/Editor Mode.unity
+    path: Assets/Scenes/HornetEditor.unity
     guid: 1846fe49ca6b1ac4fb81359442858ede
+  - enabled: 1
+    path: Assets/Scenes/CentipedeEditor.unity
+    guid: 593828bdda27c734299d713133c01965
+  - enabled: 1
+    path: Assets/Scenes/ChoiceSelect.unity
+    guid: af79fd72b1f890743b08fab9cde8c02b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -2,17 +2,16 @@
     "questions": [
         {
             "choices": [
-                "True",
                 "False",
+                "True",
                 "0"
             ],
-            "correct_answer": 0,
+            "correct_answer": 1,
             "questionNumber": 1,
-            "questionInput": "100 + 10 = 110",
+            "questionInput": "15 * 2 = 45",
             "answerInput": "True",
-            "filler1Input": "True",
-            "filler2Input": "False",
-            "filler3Input": "0"
+            "filler1Input": "False",
+            "filler2Input": "0"
         },
         {
             "choices": [
@@ -25,8 +24,7 @@
             "questionInput": "Square Root of 49 is 8",
             "answerInput": "False",
             "filler1Input": "True",
-            "filler2Input": "False",
-            "filler3Input": "0"
+            "filler2Input": "False"
         },
         {
             "choices": [
@@ -39,8 +37,7 @@
             "questionInput": "BSCS is in CECS",
             "answerInput": "YES",
             "filler1Input": "YES",
-            "filler2Input": "NO",
-            "filler3Input": "0"
+            "filler2Input": "NO"
         }
     ]
 }

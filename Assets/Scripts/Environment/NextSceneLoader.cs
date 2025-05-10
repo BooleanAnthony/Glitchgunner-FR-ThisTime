@@ -5,7 +5,7 @@ using System.Collections;
 public class NextSceneLoader : MonoBehaviour
 {
     [SerializeField] string nextScene;
-    private void SceneLoad(){
+    public void SceneLoad(){
         SceneManager.LoadScene(nextScene); //loads the game scene
     }
 
