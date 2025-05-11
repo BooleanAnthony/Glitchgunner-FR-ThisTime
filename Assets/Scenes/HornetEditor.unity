@@ -2015,7 +2015,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730020000}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4cf51d85c5514ba468472631c82eee6f, type: 3}
   m_Name: 
@@ -3957,6 +3957,18 @@ MonoBehaviour:
       - m_Target: {fileID: 730020004}
         m_TargetAssemblyTypeName: FieldManager, Assembly-CSharp
         m_MethodName: ClearAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 730020001}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: RefreshAllInputFields
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
