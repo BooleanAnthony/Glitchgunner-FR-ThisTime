@@ -2,16 +2,16 @@
     "questions": [
         {
             "choices": [
-                "25",
-                "3125",
-                "10"
+                "2",
+                "3",
+                "4"
             ],
             "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "5 + 5 = ?",
-            "answerInput": "10",
-            "filler1Input": "25",
-            "filler2Input": "3125"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         },
         {
             "choices": [
