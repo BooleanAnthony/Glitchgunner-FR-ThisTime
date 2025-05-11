@@ -2,42 +2,42 @@
     "questions": [
         {
             "choices": [
-                "4",
-                "5",
-                "6"
+                "2A",
+                "1A",
+                "3A"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 1,
-            "questionInput": "2+2",
-            "answerInput": "4",
-            "filler1Input": "5",
-            "filler2Input": "6"
+            "questionInput": "BSCS",
+            "answerInput": "2A",
+            "filler1Input": "1A",
+            "filler2Input": "3A"
         },
         {
             "choices": [
-                "10",
-                "20",
-                "30"
+                "Hi!",
+                "Hi",
+                "Hi?"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 2,
-            "questionInput": "5+5",
-            "answerInput": "10",
-            "filler1Input": "20",
-            "filler2Input": "30"
+            "questionInput": "Hello",
+            "answerInput": "Hi!",
+            "filler1Input": "Hi",
+            "filler2Input": "Hi?"
         },
         {
             "choices": [
-                "3",
-                "4",
-                "2"
+                "Something",
+                "Everything",
+                "Anything"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 3,
-            "questionInput": "1+1",
-            "answerInput": "2",
-            "filler1Input": "3",
-            "filler2Input": "4"
+            "questionInput": "What is that?",
+            "answerInput": "Something",
+            "filler1Input": "Everything",
+            "filler2Input": "Anything"
         }
     ]
 }
