@@ -2,42 +2,42 @@
     "questions": [
         {
             "choices": [
-                "4",
-                "5",
-                "6"
+                "25",
+                "3125",
+                "10"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "2+2",
-            "answerInput": "4",
-            "filler1Input": "5",
-            "filler2Input": "6"
+            "questionInput": "5 + 5 = ?",
+            "answerInput": "10",
+            "filler1Input": "25",
+            "filler2Input": "3125"
         },
         {
             "choices": [
-                "7",
-                "90",
-                "100"
+                "3",
+                "4",
+                "2"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 2,
-            "questionInput": "3+4",
-            "answerInput": "7",
-            "filler1Input": "90",
-            "filler2Input": "100"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         },
         {
             "choices": [
-                "Something",
-                "Everything",
-                "Anything"
+                "3",
+                "4",
+                "2"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 3,
-            "questionInput": "What is that?",
-            "answerInput": "Something",
-            "filler1Input": "Everything",
-            "filler2Input": "Anything"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         }
     ]
 }

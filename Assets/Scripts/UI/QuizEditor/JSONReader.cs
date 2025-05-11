@@ -4,19 +4,12 @@ using UnityEngine;
 public class JSONReader : MonoBehaviour
 {
     [SerializeField] private TextAsset jsonData;
-    private QuizList collection;
     public QuizItem[] questions;
-    
     
     void Start()
     {
-        RefreshJson();
-    }
-
-    public void RefreshJson()
-    {
         // Deserialize JSON into a QuizList object.
-        collection = JsonUtility.FromJson<QuizList>(jsonData.text);
+        QuizList collection = JsonUtility.FromJson<QuizList>(jsonData.text);
 
         // Extract the quiz items.
         questions = collection.questions;
@@ -32,7 +25,7 @@ public class JSONReader : MonoBehaviour
                 quiz.choices = new string[] { quiz.answerInput, quiz.filler1Input, quiz.filler2Input };
                 quiz.correct_answer = Array.IndexOf(quiz.choices, quiz.answerInput);
             }
-
+            
             // Output to Unity's Console for verification.
             Debug.Log("Question Number: " + quiz.questionNumber);
             Debug.Log("Question: " + quiz.questionInput);
