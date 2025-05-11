@@ -1987,12 +1987,6 @@ MonoBehaviour:
   questionNumber: 1
   maxQuestions: 3
   currentQuestion: {fileID: 844200304}
-  question: {fileID: 551920333}
-  answer: {fileID: 44281931}
-  filler1: {fileID: 1240642774}
-  filler2: {fileID: 2044578850}
-  jsonReader: {fileID: 1798726531}
-  current_question: 0
 --- !u!4 &730020002
 Transform:
   m_ObjectHideFlags: 0
@@ -5006,7 +5000,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
+  m_TextWrappingMode: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -5348,52 +5342,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1798726530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1798726532}
-  - component: {fileID: 1798726531}
-  m_Layer: 0
-  m_Name: Reader
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1798726531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798726530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ed47e5aa5dcc184ebd1d426e0393838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jsonData: {fileID: 4900000, guid: ff8f8f38b8ea21141bb4e413bf25f2b1, type: 3}
-  questions: []
---- !u!4 &1798726532
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798726530}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 534.3156, y: 378.4983, z: -8.06515}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1887549929
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,4 +5950,3 @@ SceneRoots:
   - {fileID: 1887549932}
   - {fileID: 288933510}
   - {fileID: 730020002}
-  - {fileID: 1798726532}

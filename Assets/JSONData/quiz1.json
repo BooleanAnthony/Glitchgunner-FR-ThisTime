@@ -6,7 +6,7 @@
                 "1A",
                 "3A"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 1,
             "questionInput": "BSCS",
             "answerInput": "2A",
@@ -19,7 +19,7 @@
                 "20",
                 "30"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 2,
             "questionInput": "5+5",
             "answerInput": "10",
@@ -28,16 +28,16 @@
         },
         {
             "choices": [
-                "Something",
-                "Everything",
-                "Anything"
+                "3",
+                "4",
+                "2"
             ],
-            "correct_answer": 0,
+            "correct_answer": 2,
             "questionNumber": 3,
-            "questionInput": "What is that?",
-            "answerInput": "Something",
-            "filler1Input": "Everything",
-            "filler2Input": "Anything"
+            "questionInput": "1+1",
+            "answerInput": "2",
+            "filler1Input": "3",
+            "filler2Input": "4"
         }
     ]
 }

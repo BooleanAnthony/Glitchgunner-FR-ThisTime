@@ -10,7 +10,6 @@ public class JSONReader : MonoBehaviour
     private QuizList collection;
     public QuizItem[] questions;
     
-    
     void Start()
     {
         if (bossType == BossType.Hornet)
@@ -44,7 +43,7 @@ public class JSONReader : MonoBehaviour
                 quiz.choices = new string[] { quiz.answerInput, quiz.filler1Input, quiz.filler2Input };
                 quiz.correct_answer = Array.IndexOf(quiz.choices, quiz.answerInput);
             }
-
+            
             // Output to Unity's Console for verification.
             Debug.Log("Question Number: " + quiz.questionNumber);
             Debug.Log("Question: " + quiz.questionInput);
