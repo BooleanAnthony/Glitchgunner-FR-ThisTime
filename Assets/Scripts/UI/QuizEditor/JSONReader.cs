@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class JSONReader : MonoBehaviour
 {
-    [SerializeField] private TextAsset jsonData;
+    private string jsonQuizPath;
     private QuizList collection;
     public QuizItem[] questions;
     
     
     void Start()
     {
+        jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz1.json");
         RefreshJson();
     }
 
     public void RefreshJson()
     {
         // Deserialize JSON into a QuizList object.
-        collection = JsonUtility.FromJson<QuizList>(jsonData.text);
+        string jsonData = File.ReadAllText(jsonQuizPath);
+        collection = JsonUtility.FromJson<QuizList>(jsonData);
 
         // Extract the quiz items.
         questions = collection.questions;
