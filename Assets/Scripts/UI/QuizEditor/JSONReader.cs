@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class JSONReader : MonoBehaviour
 {
+    enum BossType {Hornet, Centipede}
+    [SerializeField] private BossType bossType;
     private string jsonQuizPath;
     private QuizList collection;
     public QuizItem[] questions;
     
+    
     void Start()
     {
-        jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz1.json");
+        if (bossType == BossType.Hornet)
+        {
+            jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz1.json");
+        } else if (bossType == BossType.Centipede)
+        {
+            jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz2.json");
+        }
+        
         RefreshJson();
     }
 
@@ -34,7 +44,7 @@ public class JSONReader : MonoBehaviour
                 quiz.choices = new string[] { quiz.answerInput, quiz.filler1Input, quiz.filler2Input };
                 quiz.correct_answer = Array.IndexOf(quiz.choices, quiz.answerInput);
             }
-            
+
             // Output to Unity's Console for verification.
             Debug.Log("Question Number: " + quiz.questionNumber);
             Debug.Log("Question: " + quiz.questionInput);
