@@ -2,29 +2,29 @@
     "questions": [
         {
             "choices": [
-                "2",
-                "3",
-                "4"
+                "4",
+                "5",
+                "6"
             ],
             "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "1+1",
-            "answerInput": "2",
-            "filler1Input": "3",
-            "filler2Input": "4"
+            "questionInput": "2+2",
+            "answerInput": "4",
+            "filler1Input": "5",
+            "filler2Input": "6"
         },
         {
             "choices": [
-                "3",
-                "4",
-                "2"
+                "10",
+                "20",
+                "30"
             ],
             "correct_answer": 2,
             "questionNumber": 2,
-            "questionInput": "1+1",
-            "answerInput": "2",
-            "filler1Input": "3",
-            "filler2Input": "4"
+            "questionInput": "5+5",
+            "answerInput": "10",
+            "filler1Input": "20",
+            "filler2Input": "30"
         },
         {
             "choices": [
