@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JSONReader : MonoBehaviour
 {
+    enum BossType {Hornet, Centipede}
+    [SerializeField] private BossType bossType;
     private string jsonQuizPath;
     private QuizList collection;
     public QuizItem[] questions;
@@ -11,7 +13,14 @@ public class JSONReader : MonoBehaviour
     
     void Start()
     {
-        jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz1.json");
+        if (bossType == BossType.Hornet)
+        {
+            jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz1.json");
+        } else if (bossType == BossType.Centipede)
+        {
+            jsonQuizPath = Path.Combine(Application.dataPath, "JSONData/quiz2.json");
+        }
+        
         RefreshJson();
     }
 

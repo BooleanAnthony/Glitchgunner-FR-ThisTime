@@ -38,6 +38,11 @@ public class ScoreManager : MonoBehaviour
     public void AddToScore(int value)
     {
         score += value;
+
+        if (score < 0)
+        {
+            score = 0;
+        }
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
