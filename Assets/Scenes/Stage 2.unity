@@ -1333,7 +1333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ed47e5aa5dcc184ebd1d426e0393838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossType: 1
+  jsonData: {fileID: 4900000, guid: 6dbc5ee713bc3a04586163f605c862ee, type: 3}
   questions: []
 --- !u!4 &573856538
 Transform:

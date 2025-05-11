@@ -2,16 +2,16 @@
     "questions": [
         {
             "choices": [
-                "2A",
-                "1A",
-                "3A"
+                "4",
+                "5",
+                "6"
             ],
             "correct_answer": 2,
             "questionNumber": 1,
-            "questionInput": "BSCS",
-            "answerInput": "2A",
-            "filler1Input": "1A",
-            "filler2Input": "3A"
+            "questionInput": "2+2",
+            "answerInput": "4",
+            "filler1Input": "5",
+            "filler2Input": "6"
         },
         {
             "choices": [

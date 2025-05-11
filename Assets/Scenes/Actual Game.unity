@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1617233536}
-  baseScore: 0
+  baseScore: 1000
   displayScore: 0
 --- !u!1 &87266837
 GameObject:
@@ -6225,7 +6225,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runningSpeed: 10
   runningAcceleration: 6
-  secondPerPoint: 2
   player_script: {fileID: 2020213436}
 --- !u!114 &2020213436
 MonoBehaviour:
@@ -6504,13 +6503,13 @@ SceneRoots:
   m_Roots:
   - {fileID: 1025733211}
   - {fileID: 87266840}
+  - {fileID: 332553189}
   - {fileID: 702703029}
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 1566916078}
   - {fileID: 1920981824}
   - {fileID: 1984497200}
-  - {fileID: 332553189}
   - {fileID: 2020213430}
   - {fileID: 69797145}
   - {fileID: 656961052}
