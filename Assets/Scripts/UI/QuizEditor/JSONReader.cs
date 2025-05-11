@@ -37,7 +37,11 @@ public class JSONReader : MonoBehaviour
         // initialize 'choices' and calculate 'correct_answer'.
         foreach (QuizItem quiz in questions)
         {
-            quiz.ShuffleChoices(); //Because of Kaizen x2
+            if (quiz.filler2Input != "0")
+            {
+                quiz.ShuffleChoices(); //Because of Kaizen x2
+            }
+            
             if (quiz.choices == null || quiz.choices.Length == 0)
             {
                 // Here we assume that answerInput, filler1Input, and filler2Input form the choices.
