@@ -20,7 +20,7 @@ public class QuestionManager : MonoBehaviour
 
     public void NextQuestion()
     {
-        if (current_question < 3)
+        if (current_question < 2)
         {
             current_question++;
         }
