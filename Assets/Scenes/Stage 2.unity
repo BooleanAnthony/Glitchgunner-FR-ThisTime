@@ -206,8 +206,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2433,7 +2433,7 @@ MonoBehaviour:
 
     Answer: C'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
   m_sharedMaterial: {fileID: -267997401350402584, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -130.27832, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1600841508
@@ -2569,8 +2569,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Question: \nInsert Question here!'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
-  m_sharedMaterial: {fileID: -267997401350402584, guid: d1fdc20bc0195a9409ce786d2c427c7c, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
+  m_sharedMaterial: {fileID: -1939976370473018258, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2900,8 +2900,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 4
-  m_fontSizeBase: 4
+  m_fontSize: 5
+  m_fontSizeBase: 5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -37,7 +37,7 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         additionalScoreTextBox.SetActive(textActive);
-        scoreText.text = "Score: " + score;
+        scoreText.text = "SCORE: " + score; //DO NOT USE LOWERCASE UNLESS YOU CHANGED THE FONT ASSET
 
         if (textActive)
         {
