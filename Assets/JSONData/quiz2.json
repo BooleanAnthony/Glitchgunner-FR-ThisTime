@@ -6,11 +6,11 @@
                 "True",
                 "0"
             ],
-            "correct_answer": 1,
+            "correct_answer": 0,
             "questionNumber": 1,
             "questionInput": "15 * 2 = 45",
-            "answerInput": "True",
-            "filler1Input": "False",
+            "answerInput": "False",
+            "filler1Input": "True",
             "filler2Input": "0"
         },
         {
@@ -24,20 +24,20 @@
             "questionInput": "Square Root of 49 is 8",
             "answerInput": "False",
             "filler1Input": "True",
-            "filler2Input": "False"
+            "filler2Input": "0"
         },
         {
             "choices": [
-                "YES",
                 "NO",
+                "YES",
                 "0"
             ],
             "correct_answer": 0,
             "questionNumber": 3,
-            "questionInput": "BSCS is in CECS",
-            "answerInput": "YES",
+            "questionInput": "We have PE tomorrow",
+            "answerInput": "NO",
             "filler1Input": "YES",
-            "filler2Input": "NO"
+            "filler2Input": "0"
         }
     ]
 }

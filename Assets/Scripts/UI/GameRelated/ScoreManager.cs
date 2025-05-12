@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] GameObject additionalScoreTextBox;
     [SerializeField] private int baseScore;
+    [SerializeField] private float timeLimit;
     public int displayScore;
     private int score;
     public static ScoreManager instance;
+    private float timer = 0;
+    private bool textActive = false;
 
     void Awake()
     {
@@ -32,13 +36,36 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        additionalScoreTextBox.SetActive(textActive);
         scoreText.text = "Score: " + score;
+
+        if (textActive)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeLimit)
+            {
+                textActive = false;
+                timer = 0f;
+            }
+        }
     }
 
     public void AddToScore(int value)
     {
         score += value;
+        textActive = true;
+        TextMeshProUGUI additionalScoreText = additionalScoreTextBox.GetComponent<TextMeshProUGUI>();
 
+        if (value > 0)
+        {
+            additionalScoreText.text = "+" + value;
+        }
+        else 
+        {
+            additionalScoreText.text = value.ToString();
+        }
+        
         if (score < 0)
         {
             score = 0;
