@@ -5,23 +5,26 @@ using Unity.VisualScripting;
 
 public class QuizInputDemo : MonoBehaviour
 {   
-    [SerializeField] private TMP_InputField question, answer, filler1, filler2, filler3; // Easily assign input field objects in Unity Inspector
-    [SerializeField] private string[] fileNames;
+    [SerializeField] private TMP_InputField question, answer, filler1, filler2; // Easily assign input field objects in Unity Inspector
+    [SerializeField] private string fileName;
     [SerializeField] private QuestionManager questionManager;
-    [SerializeField] private StageManager stageManager;
+    //[SerializeField] private StageManager stageManager;
 
     [Header("Recorded Input Values")]
-    [SerializeField] private string questionReflect, answerReflect, filler1Reflect, filler2Reflect, filler3Reflect; // For debugging input values
+    [SerializeField] private string questionReflect, answerReflect, filler1Reflect, filler2Reflect; // For debugging input values
 
-    public QuizItem quizItem1 = new();
+    public QuizItem quizItem1 = new(); //Is this needed here? - Kaizen
 
     public void ReflectDemo() // Debugging method to reflect user input
     {
         questionReflect = question.text;
         answerReflect = answer.text;
         filler1Reflect = filler1.text;
-        filler2Reflect = filler2.text;
-        filler2Reflect = filler3.text;
+
+        if (filler2 != null)
+        {
+            filler2Reflect = filler2.text;
+        }
     }
 
     public void writeJSON() 
@@ -46,7 +49,7 @@ public class QuizInputDemo : MonoBehaviour
         }
 
         // Define file path
-        string filePath = Application.dataPath + "/JSONData/" + fileNames[stageManager.GetStageNumber() - 1] + ".json";
+        string filePath = Application.dataPath + "/JSONData/" + fileName + ".json";
 
         // Check if JSON file exists
         QuizList quizCollection;
@@ -110,20 +113,15 @@ public class QuizInputDemo : MonoBehaviour
         newQuizItem.questionInput = question.text;
         newQuizItem.answerInput = answer.text;
         newQuizItem.filler1Input = filler1.text;
-        newQuizItem.filler2Input = filler2.text;
-        if (stageManager.GetStageNumber() == 1)
+        if (filler2 != null)
         {
-            newQuizItem.filler3Input = filler3.text;
+            newQuizItem.filler2Input = filler2.text;
         } 
-        else if (stageManager.GetStageNumber() == 2)
+        else 
         {
-            newQuizItem.filler3Input = "0";
+            newQuizItem.filler2Input = "0";
         }
-        newQuizItem.choices = new string[] { newQuizItem.filler1Input, newQuizItem.filler2Input, newQuizItem.filler3Input };
-        if (newQuizItem.filler3Input != "0")
-        {
-            newQuizItem.ShuffleChoices(); //Because of Kaizen
-        }
+        newQuizItem.choices = new string[] {newQuizItem.answerInput, newQuizItem.filler1Input, newQuizItem.filler2Input};
         newQuizItem.correct_answer = System.Array.IndexOf(newQuizItem.choices, newQuizItem.answerInput);
     }
 }

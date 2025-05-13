@@ -2,45 +2,42 @@
     "questions": [
         {
             "choices": [
-                "string function",
-                "regular function",
-                "main function"
+                "2A",
+                "1A",
+                "3A"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 1,
-            "questionInput": "int main() is what?",
-            "answerInput": "main function",
-            "filler1Input": "main function",
-            "filler2Input": "string function",
-            "filler3Input": "regular function"
+            "questionInput": "BSCS",
+            "answerInput": "2A",
+            "filler1Input": "1A",
+            "filler2Input": "3A"
         },
         {
             "choices": [
-                "16",
-                "25",
-                "36"
+                "Hi!",
+                "Hi",
+                "Hi?"
             ],
-            "correct_answer": 1,
+            "correct_answer": 0,
             "questionNumber": 2,
-            "questionInput": "5 * 5",
-            "answerInput": "25",
-            "filler1Input": "16",
-            "filler2Input": "25",
-            "filler3Input": "36"
+            "questionInput": "Hello",
+            "answerInput": "Hi!",
+            "filler1Input": "Hi",
+            "filler2Input": "Hi?"
         },
         {
             "choices": [
-                "30",
-                "25",
-                "20"
+                "Something",
+                "Everything",
+                "Anything"
             ],
-            "correct_answer": 2,
+            "correct_answer": 0,
             "questionNumber": 3,
-            "questionInput": "500 / 25",
-            "answerInput": "20",
-            "filler1Input": "30",
-            "filler2Input": "25",
-            "filler3Input": "20"
+            "questionInput": "What is that?",
+            "answerInput": "Something",
+            "filler1Input": "Everything",
+            "filler2Input": "Anything"
         }
     ]
 }

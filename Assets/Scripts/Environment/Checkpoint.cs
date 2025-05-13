@@ -13,6 +13,10 @@ public class Checkpoint : MonoBehaviour
 			player_script.SetCheckpoint(this);
 
 			GetComponent<SpriteRenderer>().color = new Color(0, 1, 0);
+			if (ScoreManager.instance != null)
+            {
+                ScoreManager.instance.AddToScore(15);
+            }
 		}
 	}
 }

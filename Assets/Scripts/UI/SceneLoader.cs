@@ -31,6 +31,6 @@ public class SceneLoader : MonoBehaviour
 
     private void EditorLoad() //Sceneloader but for Editor Mode - k
     {
-        SceneManager.LoadScene("Editor Mode"); //loads Editor Mode - k
+        SceneManager.LoadScene("ChoiceSelect"); //loads entrance to editor mode - m
     }
 }

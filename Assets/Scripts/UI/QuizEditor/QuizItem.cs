@@ -10,7 +10,6 @@ public class QuizItem
         public string answerInput;
         public string filler1Input;
         public string filler2Input;
-        public string filler3Input;
 
         public void ShuffleChoices()
         {

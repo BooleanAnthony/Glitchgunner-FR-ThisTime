@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public float playerHealth = 10f; // Default health
     public bool justhealed = false;
+    public float baseHealth;
 
     void Awake()
     {
@@ -39,5 +40,15 @@ public class GameManager : MonoBehaviour
     void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void HealPlayer(float healing)
+    {
+        playerHealth += healing;
+        justhealed = true;
+        if (ScoreManager.instance != null)
+        {
+            ScoreManager.instance.AddToScore(Mathf.RoundToInt(healing) * 10);
+        }
     }
 }

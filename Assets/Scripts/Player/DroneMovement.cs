@@ -76,6 +76,11 @@ namespace Player
             if (shootingScript != null) {
                 shootingScript.enabled = false;
             }
+
+            if (ScoreManager.instance != null)
+			{
+				ScoreManager.instance.AddToScore(-100);
+			}
         }
 
         public void RevivePlayer() {
