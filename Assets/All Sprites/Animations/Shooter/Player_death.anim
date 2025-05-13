@@ -59,19 +59,19 @@ AnimationClip:
       value: {fileID: 1160216493795409510, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
     - time: 0.5
       value: {fileID: 8897409446059562868, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 0.5833333
+    - time: 0.5
       value: {fileID: 22231737771934, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 0.6666667
+    - time: 0.5833333
       value: {fileID: -8468696215945103692, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 0.75
+    - time: 0.6666667
       value: {fileID: 4759079708828530550, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 0.8333333
+    - time: 0.75
       value: {fileID: 2387559801772780413, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 0.9166667
+    - time: 0.8333333
       value: {fileID: -5490381120134960930, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 1
+    - time: 0.9166667
       value: {fileID: 9212551730151135260, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
-    - time: 1.0833334
+    - time: 1
       value: {fileID: 1712120935572927024, guid: 4a1cd28205512124180a755b5b49359a, type: 3}
     attribute: m_Sprite
     path: DroneBody
@@ -142,12 +142,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.1666667
+    m_StopTime: 1.0833334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0

@@ -176,10 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Test 3
-
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1991,7 +1988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1013785329
 Transform:
   m_ObjectHideFlags: 0
@@ -2262,6 +2259,7 @@ MonoBehaviour:
   minBounds: {x: -7.5, y: -5}
   maxBounds: {x: 8, y: 5}
   dead: 0
+  movable: 1
 --- !u!50 &1363399899
 Rigidbody2D:
   serializedVersion: 5
@@ -2556,7 +2554,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.8, y: 9.599999}
+    oldSize: {x: 12.8, y: 9.6}
     newSize: {x: 2.82, y: 1.78}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -2884,7 +2882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Question: \nInsert Question here!'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
   m_sharedMaterial: {fileID: -1939976370473018258, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
@@ -3289,9 +3287,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Test 1
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

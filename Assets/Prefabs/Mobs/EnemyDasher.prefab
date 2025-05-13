@@ -51,8 +51,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alignSpeed: 3
   dashSpeed: 10
-  alignDuration: 5
-  health: 20
+  alignDuration: 3
+  health: 50
   damage: 2
   alignOffsetRange: 0.5
   yOffset: 0

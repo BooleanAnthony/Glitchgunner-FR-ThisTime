@@ -65,7 +65,7 @@ public class Health : MonoBehaviour
             {
                 if (playerScript != null && !playerScript.dead)
                 {
-                    playerScript.KillPlayer();
+                    playerScript.StartCoroutine("KillPlayer");
                     print("You died");
                     playerScript.dead = true;
                 }

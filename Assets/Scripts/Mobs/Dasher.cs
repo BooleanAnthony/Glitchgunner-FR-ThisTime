@@ -55,10 +55,6 @@ namespace EnemyMob
         private void Update()
         {
             timer += Time.deltaTime;
-            //if (deathTriggered)
-            //{
-            //    return;
-            //}
 
             if (!isDashing)
             {
@@ -96,7 +92,7 @@ namespace EnemyMob
                         Debug.Log("enemy died");
                         if (!deathTriggered)
                         {
-                            anim.SetTrigger("dead");
+                            anim.SetBool("dead", true);
                             collider.enabled = false;
                             deathTriggered = true;
                         }
