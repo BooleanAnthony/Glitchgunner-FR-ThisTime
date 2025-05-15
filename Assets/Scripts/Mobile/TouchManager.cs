@@ -10,7 +10,6 @@ public class TouchInputManager : MonoBehaviour
     public static bool TapDetected { get; private set; } = false;
     public static bool TapHeld { get; private set; } = false;
     public static bool TapStarted { get; private set; } = false;
-    [SerializeField] TextMeshProUGUI scoreText;
 
     [SerializeField] private float swipeThreshold = 50f;
 
@@ -22,8 +21,8 @@ public class TouchInputManager : MonoBehaviour
     {
         LastSwipe = SwipeDirection.None;
         TapDetected = false;
-        TapStarted = false;  // reset each frame
-        TapHeld = false;     // reset each frame
+        TapStarted = false;
+        TapHeld = false;
 
         float screenMiddle = Screen.width / 2f;
 
@@ -49,6 +48,8 @@ public class TouchInputManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _endTouchPosition = Input.mousePosition;
+
+            // Check if started on right side for tap detection
             if (_startTouchPosition.x >= screenMiddle)
             {
                 Vector2 delta = _endTouchPosition - _startTouchPosition;
@@ -58,12 +59,20 @@ public class TouchInputManager : MonoBehaviour
                     Debug.Log("[Touch] Tap DETECTED on RIGHT side.");
                 }
             }
+
+            // Check if started on left side for swipe detection
+            if (_startTouchPosition.x < screenMiddle)
+            {
+                DetectTouch();
+            }
+
             TapHeld = false;
         }
     #else
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
+
             if (touch.phase == TouchPhase.Began)
             {
                 _startTouchPosition = touch.position;
@@ -84,20 +93,26 @@ public class TouchInputManager : MonoBehaviour
             if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 _endTouchPosition = touch.position;
-                Vector2 delta = _endTouchPosition - _startTouchPosition;
 
-                if (_startTouchPosition.x >= screenMiddle && delta.magnitude < swipeThreshold)
+                if (_startTouchPosition.x >= screenMiddle)
                 {
-                    TapDetected = true;
-                    Debug.Log("[Touch] Tap DETECTED on RIGHT side.");
+                    Vector2 delta = _endTouchPosition - _startTouchPosition;
+                    if (delta.magnitude < swipeThreshold)
+                    {
+                        TapDetected = true;
+                        Debug.Log("[Touch] Tap DETECTED on RIGHT side.");
+                    }
                 }
+
+                if (_startTouchPosition.x < screenMiddle)
+                {
+                    DetectTouch();
+                }
+
                 TapHeld = false;
             }
         }
     #endif
-
-
-        scoreText.text = "Tap Detected: " + TapDetected + ", Tap Held: " + TapHeld + ", Tap Started: " + TapStarted;
     }
 
 

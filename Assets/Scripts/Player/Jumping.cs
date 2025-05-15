@@ -49,28 +49,20 @@ namespace Player
             _lastJumpPressTime += Time.deltaTime;
             _lastGroundTime += Time.deltaTime;
 
-            #if UNITY_EDITOR
-                if (Input.GetButtonDown("Jump"))
-                    _lastJumpPressTime = 0f;
-                if (!Input.GetButton("Jump") && _isJumping && _rigidbody.linearVelocityY > 0)
-                    _isJumpCutting = true;
-            #else
-            #endif
-                Debug.Log("Updating");
-                if (TouchInputManager.TapStarted)
-                {
-                    _lastJumpPressTime = 0f;
-                    Debug.Log("[Jump] Tap START detected: initiating jump.");
-                }
+            if (TouchInputManager.TapStarted)
+            {
+                _lastJumpPressTime = 0f;
+                Debug.Log("[Jump] Tap START detected: initiating jump.");
+            }
 
-                if (TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
-                    _isJumpCutting = false;
+            if (TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
+                _isJumpCutting = false;
 
-                if (!TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
-                {
-                    _isJumpCutting = true;
-                    Debug.Log("[Jump] Jump cut triggered (tap released).");
-                }
+            if (!TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
+            {
+                _isJumpCutting = true;
+                Debug.Log("[Jump] Jump cut triggered (tap released).");
+            }
 
             // Grounded check
             if (!_isJumping && Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer))

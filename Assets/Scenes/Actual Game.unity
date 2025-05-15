@@ -528,7 +528,6 @@ GameObject:
   - component: {fileID: 69797145}
   - component: {fileID: 69797144}
   - component: {fileID: 69797146}
-  - component: {fileID: 69797147}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -583,20 +582,6 @@ MonoBehaviour:
   baseScore: 0
   timeLimit: 1
   displayScore: 0
---- !u!114 &69797147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 69797143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66d5a2872187b2c48a6652086dcd12ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1210366456}
-  swipeThreshold: 50
 --- !u!1 &87266837
 GameObject:
   m_ObjectHideFlags: 0

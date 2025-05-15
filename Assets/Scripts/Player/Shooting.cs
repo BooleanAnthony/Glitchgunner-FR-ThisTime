@@ -21,7 +21,7 @@ namespace Player
 
         private void Update()
         {
-            if (Input.GetButtonDown("Fire1") && !_isFiring)
+            if (TouchInputManager.TapHeld && !_isFiring)
             {
                 StartCoroutine(FireBullet());
             }
