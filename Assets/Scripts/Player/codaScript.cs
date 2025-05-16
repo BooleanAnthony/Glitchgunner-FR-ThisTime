@@ -31,7 +31,7 @@ namespace Player {
 		void Update()
 		{
 			if (revivable) {
-				if (Input.GetKeyDown(KeyCode.Space)) {
+				if (TouchInputManager.TapDetected) {
 					RestartToCheckpoint(current_checkpoint);
 				}
 			}

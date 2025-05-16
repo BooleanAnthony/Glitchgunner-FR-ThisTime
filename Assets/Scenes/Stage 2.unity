@@ -1820,7 +1820,22 @@ MonoBehaviour:
   nextScene: Main Menu
   activator: {fileID: 679155663}
   playerHealth: {fileID: 1363399894}
-  jsonReader: {fileID: 573856537}
+  questions:
+  - question: The synonym of Axiom is Truth
+    choices:
+    - True
+    - False
+    correct_answer: 0
+  - question: The synonym of Abject is Lordly
+    choices:
+    - True
+    - False
+    correct_answer: 1
+  - question: The antonym of Authentic is Factitious
+    choices:
+    - True
+    - False
+    correct_answer: 1
 --- !u!4 &679155661
 Transform:
   m_ObjectHideFlags: 0
@@ -1895,7 +1910,7 @@ MonoBehaviour:
   minAttackPos: {x: -7, y: 4}
   maxAttackPos: {x: 0, y: -4}
   moveSpeed: 10
-  cooldown: 10
+  cooldown: 15
 --- !u!114 &679155665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,8 +2099,8 @@ Transform:
   m_GameObject: {fileID: 1203234297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2094305, y: -1.227798, z: 0.019102251}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: 4.5, y: -1.5, z: 0.019102251}
+  m_LocalScale: {x: 2, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1747904283}
@@ -2258,6 +2273,9 @@ MonoBehaviour:
   - {fileID: 171258523}
   minBounds: {x: -7.5, y: -5}
   maxBounds: {x: 8, y: 5}
+  swipeThreshold: 50
+  movementDuration: 0.5
+  movementMultiplier: 0.75
   dead: 0
   movable: 1
 --- !u!50 &1363399899
@@ -2580,7 +2598,7 @@ MonoBehaviour:
   firePoint: {fileID: 934242983}
   player: {fileID: 1363399893}
   range: 10
-  firingSpeed: 5
+  firingSpeed: 6
   difficultyManager: {fileID: 627654972}
   pelletCount: 7
   spreadAngle: 60

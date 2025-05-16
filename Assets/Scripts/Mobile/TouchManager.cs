@@ -1,5 +1,3 @@
-using System;
-using TMPro;
 using UnityEngine;
 
 public enum SwipeDirection { None, Up, Down, Left, Right }
@@ -11,7 +9,14 @@ public class TouchInputManager : MonoBehaviour
     public static bool TapHeld { get; private set; } = false;
     public static bool TapStarted { get; private set; } = false;
 
+    public static Vector2 SwipeStart { get; private set; }
+    public static Vector2 SwipeEnd { get; private set; }
+    public static Vector2 SwipeDelta => SwipeEnd - SwipeStart;
+    public static Vector2 LastSwipeDelta { get; private set; } = Vector2.zero;
+
     [SerializeField] private float swipeThreshold = 50f;
+    [SerializeField] private float swipeResetTime = 1.5f;  // time in seconds to reset swipe delta
+    private float _swipeDeltaTimer = 0f;
 
     private Vector2 _startTouchPosition;
     private Vector2 _endTouchPosition;
@@ -30,6 +35,9 @@ public class TouchInputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _startTouchPosition = Input.mousePosition;
+
+            if (_startTouchPosition.x < screenMiddle)
+                SwipeStart = _endTouchPosition;
             if (_startTouchPosition.x >= screenMiddle)
             {
                 TapStarted = true;
@@ -48,6 +56,9 @@ public class TouchInputManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             _endTouchPosition = Input.mousePosition;
+
+            if (_startTouchPosition.x < screenMiddle)
+                SwipeEnd = _endTouchPosition;
 
             // Check if started on right side for tap detection
             if (_startTouchPosition.x >= screenMiddle)
@@ -76,6 +87,10 @@ public class TouchInputManager : MonoBehaviour
             if (touch.phase == TouchPhase.Began)
             {
                 _startTouchPosition = touch.position;
+
+                if (_startTouchPosition.x < screenMiddle)
+                    SwipeStart = _startTouchPosition;
+
                 if (_startTouchPosition.x >= screenMiddle)
                 {
                     TapStarted = true;
@@ -93,6 +108,9 @@ public class TouchInputManager : MonoBehaviour
             if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
             {
                 _endTouchPosition = touch.position;
+
+                if (_startTouchPosition.x < screenMiddle)
+                    SwipeEnd = _startTouchPosition;
 
                 if (_startTouchPosition.x >= screenMiddle)
                 {
@@ -113,6 +131,19 @@ public class TouchInputManager : MonoBehaviour
             }
         }
     #endif
+    }
+
+    private void FixedUpdate()
+    {
+        if (_swipeDeltaTimer > 0f)
+        {
+            _swipeDeltaTimer -= Time.fixedDeltaTime;
+            if (_swipeDeltaTimer <= 0f)
+            {
+                LastSwipeDelta = Vector2.zero;
+                LastSwipe = SwipeDirection.None;
+            }
+        }
     }
 
 
@@ -144,6 +175,8 @@ public class TouchInputManager : MonoBehaviour
             {
                 LastSwipe = delta.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
             }
+
+            LastSwipeDelta = delta;
             Debug.Log($"[Touch] SWIPE detected on LEFT side: {LastSwipe}");
         }
     }

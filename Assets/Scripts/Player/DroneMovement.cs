@@ -12,13 +12,18 @@ namespace Player
         [SerializeField] private SpriteRenderer[] allSprites;
         [SerializeField] private Vector2 minBounds; // bottom-left world position
         [SerializeField] private Vector2 maxBounds; // top-right world position
+        [SerializeField] private float swipeThreshold = 50f;  // Min swipe magnitude to register movement
+        [SerializeField] private float movementDuration = 0.3f; // How long to move after swipe (seconds)
+        [SerializeField] private float movementMultiplier = 0.75f; // How hard to move after swipe (seconds)
 
-        private Vector2 _movementInput;
+        private Vector2 _movementInput = Vector2.zero;
+        private float _movementTimer = 0f;
         
         private Rigidbody2D _rigidbody;
         private Animator _animator;
         private Shooting shootingScript;
         private Health healthScript;
+        private BoxCollider2D _collider;
         public bool dead = false;
         public bool movable = true;
 
@@ -28,20 +33,37 @@ namespace Player
             shootingScript = GetComponent<Shooting>();
             healthScript = GetComponent<Health>();
             _animator = GetComponent<Animator>();
+            _collider = GetComponent<BoxCollider2D>();
         }
 
         private void Update()
         {
             if (!dead && movable)
             {
-                _movementInput.x = Input.GetAxisRaw("Horizontal");
-                _movementInput.y = Input.GetAxisRaw("Vertical");
+                // Default to zero each frame
+                _movementInput = Vector2.zero;
+                Vector2 swipe = TouchInputManager.LastSwipeDelta;
 
+                if (swipe.magnitude > swipeThreshold)
+                {
+                    Vector2 direction;
+
+                    // Clamp movement to 4 directions based on larger delta axis
+                    if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
+                        direction = new Vector2(Mathf.Sign(swipe.x), 0);
+                    else
+                        direction = new Vector2(0, Mathf.Sign(swipe.y));
+
+                    // Apply multiplier to get actual movement input
+                    _movementInput = direction * movementMultiplier;
+                }
+                swipe = Vector2.zero;
+            //#endif
                 bool isMoving = _movementInput.sqrMagnitude > 0.01f;
                 _animator.SetBool("isMoving", isMoving);
             } else 
             {
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (TouchInputManager.TapDetected)
                 {
                     RevivePlayer();
                 }
@@ -76,6 +98,7 @@ namespace Player
             _animator.SetBool("isDead", true);
             yield return new WaitForSeconds(1f);
             dead = true;
+            _collider.enabled = false;
             SetAllSpritesVisible(false);
 
             if (shootingScript != null) {
@@ -94,8 +117,10 @@ namespace Player
             SetAllSpritesVisible(true);
             shootingScript.OnRevive();
             healthScript.FullHeal();
+            _collider.enabled = true;
 
-            if (shootingScript != null) {
+            if (shootingScript != null)
+            {
                 shootingScript.enabled = true;
             }
             _animator.SetBool("isDead", false);

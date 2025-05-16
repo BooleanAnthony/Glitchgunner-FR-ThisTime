@@ -14,6 +14,11 @@ public class ScoreManager : MonoBehaviour
     private float timer = 0;
     private bool textActive = false;
 
+    public int GetScore()
+    {
+        return score;
+    }
+
     void Awake()
     {
         if (instance == null)

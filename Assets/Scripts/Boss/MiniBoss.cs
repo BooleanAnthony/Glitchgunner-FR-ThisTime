@@ -4,7 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace BossFights {
+namespace BossFights
+{
 	public class MiniBoss : MonoBehaviour
 	{
 		int correct_answer = 0;
@@ -15,18 +16,22 @@ namespace BossFights {
 		[SerializeField] string nextScene;
 		[SerializeField] ScriptActivator activator;
 		[SerializeField] Health playerHealth;
-		[SerializeField] JSONReader jsonReader;
-		
+		[SerializeField] public Question[] questions;
+		//[SerializeField] JSONReader jsonReader;
+
 		private InvincibilityFlicker flicker;
 
 		private int questions_size;
 
-		IEnumerator Start() {
+		IEnumerator Start()
+		{
 			yield return new WaitForSeconds(1f);
 			// Time to get shit done.
-			questions_size = jsonReader.questions.Length;
+			//questions_size = jsonReader.questions.Length;
+			questions_size = questions.Length;
 
-			for (int i = 0; i < weakpoints.Length; i++) {
+			for (int i = 0; i < weakpoints.Length; i++)
+			{
 				weakpoints[i].GetComponent<WeakpointChoice>().InitializeWeakpoint(this, i);
 			}
 
@@ -35,33 +40,53 @@ namespace BossFights {
 			NextQuestion();
 		}
 
-		void NextQuestion() {
+		void NextQuestion()
+		{
 			current_question++;
-			
-			if (current_question < questions_size) {
+
+			if (current_question < questions_size)
+			{
+				/*
 				correct_answer = jsonReader.questions[current_question].correct_answer;
 
-				for (int i = 0; i < weakpoints.Length; i++) {
+				for (int i = 0; i < weakpoints.Length; i++)
+				{
 					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
 					weakpoints[i].SetActive(true);
-				
+
 					w.SetText(jsonReader.questions[current_question].choices[i]);
 					w.SetHealth(100);
 				}
 
 				question_text.SetText($"Question {current_question + 1}:\n{jsonReader.questions[current_question].questionInput}");
+				*/
+				correct_answer = questions[current_question].correct_answer;
+
+				for (int i = 0; i < weakpoints.Length; i++) {
+					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
+					weakpoints[i].SetActive(true);
+
+					w.SetText(questions[current_question].choices[i]);
+
+					w.invulnerable = false;
+					w.SetHealth(100);
+				}
+
+				question_text.SetText($"Question {current_question + 1}:\n{questions[current_question].question}");
 			}
-			else {
+			else
+			{
 				EndBossFight();
 			}
 
-			if (current_question == questions_size-1)
+			if (current_question == questions_size - 1)
 			{
 				activator.ActivateAllScripts();
 			}
 		}
 
-		void EndBossFight() {
+		void EndBossFight()
+		{
 			print("Bossfight over!");
 
 			gameObject.SetActive(false);
@@ -69,10 +94,12 @@ namespace BossFights {
 			SceneManager.LoadScene(nextScene); //loads the game scene upon death
 		}
 
-		public void SubmitAnswer(int answer) {
+		public void SubmitAnswer(int answer)
+		{
 			print($"Got an answer! Answer submitted was {answer}");
 
-			foreach (GameObject weakpoint in weakpoints) {
+			foreach (GameObject weakpoint in weakpoints)
+			{
 				WeakpointChoice w = weakpoint.GetComponent<WeakpointChoice>();
 
 				w.invulnerable = true;
@@ -81,18 +108,21 @@ namespace BossFights {
 			StartCoroutine("ProcessAnswer", answer);
 		}
 
-		IEnumerator ProcessAnswer(int answer) {
+		IEnumerator ProcessAnswer(int answer)
+		{
 			int value = 25;
 			WeakpointChoice weakpoint = weakpoints[answer].GetComponent<WeakpointChoice>();
 			yield return new WaitForSeconds(1);
 
 			question_status.gameObject.SetActive(true);
-			if (answer == correct_answer) {
+			if (answer == correct_answer)
+			{
 				question_status.SetText($"Correct!");
 				playerHealth.HealDamage(1);
 				weakpoint.StartCoroutine("Death");
 			}
-			else {
+			else
+			{
 				question_status.SetText($"Wrong!\nAnswer: Weakpoint {correct_answer + 1}");
 				weakpoint.StartCoroutine("ShotgunFire");
 				value *= -1;
@@ -108,15 +138,23 @@ namespace BossFights {
 
 			NextQuestion();
 
-			if (current_question < questions_size) {
+			if (current_question < questions_size)
+			{
 				flicker.StartCoroutine("Flicker");
 				yield return new WaitForSeconds(5);
-				for (int i = 0; i < weakpoints.Length; i++) 
+				for (int i = 0; i < weakpoints.Length; i++)
 				{
 					WeakpointChoice w = weakpoints[i].GetComponent<WeakpointChoice>();
 					w.invulnerable = false;
 				}
 			}
 		}
-    }
+	}
+	
+	[Serializable]
+	public struct Question {
+		public string question;
+		public string[] choices;
+		public int correct_answer;
+	}
 }

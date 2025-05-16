@@ -526,7 +526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnRateInSeconds: 2
+  maxSpawnRateInSeconds: 10
   enemies:
   - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
   - {fileID: 27407864014962235, guid: 4c1fcd57ebbb1a846a73fe1e33b97451, type: 3}
@@ -973,7 +973,7 @@ MonoBehaviour:
   firePoint: {fileID: 922955026}
   player: {fileID: 1283095809}
   range: 10
-  firingSpeed: 5
+  firingSpeed: 10
   difficultyManager: {fileID: 627654972}
   pelletCount: 5
   spreadAngle: 60
@@ -1406,8 +1406,8 @@ Transform:
   m_GameObject: {fileID: 569910191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2094305, y: -1.227798, z: 0.019102251}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
+  m_LocalPosition: {x: 4.5, y: -1.5, z: 0.019102251}
+  m_LocalScale: {x: 2, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1528412163}
@@ -1611,7 +1611,25 @@ MonoBehaviour:
   nextScene: Stage 2
   activator: {fileID: 679155663}
   playerHealth: {fileID: 1283095812}
-  jsonReader: {fileID: 1706951562}
+  questions:
+  - question: 1+1 = ?
+    choices:
+    - 1
+    - 2
+    - 3
+    correct_answer: 1
+  - question: 5 * 5 = ?
+    choices:
+    - 25
+    - 10
+    - 50
+    correct_answer: 0
+  - question: 4a = 12, a = ?
+    choices:
+    - 12
+    - 4
+    - 3
+    correct_answer: 2
 --- !u!4 &679155661
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,6 +2257,9 @@ MonoBehaviour:
   - {fileID: 530186852}
   minBounds: {x: -7.5, y: -5}
   maxBounds: {x: 8, y: 5}
+  swipeThreshold: 50
+  movementDuration: 0.5
+  movementMultiplier: 0.75
   dead: 0
   movable: 1
 --- !u!50 &1283095807
@@ -2848,7 +2869,7 @@ MonoBehaviour:
   firePoint: {fileID: 934242983}
   player: {fileID: 1283095809}
   range: 10
-  firingSpeed: 3
+  firingSpeed: 7
   difficultyManager: {fileID: 627654972}
   pelletCount: 5
   spreadAngle: 60
