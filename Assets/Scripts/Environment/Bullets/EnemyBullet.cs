@@ -14,10 +14,6 @@ namespace Environment
                     {
                         drone.TakeDamage(damage);
                     }
-                    else
-                    {
-                        Debug.LogWarning("Health component not found on Player!");
-                    }
                 }
                 Destroy(gameObject);
             }

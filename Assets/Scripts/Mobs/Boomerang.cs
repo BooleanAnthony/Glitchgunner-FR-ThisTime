@@ -37,10 +37,6 @@ namespace Mobs
             {
                 difficulty = DifficultyManager.Instance.CurrentDifficulty;
             }
-            else
-            {
-                Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
-            }
 
             anim = GetComponent<Animator>();
             collider = GetComponent<BoxCollider2D>();
@@ -50,15 +46,12 @@ namespace Mobs
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Triggered Collision");
             if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 health -= bullet.GetDamage();
-                Debug.Log("enemy took damage: " + bullet.GetDamage());
                 if (health <= 0)
                 {
-                    Debug.Log("enemy died");
                     if (!deathTriggered)
                     {
                         anim.SetBool("isDead", true);
@@ -71,14 +64,9 @@ namespace Mobs
 
             if (collision.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Triggered Player");
                 if (collision.gameObject.TryGetComponent<Health>(out var drone))
                 {
                     drone.TakeDamage(damage);
-                }
-                else
-                {
-                    Debug.LogWarning("Health component not found on Player!");
                 }
             }
 

@@ -53,15 +53,7 @@ namespace Player {
 					{
 						death_text = deathTextTransform.gameObject;
 					}
-					else
-					{
-						Debug.Log("deathtext transform not found");
-					}
 				}
-                else
-                {
-                    Debug.Log("canvastext transform not found");
-                }
             }
         }
 
@@ -78,7 +70,6 @@ namespace Player {
 			revivable = false;
 			sprite.enabled = true;
 			death_text.SetActive(false);
-			print("Player Respawned!");
 		}
 
 		public void SetCheckpoint(Checkpoint checkpoint) {
@@ -87,14 +78,11 @@ namespace Player {
 
 			current_checkpoint = checkpoint;
 			checkpoint.is_current_checkpoint = true;
-
-			print("Player new checkpoint!");
 		}
 
 		public void KillPlayer()  //happens when the player is dead offscreen
 		{
 			dead = true;
-			print("Player died!");
 			
 			StartCoroutine(DeathSequence(3f));
 			if (ScoreManager.instance != null)
@@ -108,7 +96,6 @@ namespace Player {
 			dead = true; 
 			revivable = true;
 			death_text.SetActive(true);
-			print("Player died!"); 
 			sprite.enabled = false;
 			if (ScoreManager.instance != null)
 			{
@@ -117,7 +104,6 @@ namespace Player {
 		}
 
 		private IEnumerator DeathSequence(float value) {
-			Debug.Log("Playing Death");
 			_animator.SetTrigger("Death");
 			
 			yield return new WaitForSeconds(value);

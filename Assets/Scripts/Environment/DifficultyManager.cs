@@ -35,8 +35,6 @@ public class DifficultyManager : MonoBehaviour
             currentDifficulty += increaseAmount;
             currentDifficulty = Mathf.Min(currentDifficulty, maxDifficulty);
             timer = 0f;
-
-            Debug.Log("Difficulty increased to: " + currentDifficulty);
         }
     }
 }

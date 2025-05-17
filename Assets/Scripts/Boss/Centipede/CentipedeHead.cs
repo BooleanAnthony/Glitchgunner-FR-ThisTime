@@ -8,14 +8,9 @@ public class CentipedeHead : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Triggered Player");
                 if (collision.gameObject.TryGetComponent<Health>(out var drone))
                 {
                     drone.TakeDamage(damage);
-                }
-                else
-                {
-                    Debug.LogWarning("Health component not found on Player!");
                 }
             }
         }

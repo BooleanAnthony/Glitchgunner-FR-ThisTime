@@ -33,28 +33,16 @@ namespace Mobs
                 {
                     player = playerObj.transform;
                 }
-                else
-                {
-                    Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
-                }
             }
 
             if (shootPoint == null)
             {
                 shootPoint = transform.Find("Firepoint");
-                if (shootPoint == null)
-                {
-                    Debug.LogError("Firepoint not found! Make sure it is named correctly and is a child of Shooter.");
-                }
             }
 
             if (DifficultyManager.Instance != null)
             {
                 difficulty = DifficultyManager.Instance.CurrentDifficulty;
-            }
-            else
-            {
-                Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
             }
 
             anim = GetComponent<Animator>();
@@ -88,15 +76,12 @@ namespace Mobs
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Triggered Collision");
             if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 health -= bullet.GetDamage();
-                Debug.Log("enemy took damage: " + bullet.GetDamage());
                 if (health <= 0)
                 {
-                    Debug.Log("enemy died");
                     if (!deathTriggered)
                     {
                         anim.SetTrigger("dead");
@@ -122,7 +107,6 @@ namespace Mobs
 
         private void FireBullet()
         {
-            print("Fire!");
             Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         }
 

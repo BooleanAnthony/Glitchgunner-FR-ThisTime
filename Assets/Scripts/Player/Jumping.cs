@@ -52,7 +52,6 @@ namespace Player
             if (TouchInputManager.TapStarted)
             {
                 _lastJumpPressTime = 0f;
-                Debug.Log("[Jump] Tap START detected: initiating jump.");
             }
 
             if (TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
@@ -61,7 +60,6 @@ namespace Player
             if (!TouchInputManager.TapHeld && _isJumping && _rigidbody.linearVelocityY > 0)
             {
                 _isJumpCutting = true;
-                Debug.Log("[Jump] Jump cut triggered (tap released).");
             }
 
             // Grounded check
@@ -110,7 +108,6 @@ namespace Player
 
         private void Jump()
         {
-            Debug.Log("JUMP");
             _animator.SetTrigger("Jump");
             _isJumping = true;
             _isJumpFalling = false;

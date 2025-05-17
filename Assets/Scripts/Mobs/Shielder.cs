@@ -29,19 +29,11 @@ namespace Mobs
                 {
                     player = playerObj.transform;
                 }
-                else
-                {
-                    Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
-                }
             }
 
             if (DifficultyManager.Instance != null)
             {
                 difficulty = DifficultyManager.Instance.CurrentDifficulty;
-            }
-            else
-            {
-                Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
             }
 
             anim = GetComponent<Animator>();
@@ -64,15 +56,12 @@ namespace Mobs
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("Triggered Collision");
             if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
             {
                 Bullet bullet = collision.gameObject.GetComponent<Bullet>();
                 health -= bullet.GetDamage();
-                Debug.Log("enemy took damage: " + bullet.GetDamage());
                 if (health <= 0)
                 {
-                    Debug.Log("enemy died");
                     if (!deathTriggered)
                     {
                         anim.SetTrigger("dead");
@@ -84,7 +73,6 @@ namespace Mobs
 
             if (collision.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Triggered Player");
                 DroneMovement drone = collision.gameObject.GetComponent<DroneMovement>();
                 drone?.KillPlayer();
             }

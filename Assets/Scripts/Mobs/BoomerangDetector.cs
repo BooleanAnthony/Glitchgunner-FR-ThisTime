@@ -13,7 +13,6 @@ public class BoomerangDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = true;
-            Debug.Log("Player entered detection box");
         }
     }
 
@@ -23,7 +22,6 @@ public class BoomerangDetector : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInside = false;
-            Debug.Log("Player exited detection box");
         }
     }
 

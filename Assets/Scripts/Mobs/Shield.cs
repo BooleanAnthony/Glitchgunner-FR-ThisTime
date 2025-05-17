@@ -41,7 +41,6 @@ public class Shield : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Collider"))
         {
-            Debug.Log("Shield collided with: " + collision.gameObject.name);
             int layer = collision.gameObject.layer;
             if (layer == LayerMask.NameToLayer("Player"))
             {

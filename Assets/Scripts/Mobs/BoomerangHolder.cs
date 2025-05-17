@@ -15,10 +15,6 @@ public class BoomerangHolder : MonoBehaviour
             {
                 player = playerObj.transform;
             }
-            else
-            {
-                Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
-            }
         }
     }
     

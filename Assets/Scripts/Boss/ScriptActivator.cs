@@ -13,7 +13,6 @@ public class ScriptActivator : MonoBehaviour
             if (script != null)
             {
                 script.enabled = true;
-                Debug.Log($"{script.name} activated.");
             }
         }
     }

@@ -31,10 +31,6 @@ namespace EnemyMob
                 {
                     player = playerObj.transform;
                 }
-                else
-                {
-                    Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
-                }
             }
 
             anim = GetComponent<Animator>();
@@ -43,10 +39,6 @@ namespace EnemyMob
             if (DifficultyManager.Instance != null)
             {
                 difficulty = DifficultyManager.Instance.CurrentDifficulty;
-            }
-            else
-            { 
-                Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
             }
 
             DifficultyScale();
@@ -86,10 +78,8 @@ namespace EnemyMob
                 if (bullet != null)
                 {
                     health -= bullet.GetDamage();
-                    Debug.Log("enemy took damage: " + bullet.GetDamage());
                     if (health <= 0 && !isDashing)
                     {
-                        Debug.Log("enemy died");
                         if (!deathTriggered)
                         {
                             anim.SetBool("dead", true);
@@ -102,7 +92,6 @@ namespace EnemyMob
 
             if (collision.gameObject.CompareTag("Player"))
             {
-                Debug.Log("Triggered Player");
                 if (collision.gameObject.TryGetComponent<Health>(out var drone))
                 {
                     if (isDashing)
@@ -114,10 +103,6 @@ namespace EnemyMob
                         drone.TakeDamage(damage - 1);
                     }
                     
-                }
-                else
-                {
-                    Debug.LogWarning("Health component not found on Player!");
                 }
             }
         }

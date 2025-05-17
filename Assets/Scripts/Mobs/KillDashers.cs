@@ -7,8 +7,6 @@ public class KillEnemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("EnemyMob"))
         {
-            Debug.Log("Triggered by: " + collision.gameObject.name + " with tag: " + collision.gameObject.tag);
-            Debug.Log("Killed object");
             Destroy(collision.gameObject);
         }
     }

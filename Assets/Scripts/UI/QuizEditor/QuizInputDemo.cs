@@ -31,12 +31,10 @@ public class QuizInputDemo : MonoBehaviour
     {
         if (string.IsNullOrEmpty(question.text) || string.IsNullOrEmpty(answer.text))
         {
-            Debug.Log("Text field is empty!");
             return;
         }
 
         int targetQuestionNumber = questionManager.GetQuestionNumber();
-        Debug.Log($"Attempting to update question {targetQuestionNumber} in JSON...");
 
         // Create a new QuizItem from user input
         QuizItem newQuizItem = new();
@@ -44,7 +42,6 @@ public class QuizInputDemo : MonoBehaviour
 
         if (newQuizItem.correct_answer < 0) 
         {
-            Debug.Log("Nothing was saved");
             return;
         }
 
@@ -60,16 +57,15 @@ public class QuizInputDemo : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("JSON file does not exist. Cannot update.");
             return;
         }
 
         // Debugging: Show all current questions before updating
-        Debug.Log($"Existing Questions Count: {quizCollection.questions.Length}");
+        /*Debug.Log($"Existing Questions Count: {quizCollection.questions.Length}");
         foreach (QuizItem item in quizCollection.questions)
         {
             Debug.Log($"Question {item.questionNumber}: {item.questionInput}");
-        }
+        }*/
 
         // Flag to track if any question was updated
         bool updated = false;
@@ -81,7 +77,6 @@ public class QuizInputDemo : MonoBehaviour
             {
                 quizCollection.questions[i] = newQuizItem;
                 updated = true;
-                Debug.Log($"Updated Question {targetQuestionNumber} Successfully.");
                 break;
             }
         }
@@ -89,22 +84,20 @@ public class QuizInputDemo : MonoBehaviour
         // If no match found, show a warning
         if (!updated)
         {
-            Debug.LogWarning($"No question found with questionNumber {targetQuestionNumber}. JSON remains unchanged.");
             return;
         }
 
         // Debugging: Show all updated questions AFTER modification
-        foreach (QuizItem item in quizCollection.questions)
+        /*foreach (QuizItem item in quizCollection.questions)
         {
             Debug.Log($"Updated Question {item.questionNumber}: {item.questionInput}");
-        }
+        }*/
 
         // Convert updated data back to JSON
         string updatedJson = JsonUtility.ToJson(quizCollection, true);
 
         // Write updated JSON file
         File.WriteAllText(filePath, updatedJson);
-        Debug.Log($"Successfully updated question {targetQuestionNumber} in JSON.");
     }
 
     private void modifyQuizItem(QuizItem newQuizItem, int targetQuestionNumber)

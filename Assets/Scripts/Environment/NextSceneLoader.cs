@@ -11,9 +11,7 @@ public class NextSceneLoader : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print("Collision detected");
         if (collision.gameObject.CompareTag("PlayerChar")) {
-            print("Its a player!");
 			SceneLoad();
 		}
     }

@@ -50,11 +50,11 @@ public class JSONReader : MonoBehaviour
             }
 
             // Output to Unity's Console for verification.
-            Debug.Log("Question Number: " + quiz.questionNumber);
+            /*Debug.Log("Question Number: " + quiz.questionNumber);
             Debug.Log("Question: " + quiz.questionInput);
             Debug.Log("Choices: " + string.Join(", ", quiz.choices));
             Debug.Log("Correct answer index: " + quiz.correct_answer);
-            Debug.Log("Correct Answer: " + quiz.choices[quiz.correct_answer]);
+            Debug.Log("Correct Answer: " + quiz.choices[quiz.correct_answer]);*/
         }
     }
 }

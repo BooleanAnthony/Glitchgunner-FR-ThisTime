@@ -34,30 +34,25 @@ public class CentipedeAttack : MonoBehaviour
 
     private IEnumerator AttackRoutine()
     {
-        Debug.Log("Attack started");
         yield return new WaitForSeconds(2f);
 
         Vector3 originalPos = head.transform.position;
         float randomX = Random.Range(minAttackPos.x, maxAttackPos.x);
         Vector3 targetXPos = new Vector3(randomX, originalPos.y, originalPos.z);
-        Debug.Log($"Moving to X: {randomX}");
         yield return MoveToPosition(head.transform, targetXPos);
 
         float targetY = Mathf.Min(minAttackPos.y, maxAttackPos.y);
         Vector3 targetDownPos = new Vector3(randomX, targetY, originalPos.z);
-        Debug.Log($"Moving down to Y: {targetY}");
         yield return MoveToPosition(head.transform, targetDownPos);
 
         moveSpeed *= 2;
 
-        Debug.Log("Returning to original position");
         yield return MoveToPosition(head.transform, originalPos);
 
         isAttacking = false;
         timer = 0;
         anim.enabled = true;
         moveSpeed /= 2;
-        Debug.Log("Attack complete");
     }
 
 

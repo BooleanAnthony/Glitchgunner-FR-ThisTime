@@ -87,8 +87,6 @@ namespace BossFights
 
 		void EndBossFight()
 		{
-			print("Bossfight over!");
-
 			gameObject.SetActive(false);
 			question_text.gameObject.SetActive(false);
 			SceneManager.LoadScene(nextScene); //loads the game scene upon death
@@ -96,8 +94,6 @@ namespace BossFights
 
 		public void SubmitAnswer(int answer)
 		{
-			print($"Got an answer! Answer submitted was {answer}");
-
 			foreach (GameObject weakpoint in weakpoints)
 			{
 				WeakpointChoice w = weakpoint.GetComponent<WeakpointChoice>();

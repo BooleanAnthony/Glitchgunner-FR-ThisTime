@@ -42,7 +42,6 @@ public class TouchInputManager : MonoBehaviour
             {
                 TapStarted = true;
                 TapHeld = true;
-                Debug.Log("[Touch] Tap START detected on RIGHT side.");
             }
         }
 
@@ -67,7 +66,6 @@ public class TouchInputManager : MonoBehaviour
                 if (delta.magnitude < swipeThreshold)
                 {
                     TapDetected = true;
-                    Debug.Log("[Touch] Tap DETECTED on RIGHT side.");
                 }
             }
 
@@ -95,7 +93,6 @@ public class TouchInputManager : MonoBehaviour
                 {
                     TapStarted = true;
                     TapHeld = true;
-                    Debug.Log("[Touch] Tap START detected on RIGHT side.");
                 }
             }
 
@@ -118,7 +115,6 @@ public class TouchInputManager : MonoBehaviour
                     if (delta.magnitude < swipeThreshold)
                     {
                         TapDetected = true;
-                        Debug.Log("[Touch] Tap DETECTED on RIGHT side.");
                     }
                 }
 
@@ -153,14 +149,11 @@ public class TouchInputManager : MonoBehaviour
         float screenMiddle = Screen.width / 2f;
         bool isLeftSide = _startTouchPosition.x < screenMiddle;
 
-        Debug.Log($"[Touch] Delta: {delta.magnitude}, Is Left Side: {isLeftSide}");
-
         if (delta.magnitude < swipeThreshold)
         {
             if (!isLeftSide)
             {
                 TapDetected = true;
-                Debug.Log("[Touch] TAP detected on RIGHT side.");
             }
             return;
         }
@@ -177,7 +170,6 @@ public class TouchInputManager : MonoBehaviour
             }
 
             LastSwipeDelta = delta;
-            Debug.Log($"[Touch] SWIPE detected on LEFT side: {LastSwipe}");
         }
     }
 }

@@ -39,7 +39,6 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float _damage)
     {
-        Debug.Log("Took damage");
         if (playerScript == null)
         {
             playerScript = Object.FindAnyObjectByType<DroneMovement>();
@@ -54,29 +53,17 @@ public class Health : MonoBehaviour
             {
                 GameManager.instance.playerHealth = CurrentHealth;
             }
-
-            print("Lost " + _damage + " hearts");
-
-            if (CurrentHealth > 0)
-            {
-                print("Player still alive");
-            }
             else
             {
                 if (playerScript != null && !playerScript.dead)
                 {
                     playerScript.StartCoroutine("KillPlayer");
-                    print("You died");
                     playerScript.dead = true;
                 }
             }
 
             // Reset invincibility timer **before exiting**
             invincibilityTimer = invincibilityDuration;
-        }
-        else
-        {
-            print("Player is invincible, can't take damage yet.");
         }
 
         if (ScoreManager.instance != null)
