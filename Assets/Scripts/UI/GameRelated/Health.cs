@@ -41,28 +41,24 @@ public class Health : MonoBehaviour
     {
         if (playerScript == null)
         {
-            playerScript = Object.FindAnyObjectByType<DroneMovement>();
+            playerScript = FindAnyObjectByType<DroneMovement>();
         }
-        
+
         if (invincibilityTimer <= 0)
         {
             CurrentHealth = Mathf.Clamp(CurrentHealth - _damage, 0, startingHealth);
 
-            // Update GameManager so health persists across scenes
             if (GameManager.instance != null)
             {
                 GameManager.instance.playerHealth = CurrentHealth;
             }
-            else
+
+            // Check for death here, NOT inside else!
+            if (CurrentHealth <= 0 && playerScript != null && !playerScript.dead)
             {
-                if (playerScript != null && !playerScript.dead)
-                {
-                    playerScript.StartCoroutine("KillPlayer");
-                    playerScript.dead = true;
-                }
+                playerScript.StartCoroutine(playerScript.KillPlayer());
             }
 
-            // Reset invincibility timer **before exiting**
             invincibilityTimer = invincibilityDuration;
         }
 
@@ -71,6 +67,7 @@ public class Health : MonoBehaviour
             ScoreManager.instance.AddToScore(Mathf.RoundToInt(_damage) * -10);
         }
     }
+
 
     public void FullHeal()
     {

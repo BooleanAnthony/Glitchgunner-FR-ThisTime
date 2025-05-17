@@ -13,11 +13,10 @@ namespace Player
         [SerializeField] private Vector2 minBounds; // bottom-left world position
         [SerializeField] private Vector2 maxBounds; // top-right world position
         [SerializeField] private float swipeThreshold = 50f;  // Min swipe magnitude to register movement
-        [SerializeField] private float movementDuration = 0.3f; // How long to move after swipe (seconds)
+        [SerializeField] private float movementDuration = 1f; // How long to move after swipe (seconds)
         [SerializeField] private float movementMultiplier = 0.75f; // How hard to move after swipe (seconds)
 
         private Vector2 _movementInput = Vector2.zero;
-        private float _movementTimer = 0f;
         
         private Rigidbody2D _rigidbody;
         private Animator _animator;
@@ -38,7 +37,7 @@ namespace Player
 
         private void Update()
         {
-            if (!dead && movable)
+            if (!dead && movable && !TouchInputManager.TapHeld)
             {
                 // Default to zero each frame
                 _movementInput = Vector2.zero;
@@ -57,11 +56,14 @@ namespace Player
                     // Apply multiplier to get actual movement input
                     _movementInput = direction * movementMultiplier;
                 }
-                swipe = Vector2.zero;
-            //#endif
                 bool isMoving = _movementInput.sqrMagnitude > 0.01f;
                 _animator.SetBool("isMoving", isMoving);
-            } else 
+            }
+            else if (TouchInputManager.TapHeld)
+            {
+                _movementInput = Vector2.zero;
+            }
+            else
             {
                 if (TouchInputManager.TapDetected)
                 {

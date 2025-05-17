@@ -13,6 +13,7 @@ public class TouchInputManager : MonoBehaviour
     public static Vector2 SwipeEnd { get; private set; }
     public static Vector2 SwipeDelta => SwipeEnd - SwipeStart;
     public static Vector2 LastSwipeDelta { get; private set; } = Vector2.zero;
+    public static bool SwipeHeld { get; private set; } = false;
 
     [SerializeField] private float swipeThreshold = 50f;
     [SerializeField] private float swipeResetTime = 1.5f;  // time in seconds to reset swipe delta
@@ -20,7 +21,6 @@ public class TouchInputManager : MonoBehaviour
 
     private Vector2 _startTouchPosition;
     private Vector2 _endTouchPosition;
-    private bool _isTouchingRight = false;
 
     void Update()
     {
@@ -49,7 +49,13 @@ public class TouchInputManager : MonoBehaviour
         {
             Vector2 currentPos = Input.mousePosition;
             if (currentPos.x >= screenMiddle)
+            {
                 TapHeld = true;
+            }
+            else
+            {
+                SwipeHeld = true;
+            }
         }
 
         if (Input.GetMouseButtonUp(0))
@@ -75,7 +81,7 @@ public class TouchInputManager : MonoBehaviour
                 DetectTouch();
             }
 
-            TapHeld = false;
+            TapHeld = SwipeHeld = false;
         }
     #else
         if (Input.touchCount > 0)
@@ -99,7 +105,13 @@ public class TouchInputManager : MonoBehaviour
             if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
             {
                 if (touch.position.x >= screenMiddle)
+                {
                     TapHeld = true;
+                }
+                else
+                {
+                    SwipeHeld = true;
+                }
             }
 
             if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Canceled)
@@ -123,7 +135,7 @@ public class TouchInputManager : MonoBehaviour
                     DetectTouch();
                 }
 
-                TapHeld = false;
+                TapHeld = SwipeHeld = false;
             }
         }
     #endif
