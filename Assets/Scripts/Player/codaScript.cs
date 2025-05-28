@@ -96,7 +96,7 @@ namespace Player {
 			dead = true;
 			print("Player died!");
 			
-			StartCoroutine(DeathSequence(3f));
+			StartCoroutine(DeathSequence(3.1f));
 			if (ScoreManager.instance != null)
 			{
 				ScoreManager.instance.AddToScore(-75);

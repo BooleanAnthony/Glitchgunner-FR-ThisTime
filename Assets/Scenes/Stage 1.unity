@@ -526,12 +526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpawnRateInSeconds: 2
+  maxSpawnRateInSeconds: 5
   enemies:
   - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
   - {fileID: 27407864014962235, guid: 4c1fcd57ebbb1a846a73fe1e33b97451, type: 3}
-  minSpawnPosition: {x: -0.5, y: -5}
-  maxSpawnPosition: {x: 2.5, y: 5}
+  minSpawnPosition: {x: 0.5, y: -4}
+  maxSpawnPosition: {x: 2.5, y: 4}
 --- !u!4 &57345537
 Transform:
   m_ObjectHideFlags: 0
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   - {fileID: 1906929450}
   - {fileID: 530186852}
   minBounds: {x: -7.5, y: -5}
-  maxBounds: {x: 8, y: 5}
+  maxBounds: {x: 0, y: 5}
   dead: 0
   movable: 1
 --- !u!50 &1283095807

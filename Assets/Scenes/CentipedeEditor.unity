@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quiz Editor - Centipede
+  m_text: Quiz Editor - Hornet 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
   m_sharedMaterial: {fileID: -1939976370473018258, guid: 395eb0fb351fd594d8a2f908b8cd9d0a, type: 2}
