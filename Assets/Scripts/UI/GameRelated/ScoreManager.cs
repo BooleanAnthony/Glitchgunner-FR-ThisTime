@@ -60,10 +60,12 @@ public class ScoreManager : MonoBehaviour
         if (value > 0)
         {
             additionalScoreText.text = "+" + value;
+            additionalScoreText.color = Color.green;
         }
         else 
         {
             additionalScoreText.text = value.ToString();
+            additionalScoreText.color = Color.red;
         }
         
         if (score < 0)

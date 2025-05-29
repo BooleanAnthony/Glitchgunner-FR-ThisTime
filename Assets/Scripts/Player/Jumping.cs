@@ -26,6 +26,7 @@ namespace Player
         private bool _isJumping;
         private bool _isJumpFalling;
         private bool _isJumpCutting;
+        private bool isFalling;
 
         // Timers start at max to avoid accidentally triggering during start 
         private float _lastJumpPressTime = float.MaxValue;
@@ -55,7 +56,12 @@ namespace Player
 
             // Grounded check
             if (!_isJumping && Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer))
+            {
                 _lastGroundTime = 0f;
+                _isJumpFalling = false;
+                _isJumping = false;
+                Debug.Log("Grounded");
+            }
             
             if (_isJumping && _rigidbody.linearVelocityY < 0)
             {
@@ -67,10 +73,26 @@ namespace Player
                 Jump();
 
             _rigidbody.gravityScale = (_isJumpFalling || _isJumpCutting) ? fallingGravity : jumpingGravity;
+
+            if (_isJumpFalling || _isJumping)
+            {
+                isFalling = true;
+            }
+
+            if (!_isJumpFalling && !_isJumping)
+            {
+                if (isFalling)
+                {
+                    _animator.Play("running", 0, 0f);
+                }
+                isFalling = false;
+            }
+            _animator.SetBool("isFalling", isFalling);
         }
 
         private void Jump()
         {
+            Debug.Log("JUMP");
             _animator.SetTrigger("Jump");
             _isJumping = true;
             _isJumpFalling = false;

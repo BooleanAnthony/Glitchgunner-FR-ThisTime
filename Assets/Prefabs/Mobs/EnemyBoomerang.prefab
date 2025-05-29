@@ -164,9 +164,9 @@ GameObject:
   m_Component:
   - component: {fileID: 817534741995214835}
   - component: {fileID: 6982069258236421165}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: EnemyMob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,9 +251,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1023741756868137701}
   - component: {fileID: 6627663923837859012}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Thrusters
-  m_TagString: Untagged
+  m_TagString: EnemyMob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

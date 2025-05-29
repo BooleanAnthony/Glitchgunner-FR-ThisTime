@@ -2,42 +2,42 @@
     "questions": [
         {
             "choices": [
-                "2A",
-                "1A",
-                "3A"
+                "Bibaoco",
+                "La-anan",
+                "Gromea"
             ],
             "correct_answer": 0,
             "questionNumber": 1,
-            "questionInput": "BSCS",
-            "answerInput": "2A",
-            "filler1Input": "1A",
-            "filler2Input": "3A"
+            "questionInput": "Matthew...",
+            "answerInput": "Bibaoco",
+            "filler1Input": "La-anan",
+            "filler2Input": "Gromea"
         },
         {
             "choices": [
-                "Hi!",
-                "Hi",
-                "Hi?"
+                "21",
+                "910",
+                "19"
             ],
             "correct_answer": 0,
             "questionNumber": 2,
-            "questionInput": "Hello",
-            "answerInput": "Hi!",
-            "filler1Input": "Hi",
-            "filler2Input": "Hi?"
+            "questionInput": "what is 9 + 10",
+            "answerInput": "21",
+            "filler1Input": "910",
+            "filler2Input": "19"
         },
         {
             "choices": [
-                "Something",
-                "Everything",
-                "Anything"
+                "president",
+                "Barracks",
+                "obama"
             ],
             "correct_answer": 0,
             "questionNumber": 3,
-            "questionInput": "What is that?",
-            "answerInput": "Something",
-            "filler1Input": "Everything",
-            "filler2Input": "Anything"
+            "questionInput": "What is obamas last name?",
+            "answerInput": "president",
+            "filler1Input": "Barracks",
+            "filler2Input": "obama"
         }
     ]
 }

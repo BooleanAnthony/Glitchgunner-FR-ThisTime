@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 namespace Player
@@ -19,6 +20,7 @@ namespace Player
         private Shooting shootingScript;
         private Health healthScript;
         public bool dead = false;
+        public bool movable = true;
 
         private void Awake()
         {
@@ -30,7 +32,7 @@ namespace Player
 
         private void Update()
         {
-            if (!dead)
+            if (!dead && movable)
             {
                 _movementInput.x = Input.GetAxisRaw("Horizontal");
                 _movementInput.y = Input.GetAxisRaw("Vertical");
@@ -69,7 +71,10 @@ namespace Player
             transform.position = pos;
         }
 
-        public void KillPlayer() {
+        public IEnumerator KillPlayer() {
+            movable = false;
+            _animator.SetBool("isDead", true);
+            yield return new WaitForSeconds(1f);
             dead = true;
             SetAllSpritesVisible(false);
 
@@ -79,11 +84,12 @@ namespace Player
 
             if (ScoreManager.instance != null)
 			{
-				ScoreManager.instance.AddToScore(-100);
+				ScoreManager.instance.AddToScore(-40);
 			}
         }
 
         public void RevivePlayer() {
+            movable = true;
             dead = false;
             SetAllSpritesVisible(true);
             shootingScript.OnRevive();
@@ -92,6 +98,8 @@ namespace Player
             if (shootingScript != null) {
                 shootingScript.enabled = true;
             }
+            _animator.SetBool("isDead", false);
+            _animator.Play("Idle", 0, 0f);
         }
 
         private void SetAllSpritesVisible(bool visible)

@@ -106,13 +106,6 @@ namespace Mobs
                 }
             }
 
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("Triggered Player");
-                DroneMovement drone = collision.gameObject.GetComponent<DroneMovement>();
-                drone?.KillPlayer();
-            }
-
             if (collision.gameObject.CompareTag("EnemyMob"))
             {
                 inContact = true;
