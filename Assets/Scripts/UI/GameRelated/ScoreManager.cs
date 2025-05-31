@@ -62,12 +62,12 @@ public class ScoreManager : MonoBehaviour
             additionalScoreText.text = "+" + value;
             additionalScoreText.color = Color.green;
         }
-        else 
+        else
         {
             additionalScoreText.text = value.ToString();
             additionalScoreText.color = Color.red;
         }
-        
+
         if (score < 0)
         {
             score = 0;
@@ -91,5 +91,10 @@ public class ScoreManager : MonoBehaviour
     void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public int GetScore()
+    {
+        return score;
     }
 }

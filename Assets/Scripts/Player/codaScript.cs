@@ -7,6 +7,7 @@ namespace Player {
 		[SerializeField] private SpriteRenderer sprite;
 		[SerializeField] private Canvas hud;
 		[SerializeField] private GameObject death_text;
+		public AudioSource audioPlayer;
 		
 		public bool dead, revivable = false;
 		private Animator _animator;
@@ -96,7 +97,7 @@ namespace Player {
 			dead = true;
 			print("Player died!");
 			
-			StartCoroutine(DeathSequence(3f));
+			StartCoroutine(DeathSequence(3.1f));
 			if (ScoreManager.instance != null)
 			{
 				ScoreManager.instance.AddToScore(-75);
@@ -119,6 +120,8 @@ namespace Player {
 		private IEnumerator DeathSequence(float value) {
 			Debug.Log("Playing Death");
 			_animator.SetTrigger("Death");
+
+			audioPlayer.Play();
 			
 			yield return new WaitForSeconds(value);
 			death_text.SetActive(true);

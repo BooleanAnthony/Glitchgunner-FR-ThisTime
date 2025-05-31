@@ -21,6 +21,7 @@ namespace Player
         private Health healthScript;
         public bool dead = false;
         public bool movable = true;
+        public AudioSource audioPlayer;
 
         private void Awake()
         {
@@ -77,6 +78,7 @@ namespace Player
             yield return new WaitForSeconds(1f);
             dead = true;
             SetAllSpritesVisible(false);
+            audioPlayer.Play();
 
             if (shootingScript != null) {
                 shootingScript.enabled = false;

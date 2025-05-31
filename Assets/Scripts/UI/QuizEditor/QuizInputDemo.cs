@@ -1,19 +1,22 @@
 using UnityEngine;
 using System.IO;
 using TMPro;
-using Unity.VisualScripting;
+
 
 public class QuizInputDemo : MonoBehaviour
-{   
+{  
     [SerializeField] private TMP_InputField question, answer, filler1, filler2; // Easily assign input field objects in Unity Inspector
     [SerializeField] private string fileName;
     [SerializeField] private QuestionManager questionManager;
     //[SerializeField] private StageManager stageManager;
 
+
     [Header("Recorded Input Values")]
     [SerializeField] private string questionReflect, answerReflect, filler1Reflect, filler2Reflect; // For debugging input values
 
+
     public QuizItem quizItem1 = new(); //Is this needed here? - Kaizen
+
 
     public void ReflectDemo() // Debugging method to reflect user input
     {
@@ -21,13 +24,15 @@ public class QuizInputDemo : MonoBehaviour
         answerReflect = answer.text;
         filler1Reflect = filler1.text;
 
+
         if (filler2 != null)
         {
             filler2Reflect = filler2.text;
         }
     }
 
-    public void writeJSON() 
+
+    public void writeJSON()
     {
         if (string.IsNullOrEmpty(question.text) || string.IsNullOrEmpty(answer.text))
         {
@@ -35,21 +40,26 @@ public class QuizInputDemo : MonoBehaviour
             return;
         }
 
+
         int targetQuestionNumber = questionManager.GetQuestionNumber();
         Debug.Log($"Attempting to update question {targetQuestionNumber} in JSON...");
+
 
         // Create a new QuizItem from user input
         QuizItem newQuizItem = new();
         modifyQuizItem(newQuizItem, targetQuestionNumber);
 
-        if (newQuizItem.correct_answer < 0) 
+
+        if (newQuizItem.correct_answer < 0)
         {
             Debug.Log("Nothing was saved");
             return;
         }
 
-        // Define file path
-        string filePath = Application.dataPath + "/JSONData/" + fileName + ".json";
+
+        // ✅ Define file path using StreamingAssets
+        string filePath = Path.Combine(Application.streamingAssetsPath, "JSONData", fileName + ".json");
+
 
         // Check if JSON file exists
         QuizList quizCollection;
@@ -64,17 +74,10 @@ public class QuizInputDemo : MonoBehaviour
             return;
         }
 
-        // Debugging: Show all current questions before updating
-        Debug.Log($"Existing Questions Count: {quizCollection.questions.Length}");
-        foreach (QuizItem item in quizCollection.questions)
-        {
-            Debug.Log($"Question {item.questionNumber}: {item.questionInput}");
-        }
 
-        // Flag to track if any question was updated
         bool updated = false;
 
-        // Loop through questions and update the matching one
+
         for (int i = 0; i < quizCollection.questions.Length; i++)
         {
             if (quizCollection.questions[i].questionNumber == targetQuestionNumber)
@@ -86,26 +89,22 @@ public class QuizInputDemo : MonoBehaviour
             }
         }
 
-        // If no match found, show a warning
+
         if (!updated)
         {
             Debug.LogWarning($"No question found with questionNumber {targetQuestionNumber}. JSON remains unchanged.");
             return;
         }
 
-        // Debugging: Show all updated questions AFTER modification
-        foreach (QuizItem item in quizCollection.questions)
-        {
-            Debug.Log($"Updated Question {item.questionNumber}: {item.questionInput}");
-        }
 
-        // Convert updated data back to JSON
         string updatedJson = JsonUtility.ToJson(quizCollection, true);
 
-        // Write updated JSON file
+
+        // ✅ Write back to file
         File.WriteAllText(filePath, updatedJson);
         Debug.Log($"Successfully updated question {targetQuestionNumber} in JSON.");
     }
+
 
     private void modifyQuizItem(QuizItem newQuizItem, int targetQuestionNumber)
     {
@@ -116,8 +115,8 @@ public class QuizInputDemo : MonoBehaviour
         if (filler2 != null)
         {
             newQuizItem.filler2Input = filler2.text;
-        } 
-        else 
+        }
+        else
         {
             newQuizItem.filler2Input = "0";
         }
@@ -125,3 +124,9 @@ public class QuizInputDemo : MonoBehaviour
         newQuizItem.correct_answer = System.Array.IndexOf(newQuizItem.choices, newQuizItem.answerInput);
     }
 }
+
+
+
+
+
+//UPDATED SCRIPT

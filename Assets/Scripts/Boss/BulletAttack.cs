@@ -21,6 +21,7 @@ public class BulletAttack : MonoBehaviour
 
     private GameObject spawnedBullet;
     private float timer = 0f;
+    public AudioSource audioPlayer;
 
     IEnumerator Start()
     { 
@@ -40,6 +41,7 @@ public class BulletAttack : MonoBehaviour
 
     private void Fire()
     {
+        audioPlayer.Play();
         if (directionalBullet)
         {
             if (spawnerType == SpawnerType.Aim && player != null || spawnerType == SpawnerType.Shotgun)
