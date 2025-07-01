@@ -1,4 +1,3 @@
-using Mobs;
 using UnityEngine;
 
 public class BoomerangDetector : MonoBehaviour

@@ -327,8 +327,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpawnRateInSeconds: 10
   enemies:
-  - {fileID: 27407864014962235, guid: 1adbae7c7cb5e7e449c2b0b1a57deb49, type: 3}
   - {fileID: 124363525266863462, guid: 8d939ea52374f174c9bf207f1e8593b4, type: 3}
+  - {fileID: 27407864014962235, guid: 1adbae7c7cb5e7e449c2b0b1a57deb49, type: 3}
   minSpawnPosition: {x: 0.5, y: -4}
   maxSpawnPosition: {x: 2.5, y: 4}
 --- !u!4 &57345537

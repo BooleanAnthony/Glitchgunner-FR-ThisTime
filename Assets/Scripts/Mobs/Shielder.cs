@@ -2,107 +2,90 @@ using Environment;
 using Player;
 using UnityEngine;
 
-namespace Mobs
+public class Shielder : EnemyDrone
 {
-    public class Shielder : MonoBehaviour
+    [Header("Unique Stats")]
+    [SerializeField] private Shield shield; 
+    public float yOffset = 0f;
+
+    private float timer = 0f;
+    private Transform player;
+
+    protected override void Awake()
     {
-        [SerializeField] private float healingCD = 15f; 
-        [SerializeField] private float health = 10; 
-        [SerializeField] private Shield shield; 
-        public float yOffset = 0f;
-        private float difficulty = 1; //multiplier for HP/Damage
-
-        private float timer = 0f;
-        private Transform player;  
-        private Animator anim; 
-        private new BoxCollider2D collider; 
-        private bool deathTriggered = false;
-        
-
-
-        private void Awake()
+        base.Awake();
+        if (player == null)
         {
-            if (player == null)
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
             {
-                GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-                if (playerObj != null)
-                {
-                    player = playerObj.transform;
-                }
-                else
-                {
-                    Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
-                }
-            }
-
-            if (DifficultyManager.Instance != null)
-            {
-                difficulty = DifficultyManager.Instance.CurrentDifficulty;
+                player = playerObj.transform;
             }
             else
             {
-                Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
-            }
-
-            anim = GetComponent<Animator>();
-            collider = GetComponent<BoxCollider2D>();
-
-            difficultyScale();
-        }
-
-        private void Update()
-        {
-            timer += Time.deltaTime;
-
-            // Fire bullet when the timer exceeds the firing speed
-            if (timer >= healingCD && !deathTriggered)
-            {
-                anim.SetTrigger("shield");
-                timer = 0f; // Reset the timer after firing
+                Debug.LogError("Player not found in the scene. Please ensure the player has the tag 'Player'.");
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        if (DifficultyManager.Instance != null)
         {
-            Debug.Log("Triggered Collision");
-            if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
+            difficulty = DifficultyManager.Instance.CurrentDifficulty;
+        }
+        else
+        {
+            Debug.LogWarning("DifficultyManager instance not found. Defaulting to difficulty 1.");
+        }
+
+        DifficultyScale();
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+
+        // Fire bullet when the timer exceeds the firing speed
+        if (timer >= firingSpeed && !deathTriggered)
+        {
+            anim.SetTrigger("shield");
+            timer = 0f; // Reset the timer after firing
+        }
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Triggered Collision");
+        if (collision.gameObject.name.Contains("Bullet") && !collision.gameObject.name.Contains("Enemy"))
+        {
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            health -= bullet.GetDamage();
+            Debug.Log("enemy took damage: " + bullet.GetDamage());
+            if (health <= 0)
             {
-                Bullet bullet = collision.gameObject.GetComponent<Bullet>();
-                health -= bullet.GetDamage();
-                Debug.Log("enemy took damage: " + bullet.GetDamage());
-                if (health <= 0)
+                Debug.Log("enemy died");
+                if (!deathTriggered)
                 {
-                    Debug.Log("enemy died");
-                    if (!deathTriggered)
-                    {
-                        anim.SetTrigger("dead");
-                        collider.enabled = false;
-                        deathTriggered = true;
-                    }
+                    anim.SetTrigger("dead");
+                    collider.enabled = false;
+                    deathTriggered = true;
                 }
             }
-
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                Debug.Log("Triggered Player");
-                DroneMovement drone = collision.gameObject.GetComponent<DroneMovement>();
-                drone?.KillPlayer();
-            }
         }
 
-        private void difficultyScale()
+        if (collision.gameObject.CompareTag("Player"))
         {
-            healingCD -= difficulty;
+            Debug.Log("Triggered Player");
+            DroneMovement drone = collision.gameObject.GetComponent<DroneMovement>();
+            drone?.KillPlayer();
         }
+    }
 
-        private void DestroyObject()
-        {
-            Destroy(gameObject);
-        }
+    protected void DifficultyScale()
+    {
+        firingSpeed -= difficulty;
+    }
 
-        private void ShieldUp()
-        {
-            shield.HealShield();
-        }
+    private void ShieldUp()
+    {
+        shield.HealShield();
     }
 }

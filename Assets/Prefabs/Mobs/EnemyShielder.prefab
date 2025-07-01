@@ -117,8 +117,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918f9b01c23ccfd458eea2375ba49b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healingCD: 15
   health: 10
+  alignSpeed: 0
+  firingSpeed: 15
+  damage: 1
+  healingCD: 15
   shield: {fileID: 8399578660499889825}
   yOffset: 0
 --- !u!1 &268914669428658751

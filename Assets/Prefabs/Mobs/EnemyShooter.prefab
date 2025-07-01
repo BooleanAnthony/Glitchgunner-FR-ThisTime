@@ -49,9 +49,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c3af59a9b88f144925264f32a26c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alignSpeed: 3
-  firingSpeed: 1
   health: 20
+  alignSpeed: 2
+  firingSpeed: 1
+  damage: 1
   bulletPrefab: {fileID: 5112706201094048228, guid: 67c1c00f7b2d9d64783adbe16e3861d7, type: 3}
   alignOffsetRange: 0.5
   yOffset: 0

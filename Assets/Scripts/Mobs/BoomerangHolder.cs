@@ -1,4 +1,3 @@
-using Mobs;
 using UnityEngine;
 
 public class BoomerangHolder : MonoBehaviour

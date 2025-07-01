@@ -151,10 +151,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyBoomerang
       objectReference: {fileID: 0}
-    - target: {fileID: 7988666183882072934, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
-      propertyPath: detectionBox
-      value: 
-      objectReference: {fileID: 8875126329956174915}
     - target: {fileID: 9044023833789171980, guid: c08fe743f6954414ebc912c79ef240f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
