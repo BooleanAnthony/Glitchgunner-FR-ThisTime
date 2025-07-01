@@ -1,0 +1,43 @@
+{
+    "questions": [
+        {
+            "choices": [
+                "Sir Kristian",
+                "Sir Julian",
+                "Sir Joseph"
+            ],
+            "correct_answer": 0,
+            "questionNumber": 1,
+            "questionInput": "Who's the teacher for Game Programming 1?",
+            "answerInput": "Sir Kristian",
+            "filler1Input": "Sir Julian",
+            "filler2Input": "Sir Joseph"
+        },
+        {
+            "choices": [
+                "Translation",
+                "Rotation",
+                "Scaling"
+            ],
+            "correct_answer": 0,
+            "questionNumber": 2,
+            "questionInput": "Which matrix operation will come first if I have to rotate, scale, then translate a point?",
+            "answerInput": "Translation",
+            "filler1Input": "Rotation",
+            "filler2Input": "Scaling"
+        },
+        {
+            "choices": [
+                "38 Celsius",
+                "38 m/s North East",
+                "380 lbs"
+            ],
+            "correct_answer": 0,
+            "questionNumber": 3,
+            "questionInput": "Which of the following is NOT a scalar quantity?",
+            "answerInput": "38 Celsius",
+            "filler1Input": "38 m/s North East",
+            "filler2Input": "380 lbs"
+        }
+    ]
+}

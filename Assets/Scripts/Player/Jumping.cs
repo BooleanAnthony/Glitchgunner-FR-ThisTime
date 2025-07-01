@@ -4,6 +4,8 @@ namespace Player
 {
     public class Jumping : MonoBehaviour
     {
+        public AudioSource audioPlayer;
+        public AudioSource audioPlayer2;
 		[SerializeField] private codaScript player_script;
 
         [Header("Grounded Checking")]
@@ -27,6 +29,7 @@ namespace Player
         private bool _isJumpFalling;
         private bool _isJumpCutting;
         private bool isFalling;
+        private bool wasGrounded;
 
         // Timers start at max to avoid accidentally triggering during start 
         private float _lastJumpPressTime = float.MaxValue;
@@ -88,6 +91,16 @@ namespace Player
                 isFalling = false;
             }
             _animator.SetBool("isFalling", isFalling);
+
+            bool isGroundedNow = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);//landed cjeck
+
+            if (!wasGrounded && isGroundedNow && !_isJumping)
+            {
+                Debug.Log("Landed!");
+                audioPlayer2.Play();
+            }
+
+            wasGrounded = isGroundedNow;
         }
 
         private void Jump()
@@ -97,6 +110,8 @@ namespace Player
             _isJumping = true;
             _isJumpFalling = false;
             _isJumpCutting = false;
+
+            audioPlayer.Play();
 
             var force = jumpForce;
 

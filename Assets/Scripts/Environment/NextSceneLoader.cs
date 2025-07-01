@@ -4,8 +4,10 @@ using System.Collections;
 
 public class NextSceneLoader : MonoBehaviour
 {
+    public AudioSource audioPlayer;
     [SerializeField] string nextScene;
     public void SceneLoad(){
+        audioPlayer.Play();
         SceneManager.LoadScene(nextScene); //loads the game scene
     }
 

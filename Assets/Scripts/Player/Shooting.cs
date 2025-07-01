@@ -13,6 +13,7 @@ namespace Player
         
         private bool _isFiring;
         private Animator _anim;
+        public AudioSource audioPlayer;
 
         private void Awake()
         {
@@ -33,6 +34,7 @@ namespace Player
 
             while (Input.GetButton("Fire1"))
             {
+                audioPlayer.Play();
                 _anim.SetTrigger("isFiring");
                 if (movement.dead) 
                 {

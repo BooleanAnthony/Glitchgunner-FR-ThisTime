@@ -3,11 +3,13 @@ using UnityEngine;
 public class HealthCollectible : MonoBehaviour
 {
     [SerializeField] private float healthValue;
+    public AudioSource audioPlayer;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerChar"))
         {
+            audioPlayer.Play();
             GameManager.instance.HealPlayer(healthValue);
             gameObject.SetActive(false);
 

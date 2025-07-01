@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 7ca2f0fb46d3ee14f98edc29031da3c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2463187280959648969
+    second: beware of enemies!_0
+  - first:
+      213: 6486790437734486184
+    second: beware of enemies!_1
+  - first:
+      213: -1821731052355283349
+    second: beware of enemies!_2
+  - first:
+      213: 8750357917557708575
+    second: beware of enemies!_3
+  - first:
+      213: 2205476340259963848
+    second: beware of enemies!_4
+  - first:
+      213: 4923629611274527595
+    second: beware of enemies!_5
+  - first:
+      213: 8938489930041220764
+    second: beware of enemies!_6
+  - first:
+      213: -8881763693094493410
+    second: beware of enemies!_7
+  - first:
+      213: -5661512166023030729
+    second: beware of enemies!_8
+  - first:
+      213: -4615023875659405049
+    second: beware of enemies!_9
+  - first:
+      213: 8094628457527680150
+    second: beware of enemies!_10
+  - first:
+      213: 4776222112611669107
+    second: beware of enemies!_11
+  - first:
+      213: -7578523137975634240
+    second: beware of enemies!_12
+  - first:
+      213: 1267542746354058440
+    second: beware of enemies!_13
+  - first:
+      213: 1993531859165042766
+    second: beware of enemies!_14
+  - first:
+      213: 7595741915307550811
+    second: beware of enemies!_15
+  - first:
+      213: 7831197430154820868
+    second: beware of enemies!_16
+  - first:
+      213: 2165863306522729436
+    second: beware of enemies!_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: beware of enemies!_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 337
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73bc32fe73001ddd0800000000000000
+      internalID: -2463187280959648969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_1
+      rect:
+        serializedVersion: 2
+        x: 3119
+        y: 0
+        width: 290
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0909dd885b50a50800000000000000
+      internalID: 6486790437734486184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_2
+      rect:
+        serializedVersion: 2
+        x: 5519
+        y: 287
+        width: 98
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6690148249e7b6e0800000000000000
+      internalID: -1821731052355283349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_3
+      rect:
+        serializedVersion: 2
+        x: 6623
+        y: 95
+        width: 145
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f17dd852a248f6970800000000000000
+      internalID: 8750357917557708575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_4
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c349bddb0d6b9e10800000000000000
+      internalID: 2205476340259963848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_5
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b63ec918b0f345440800000000000000
+      internalID: 4923629611274527595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_6
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e5384bb35eb0c70800000000000000
+      internalID: 8938489930041220764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_7
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 0
+        width: 290
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13242e8af2adb480800000000000000
+      internalID: -8881763693094493410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_8
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73815a45ea44e61b0800000000000000
+      internalID: -5661512166023030729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_9
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709ef5d8c3424ffb0800000000000000
+      internalID: -4615023875659405049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_10
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c94b7e1b5e55070800000000000000
+      internalID: 8094628457527680150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_11
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3749596b4bc884240800000000000000
+      internalID: 4776222112611669107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_12
+      rect:
+        serializedVersion: 2
+        x: 4607
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c632e6db5da3d690800000000000000
+      internalID: -7578523137975634240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_13
+      rect:
+        serializedVersion: 2
+        x: 4991
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c48e0e7967379110800000000000000
+      internalID: 1267542746354058440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_14
+      rect:
+        serializedVersion: 2
+        x: 5423
+        y: 0
+        width: 290
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48d4f9e9a27aab10800000000000000
+      internalID: 1993531859165042766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_15
+      rect:
+        serializedVersion: 2
+        x: 5759
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58a37b270f796960800000000000000
+      internalID: 7595741915307550811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_16
+      rect:
+        serializedVersion: 2
+        x: 6143
+        y: 0
+        width: 338
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d745e32900eac60800000000000000
+      internalID: 7831197430154820868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beware of enemies!_17
+      rect:
+        serializedVersion: 2
+        x: 6623
+        y: 0
+        width: 98
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdb1759b331be0e10800000000000000
+      internalID: 2165863306522729436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      beware of enemies!_0: -2463187280959648969
+      beware of enemies!_1: 6486790437734486184
+      beware of enemies!_10: 8094628457527680150
+      beware of enemies!_11: 4776222112611669107
+      beware of enemies!_12: -7578523137975634240
+      beware of enemies!_13: 1267542746354058440
+      beware of enemies!_14: 1993531859165042766
+      beware of enemies!_15: 7595741915307550811
+      beware of enemies!_16: 7831197430154820868
+      beware of enemies!_17: 2165863306522729436
+      beware of enemies!_2: -1821731052355283349
+      beware of enemies!_3: 8750357917557708575
+      beware of enemies!_4: 2205476340259963848
+      beware of enemies!_5: 4923629611274527595
+      beware of enemies!_6: 8938489930041220764
+      beware of enemies!_7: -8881763693094493410
+      beware of enemies!_8: -5661512166023030729
+      beware of enemies!_9: -4615023875659405049
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
