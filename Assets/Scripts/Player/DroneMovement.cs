@@ -35,12 +35,17 @@ namespace Player
         {
             if (!dead && movable)
             {
-                _movementInput.x = Input.GetAxisRaw("Horizontal");
-                _movementInput.y = Input.GetAxisRaw("Vertical");
+                _movementInput = Vector2.zero;
 
-                bool isMoving = _movementInput.sqrMagnitude > 0.01f;
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    _movementInput.y = 1f;
+                }
+
+                bool isMoving = _movementInput.y > 0.01f;
                 _animator.SetBool("isMoving", isMoving);
-            } else 
+            }
+            else
             {
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
@@ -53,14 +58,27 @@ namespace Player
         {
             if (!dead)
             {
-                var targetSpeed = movementSpeed * _movementInput;
-                var accelerationRate = (targetSpeed.sqrMagnitude > Mathf.Epsilon) ? acceleration : deceleration;
-                var speedDifference = targetSpeed - _rigidbody.linearVelocity;
-                
-                _rigidbody.AddForce(_rigidbody.mass * accelerationRate * speedDifference);
+                Vector2 targetSpeed;
+
+                if (_movementInput.y > 0.01f)
+                {
+                    // Ascending movement
+                    targetSpeed = new Vector2(0f, movementSpeed.y);
+                }
+                else
+                {
+                    // Passive descent
+                    targetSpeed = new Vector2(0f, -movementSpeed.y * 0.5f); // adjust descent rate as needed
+                }
+
+                Vector2 speedDifference = targetSpeed - _rigidbody.linearVelocity;
+
+                _rigidbody.AddForce(_rigidbody.mass * acceleration * speedDifference);
             }
+
             ClampPosition();
         }
+
 
         private void ClampPosition()
         {
