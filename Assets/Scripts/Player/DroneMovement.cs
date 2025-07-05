@@ -22,6 +22,7 @@ namespace Player
         public bool dead = false;
         public bool movable = true;
         public AudioSource audioPlayer;
+        public ScaleFromMicrophone microphoneData;
 
         private void Awake()
         {
@@ -29,6 +30,7 @@ namespace Player
             shootingScript = GetComponent<Shooting>();
             healthScript = GetComponent<Health>();
             _animator = GetComponent<Animator>();
+            microphoneData = FindAnyObjectByType<ScaleFromMicrophone>();
         }
 
         private void Update()
@@ -60,15 +62,31 @@ namespace Player
             {
                 Vector2 targetSpeed;
 
-                if (_movementInput.y > 0.01f)
+                if (microphoneData != null)
                 {
-                    // Ascending movement
-                    targetSpeed = new Vector2(0f, movementSpeed.y);
+                    if (microphoneData.loudness > 0.01f)
+                    {
+                        // Ascending movement
+                        targetSpeed = new Vector2(0f, movementSpeed.y * microphoneData.loudness);
+                    }
+                    else
+                    {
+                        // Passive descent
+                        targetSpeed = new Vector2(0f, -movementSpeed.y * 0.5f); // adjust descent rate as needed
+                    }
                 }
                 else
                 {
-                    // Passive descent
-                    targetSpeed = new Vector2(0f, -movementSpeed.y * 0.5f); // adjust descent rate as needed
+                    if (_movementInput.y > 0.01f)
+                    {
+                        // Ascending movement
+                        targetSpeed = new Vector2(0f, movementSpeed.y);
+                    }
+                    else
+                    {
+                        // Passive descent
+                        targetSpeed = new Vector2(0f, -movementSpeed.y * 0.5f); // adjust descent rate as needed
+                    }
                 }
 
                 Vector2 speedDifference = targetSpeed - _rigidbody.linearVelocity;
