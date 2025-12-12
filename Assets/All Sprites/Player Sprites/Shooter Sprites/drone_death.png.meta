@@ -1,0 +1,675 @@
+fileFormatVersion: 2
+guid: 4a1cd28205512124180a755b5b49359a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1526639925883092069
+    second: drone_death_0
+  - first:
+      213: 8561845570764459859
+    second: drone_death_1
+  - first:
+      213: 7629066207562532477
+    second: drone_death_2
+  - first:
+      213: 7512183686863032043
+    second: drone_death_3
+  - first:
+      213: -4464861982622120617
+    second: drone_death_4
+  - first:
+      213: 1160216493795409510
+    second: drone_death_5
+  - first:
+      213: 8897409446059562868
+    second: drone_death_6
+  - first:
+      213: 22231737771934
+    second: drone_death_7
+  - first:
+      213: -8468696215945103692
+    second: drone_death_8
+  - first:
+      213: 4759079708828530550
+    second: drone_death_9
+  - first:
+      213: 2387559801772780413
+    second: drone_death_10
+  - first:
+      213: -5490381120134960930
+    second: drone_death_11
+  - first:
+      213: 9212551730151135260
+    second: drone_death_12
+  - first:
+      213: 1712120935572927024
+    second: drone_death_13
+  - first:
+      213: 5152146112866739078
+    second: drone_death_14
+  - first:
+      213: -1172742087516000706
+    second: drone_death_15
+  - first:
+      213: -4231950184929666801
+    second: drone_death_16
+  - first:
+      213: 8035299263511364065
+    second: drone_death_17
+  - first:
+      213: -4005632634737416715
+    second: drone_death_18
+  - first:
+      213: 7293212078018002306
+    second: drone_death_19
+  - first:
+      213: -580107525660971660
+    second: drone_death_20
+  - first:
+      213: 1660085520738458464
+    second: drone_death_21
+  - first:
+      213: -276245758266657779
+    second: drone_death_22
+  - first:
+      213: -6118894705973327565
+    second: drone_death_23
+  - first:
+      213: -7147352165222575939
+    second: drone_death_24
+  - first:
+      213: 3894289575650502380
+    second: drone_death_25
+  - first:
+      213: -2733110795171599731
+    second: drone_death_26
+  - first:
+      213: -521463262051079873
+    second: drone_death_27
+  - first:
+      213: -796201082601734064
+    second: drone_death_28
+  - first:
+      213: -8568979370741903329
+    second: drone_death_29
+  - first:
+      213: -4326280252235691177
+    second: drone_death_30
+  - first:
+      213: -1913566505757576741
+    second: drone_death_31
+  - first:
+      213: 2469714275033659472
+    second: drone_death_32
+  - first:
+      213: 8507748302097512509
+    second: drone_death_33
+  - first:
+      213: 2109643176050210059
+    second: drone_death_34
+  - first:
+      213: 3960121034810350870
+    second: drone_death_35
+  - first:
+      213: 5415226312278973513
+    second: drone_death_36
+  - first:
+      213: 7234088015523193712
+    second: drone_death_37
+  - first:
+      213: 554454181510632661
+    second: drone_death_38
+  - first:
+      213: 3090054918788111080
+    second: drone_death_39
+  - first:
+      213: 3261860286011940140
+    second: drone_death_40
+  - first:
+      213: 9120603671896400716
+    second: drone_death_41
+  - first:
+      213: 2299979642014298065
+    second: drone_death_42
+  - first:
+      213: 7181333111008304938
+    second: drone_death_43
+  - first:
+      213: 8278568812138472466
+    second: drone_death_44
+  - first:
+      213: 3624178034861118114
+    second: drone_death_45
+  - first:
+      213: -8618338557753352668
+    second: drone_death_46
+  - first:
+      213: -3037869655437334846
+    second: drone_death_47
+  - first:
+      213: -2065463188617007837
+    second: drone_death_48
+  - first:
+      213: 4743552323295552506
+    second: drone_death_49
+  - first:
+      213: -7463083207368162577
+    second: drone_death_50
+  - first:
+      213: 1663346135801086752
+    second: drone_death_51
+  - first:
+      213: 7595921356189377864
+    second: drone_death_52
+  - first:
+      213: -4469022175192487617
+    second: drone_death_53
+  - first:
+      213: -240614681082033296
+    second: drone_death_54
+  - first:
+      213: -1917056867535204097
+    second: drone_death_55
+  - first:
+      213: 7686177263589347030
+    second: drone_death_56
+  - first:
+      213: 4733299510989590225
+    second: drone_death_57
+  - first:
+      213: 7308496345035057992
+    second: drone_death_58
+  - first:
+      213: -2697210150323429299
+    second: drone_death_59
+  - first:
+      213: 4926828133985150649
+    second: drone_death_60
+  - first:
+      213: -7856591534156077612
+    second: drone_death_61
+  - first:
+      213: 1051744620718273875
+    second: drone_death_62
+  - first:
+      213: -6146338119183994284
+    second: drone_death_63
+  - first:
+      213: -4972106394270031637
+    second: drone_death_64
+  - first:
+      213: -5839038398676527501
+    second: drone_death_65
+  - first:
+      213: -7981589824816364977
+    second: drone_death_66
+  - first:
+      213: 7164915195196155944
+    second: drone_death_67
+  - first:
+      213: 1251961158903500684
+    second: drone_death_68
+  - first:
+      213: -5729911343372693398
+    second: drone_death_69
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: drone_death_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cb0329ce6bf2510800000000000000
+      internalID: 1526639925883092069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35fca2b1f29c1d670800000000000000
+      internalID: 8561845570764459859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7683b59b43efd960800000000000000
+      internalID: 7629066207562532477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee84fe0343a04860800000000000000
+      internalID: 7512183686863032043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75589a2ceaf9902c0800000000000000
+      internalID: -4464861982622120617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e793701cae91010800000000000000
+      internalID: 1160216493795409510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 477d59d20c2f97b70800000000000000
+      internalID: 8897409446059562868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9725da3834100000800000000000000
+      internalID: 22231737771934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b6b5e129a5297a80800000000000000
+      internalID: -8468696215945103692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6777e7ec7c5ab0240800000000000000
+      internalID: 4759079708828530550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b2ba86df0522120800000000000000
+      internalID: 2387559801772780413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed828d4e57f3ec3b0800000000000000
+      internalID: -5490381120134960930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1891960dfe89df70800000000000000
+      internalID: 9212551730151135260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: drone_death_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03275517beca2c710800000000000000
+      internalID: 1712120935572927024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8206239659c174040b004f37df0b424e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      drone_death_0: 1526639925883092069
+      drone_death_1: 8561845570764459859
+      drone_death_10: 2387559801772780413
+      drone_death_11: -5490381120134960930
+      drone_death_12: 9212551730151135260
+      drone_death_13: 1712120935572927024
+      drone_death_2: 7629066207562532477
+      drone_death_3: 7512183686863032043
+      drone_death_4: -4464861982622120617
+      drone_death_5: 1160216493795409510
+      drone_death_6: 8897409446059562868
+      drone_death_7: 22231737771934
+      drone_death_8: -8468696215945103692
+      drone_death_9: 4759079708828530550
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

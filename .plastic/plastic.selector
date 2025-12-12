@@ -1,4 +1,0 @@
-repository "Gameprog/Gameprog@18968245334616@cloud"
-  path "/"
-    br "/main"
-    co "/main"

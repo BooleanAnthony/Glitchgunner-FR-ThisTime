@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: 8be8421abd79d5e42a713a2adf3dee37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9145735909578792058
+    second: Wings_boost_0
+  - first:
+      213: -2769331481700239849
+    second: Wings_boost_1
+  - first:
+      213: -1617959261182614621
+    second: Wings_boost_2
+  - first:
+      213: -5197115632896383236
+    second: Wings_boost_3
+  - first:
+      213: 7386380750673200569
+    second: Wings_boost_4
+  - first:
+      213: -7638849873181350121
+    second: Wings_boost_5
+  - first:
+      213: -7134052333215743839
+    second: Wings_boost_6
+  - first:
+      213: -5812876376070577058
+    second: Wings_boost_7
+  - first:
+      213: 3455777709323197294
+    second: Wings_boost_8
+  - first:
+      213: 6705251240381265773
+    second: Wings_boost_9
+  - first:
+      213: -347781527089421579
+    second: Wings_boost_10
+  - first:
+      213: 7707690491341148170
+    second: Wings_boost_11
+  - first:
+      213: -3454381538319699304
+    second: Wings_boost_12
+  - first:
+      213: 4303742076133898772
+    second: Wings_boost_13
+  - first:
+      213: -6142820809741546703
+    second: Wings_boost_14
+  - first:
+      213: 4389682331305328162
+    second: Wings_boost_15
+  - first:
+      213: -3551925299576116794
+    second: Wings_boost_16
+  - first:
+      213: -1734692184666600176
+    second: Wings_boost_17
+  - first:
+      213: -4653569696164692768
+    second: Wings_boost_18
+  - first:
+      213: 2310534895262444517
+    second: Wings_boost_19
+  - first:
+      213: 7442529290551248285
+    second: Wings_boost_20
+  - first:
+      213: -1482249579767839045
+    second: Wings_boost_21
+  - first:
+      213: -1784653078770374740
+    second: Wings_boost_22
+  - first:
+      213: -5081627025905416342
+    second: Wings_boost_23
+  - first:
+      213: 5613498441372365981
+    second: Wings_boost_24
+  - first:
+      213: 8217314598984121314
+    second: Wings_boost_25
+  - first:
+      213: 2556152168295288944
+    second: Wings_boost_26
+  - first:
+      213: 4895138338991242608
+    second: Wings_boost_27
+  - first:
+      213: -1808008607285815077
+    second: Wings_boost_28
+  - first:
+      213: -6201202986291795059
+    second: Wings_boost_29
+  - first:
+      213: -3361527476605652470
+    second: Wings_boost_30
+  - first:
+      213: 1125297169325141060
+    second: Wings_boost_31
+  - first:
+      213: -6196323198664701166
+    second: Wings_boost_32
+  - first:
+      213: 210016239098052091
+    second: Wings_boost_33
+  - first:
+      213: -1635378152254966541
+    second: Wings_boost_34
+  - first:
+      213: 8921846083374861892
+    second: Wings_boost_35
+  - first:
+      213: -1417549202701640367
+    second: Wings_boost_36
+  - first:
+      213: -1919679978058860454
+    second: Wings_boost_37
+  - first:
+      213: 2012495574539479452
+    second: Wings_boost_38
+  - first:
+      213: 1442997356412643159
+    second: Wings_boost_39
+  - first:
+      213: 6038579652176846176
+    second: Wings_boost_40
+  - first:
+      213: 212759183095325207
+    second: Wings_boost_41
+  - first:
+      213: 5311516078956815045
+    second: Wings_boost_42
+  - first:
+      213: 1318270244994008635
+    second: Wings_boost_43
+  - first:
+      213: 4713591655930291628
+    second: Wings_boost_44
+  - first:
+      213: -7372807199363418771
+    second: Wings_boost_45
+  - first:
+      213: -416685520355451010
+    second: Wings_boost_46
+  - first:
+      213: -3912597704370242585
+    second: Wings_boost_47
+  - first:
+      213: 2835509795258949211
+    second: Wings_boost_48
+  - first:
+      213: -3144250353288509125
+    second: Wings_boost_49
+  - first:
+      213: -8276742347682329714
+    second: Wings_boost_50
+  - first:
+      213: -5974517696939785659
+    second: Wings_boost_51
+  - first:
+      213: -2391206278221866941
+    second: Wings_boost_52
+  - first:
+      213: -512447058426245431
+    second: Wings_boost_53
+  - first:
+      213: 4100891213611936586
+    second: Wings_boost_54
+  - first:
+      213: -839585006552045484
+    second: Wings_boost_55
+  - first:
+      213: -655211703370962470
+    second: Wings_boost_56
+  - first:
+      213: -6713609363598613937
+    second: Wings_boost_57
+  - first:
+      213: 4200574176868030522
+    second: Wings_boost_58
+  - first:
+      213: -6101946166263479182
+    second: Wings_boost_59
+  - first:
+      213: -2366544202188363240
+    second: Wings_boost_60
+  - first:
+      213: -4771564398418773860
+    second: Wings_boost_61
+  - first:
+      213: -4181669343482793061
+    second: Wings_boost_62
+  - first:
+      213: 5046734523909529902
+    second: Wings_boost_63
+  - first:
+      213: -3287290014382174694
+    second: Wings_boost_64
+  - first:
+      213: -820424817088933105
+    second: Wings_boost_65
+  - first:
+      213: -8021211985550739296
+    second: Wings_boost_66
+  - first:
+      213: 8759333197223536035
+    second: Wings_boost_67
+  - first:
+      213: -8767117635998614878
+    second: Wings_boost_68
+  - first:
+      213: -6841974724053287804
+    second: Wings_boost_69
+  - first:
+      213: -2932191852718938073
+    second: Wings_boost_70
+  - first:
+      213: -7881319552236535249
+    second: Wings_boost_71
+  - first:
+      213: 727151801038791195
+    second: Wings_boost_72
+  - first:
+      213: -6297638318161293118
+    second: Wings_boost_73
+  - first:
+      213: 1419138948317491257
+    second: Wings_boost_74
+  - first:
+      213: -6764267137133177136
+    second: Wings_boost_75
+  - first:
+      213: 2220993856634584061
+    second: Wings_boost_76
+  - first:
+      213: 3303165945073691076
+    second: Wings_boost_77
+  - first:
+      213: 2039974268678951314
+    second: Wings_boost_78
+  - first:
+      213: -7168294883117790522
+    second: Wings_boost_79
+  - first:
+      213: 895667498199948196
+    second: Wings_boost_80
+  - first:
+      213: 8121290108170800787
+    second: Wings_boost_81
+  - first:
+      213: 1992213689349182665
+    second: Wings_boost_82
+  - first:
+      213: 6798354698317650944
+    second: Wings_boost_83
+  - first:
+      213: -322433511187674015
+    second: Wings_boost_84
+  - first:
+      213: -9134769834387251149
+    second: Wings_boost_85
+  - first:
+      213: 8326832784476725177
+    second: Wings_boost_86
+  - first:
+      213: 1786537206994284121
+    second: Wings_boost_87
+  - first:
+      213: -1181328400778803857
+    second: Wings_boost_88
+  - first:
+      213: 5994977932394982998
+    second: Wings_boost_89
+  - first:
+      213: -1995341446462228547
+    second: Wings_boost_90
+  - first:
+      213: 829053803857155218
+    second: Wings_boost_91
+  - first:
+      213: 8742588718627485419
+    second: Wings_boost_92
+  - first:
+      213: -4273326113876107999
+    second: Wings_boost_93
+  - first:
+      213: 2479599585454688497
+    second: Wings_boost_94
+  - first:
+      213: -3190145579160798988
+    second: Wings_boost_95
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wings_boost_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c5af38a5e2cee70800000000000000
+      internalID: 9145735909578792058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_1
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71673ff90bb5199d0800000000000000
+      internalID: -2769331481700239849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_2
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a32820df9adb89e0800000000000000
+      internalID: -1617959261182614621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_3
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6e49c0ed220e7b0800000000000000
+      internalID: -5197115632896383236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_4
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5c8a37822b18660800000000000000
+      internalID: 7386380750673200569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_5
+      rect:
+        serializedVersion: 2
+        x: 6400
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717ec70438a5df590800000000000000
+      internalID: -7638849873181350121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_6
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a001a56331cefc90800000000000000
+      internalID: -7134052333215743839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wings_boost_7
+      rect:
+        serializedVersion: 2
+        x: 8960
+        y: 0
+        width: 1280
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54ad01ebb3845fa0800000000000000
+      internalID: -5812876376070577058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Wings_boost_0: 9145735909578792058
+      Wings_boost_1: -2769331481700239849
+      Wings_boost_2: -1617959261182614621
+      Wings_boost_3: -5197115632896383236
+      Wings_boost_4: 7386380750673200569
+      Wings_boost_5: -7638849873181350121
+      Wings_boost_6: -7134052333215743839
+      Wings_boost_7: -5812876376070577058
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
