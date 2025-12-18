@@ -1,19 +1,45 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScriptActivator : MonoBehaviour
 {
-    [Header("Inactive Scripts to Activate")]
-    [SerializeField] private List<MonoBehaviour> scriptsToActivate = new List<MonoBehaviour>();
-
-    public void ActivateAllScripts()
+    [Serializable]
+    public class Attack //for bosses with multiple attacks per stage
     {
-        foreach (MonoBehaviour script in scriptsToActivate)
+        public MonoBehaviour attackScript;
+        public int stage;
+        public bool CheckStage(int check)
         {
-            if (script != null)
+            return check >= stage;
+        }
+        public void ToggleScript(bool value)
+        {
+            attackScript.enabled = value;
+        }
+    }
+
+    [Header("Inactive Scripts to Activate")]
+    [SerializeField] private List<Attack> scriptsToActivate = new();
+
+    void Start()
+    {
+        foreach (Attack script in scriptsToActivate)
+        {
+            if (script.attackScript != null)
             {
-                script.enabled = true;
-                Debug.Log($"{script.name} activated.");
+                script.ToggleScript(false);
+            }
+        }
+    }
+
+    public void ActivateAllScripts(int stage)
+    {
+        foreach (Attack script in scriptsToActivate)
+        {
+            if (script.attackScript != null && script.CheckStage(stage))
+            {
+                script.ToggleScript(true);
             }
         }
     }

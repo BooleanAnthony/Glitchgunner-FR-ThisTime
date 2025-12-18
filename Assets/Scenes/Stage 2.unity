@@ -325,12 +325,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1fcb1f084dc4bd48ab6f3ed90aeb8d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 5
   maxSpawnRateInSeconds: 10
   enemies:
   - {fileID: 27407864014962235, guid: 1adbae7c7cb5e7e449c2b0b1a57deb49, type: 3}
   - {fileID: 124363525266863462, guid: 8d939ea52374f174c9bf207f1e8593b4, type: 3}
+  backSpawnPosition: 12
   minSpawnPosition: {x: 0.5, y: -4}
   maxSpawnPosition: {x: 2.5, y: 4}
+  spawnedEnemiesNotInPosition: []
 --- !u!4 &57345537
 Transform:
   m_ObjectHideFlags: 0
@@ -1955,8 +1958,8 @@ GameObject:
   - component: {fileID: 679155661}
   - component: {fileID: 679155659}
   - component: {fileID: 679155663}
-  - component: {fileID: 679155662}
   - component: {fileID: 679155664}
+  - component: {fileID: 679155662}
   - component: {fileID: 679155665}
   m_Layer: 6
   m_Name: MiniBoss
@@ -2042,7 +2045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scriptsToActivate:
-  - {fileID: 219810249}
+  - attackScript: {fileID: 679155664}
+    stage: 1
+  - attackScript: {fileID: 219810249}
+    stage: 2
 --- !u!114 &679155664
 MonoBehaviour:
   m_ObjectHideFlags: 0

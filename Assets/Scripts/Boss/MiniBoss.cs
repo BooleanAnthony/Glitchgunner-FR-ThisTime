@@ -55,10 +55,7 @@ namespace BossFights {
 				EndBossFight();
 			}
 
-			if (current_question == questions_size-1)
-			{
-				activator.ActivateAllScripts();
-			}
+			activator.ActivateAllScripts(current_question);
 		}
 
 		void EndBossFight() {
