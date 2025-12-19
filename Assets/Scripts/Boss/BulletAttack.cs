@@ -46,6 +46,7 @@ public class BulletAttack : MonoBehaviour
         {
             if (spawnerType == SpawnerType.Aim && player != null || spawnerType == SpawnerType.Shotgun)
             {
+                print("Fire");
                 Vector2 direction = (player.position - firePoint.position).normalized;
                 float baseAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
