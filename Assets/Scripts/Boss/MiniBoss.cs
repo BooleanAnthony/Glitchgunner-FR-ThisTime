@@ -13,8 +13,6 @@ namespace BossFights {
 		[SerializeField] TMP_Text question_text;
 		[SerializeField] TMP_Text question_status;
 		[SerializeField] string nextScene;
-		[SerializeField] ScriptActivator activator;
-		[SerializeField] Health playerHealth;
 		[SerializeField] JSONReader jsonReader;
 		
 		private InvincibilityFlicker flicker;
@@ -54,8 +52,6 @@ namespace BossFights {
 			else {
 				EndBossFight();
 			}
-
-			activator.ActivateAllScripts(current_question);
 		}
 
 		void EndBossFight() {
@@ -86,7 +82,7 @@ namespace BossFights {
 			question_status.gameObject.SetActive(true);
 			if (answer == correct_answer) {
 				question_status.SetText($"Correct!");
-				playerHealth.HealDamage(1);
+				Health.instance.HealDamage(1);
 				weakpoint.StartCoroutine("Death");
 			}
 			else {

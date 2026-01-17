@@ -11,6 +11,7 @@ public class BulletAttack : MonoBehaviour
 
     [Header("Spawner Attributes")]
     [SerializeField] private SpawnerType spawnerType;
+    [SerializeField] private SpawnerType[] options;
     [SerializeField] private Transform firePoint;
     [SerializeField] private Transform player;
     [SerializeField] private int range = 10;
@@ -39,9 +40,18 @@ public class BulletAttack : MonoBehaviour
         }
     }
 
+    public void RandomizeBulletType()
+    {
+        spawnerType = options[Random.Range(0, options.Length)];
+    }
+
     private void Fire()
     {
-        audioPlayer.Play();
+        if (audioPlayer)
+        {
+            audioPlayer.Play();
+        }
+        
         if (directionalBullet)
         {
             if (spawnerType == SpawnerType.Aim && player != null || spawnerType == SpawnerType.Shotgun)

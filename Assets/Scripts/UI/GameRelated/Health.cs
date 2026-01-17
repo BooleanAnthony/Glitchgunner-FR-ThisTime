@@ -3,6 +3,7 @@ using Player;
 
 public class Health : MonoBehaviour
 {
+    public static Health instance;
     [SerializeField] private float startingHealth;
     [SerializeField] private float debugCurrentHealth;
     [SerializeField] private float invincibilityDuration = 1f; 
@@ -12,6 +13,12 @@ public class Health : MonoBehaviour
 
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+            
+
         if (GameManager.instance != null)
         {
             CurrentHealth = GameManager.instance.playerHealth > 0 ? GameManager.instance.playerHealth : startingHealth;
