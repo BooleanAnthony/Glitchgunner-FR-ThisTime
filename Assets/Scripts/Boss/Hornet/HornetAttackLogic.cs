@@ -7,7 +7,8 @@ public class HornetAttackLogic : MonoBehaviour
     public enum AttackMode
     {
         Idle,
-        SpawnMode,
+        SpawnModeDasher,
+        SpawnModeShooter,
         AttackMode
     }
     public AttackMode currentAttackMode;
@@ -19,7 +20,8 @@ public class HornetAttackLogic : MonoBehaviour
     [Header("AttackMode")]
     public BulletAttack bulletAttack;
     [Header("SpawnMode")]
-    public HornetEnemySpawner hornetEnemySpawner;
+    public HornetEnemySpawner dasherEnemySpawner;
+    public HornetEnemySpawner shooterEnemySpawner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -39,17 +41,24 @@ public class HornetAttackLogic : MonoBehaviour
             {
                 timerBetweenModeChange *= 2;
             }
-            currentAttackMode = (AttackMode)Random.Range((int)AttackMode.SpawnMode, (int)AttackMode.AttackMode + 1);
+            currentAttackMode = (AttackMode)Random.Range((int)AttackMode.SpawnModeDasher, (int)AttackMode.AttackMode + 1);
             DisableAllScripts();
             if (currentAttackMode == AttackMode.AttackMode)
             {
                 bulletAttack.enabled = true;
                 bulletAttack.RandomizeBulletType();
             }
-            if (currentAttackMode == AttackMode.SpawnMode)
+            if (currentAttackMode == AttackMode.SpawnModeDasher)
             {
-                hornetEnemySpawner.enabled = true;
-                hornetEnemySpawner.isActive = true;
+                dasherEnemySpawner.enabled = true;
+                dasherEnemySpawner.isActive = true;
+                dasherEnemySpawner.DecideOnEnemy();
+            }
+            if (currentAttackMode == AttackMode.SpawnModeShooter)
+            {
+                shooterEnemySpawner.enabled = true;
+                shooterEnemySpawner.isActive = true;
+                shooterEnemySpawner.DecideOnEnemy();
             }
         }
     }
@@ -57,8 +66,10 @@ public class HornetAttackLogic : MonoBehaviour
     void DisableAllScripts()
     {
         bulletAttack.enabled = false;
-        hornetEnemySpawner.enabled = false;
-        hornetEnemySpawner.isActive = false;
+        dasherEnemySpawner.enabled = false;
+        dasherEnemySpawner.isActive = false;
+        shooterEnemySpawner.enabled = false;
+        shooterEnemySpawner.isActive = false;
     }
 
     // Update is called once per frame

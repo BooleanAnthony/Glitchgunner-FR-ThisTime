@@ -39,9 +39,8 @@ public class HornetEnemySpawner : MonoBehaviour
     [SerializeField] Vector2 minSpawnPosition; // Serialized min position
     [SerializeField] Vector2 maxSpawnPosition; // Serialized max position
     public List<SpawnedEnemy> spawnedEnemiesNotInPosition;
+    public GameObject selectedEnemy;
     public bool isActive = false;
-
-    private GameObject enemy;
 
     IEnumerator Start()
     {
@@ -59,33 +58,50 @@ public class HornetEnemySpawner : MonoBehaviour
 
         if (enemies.Length > 0)
         {
-            Vector2 targetPos = new(
-                UnityEngine.Random.Range(minSpawnPosition.x, maxSpawnPosition.x),
-                UnityEngine.Random.Range(minSpawnPosition.y, maxSpawnPosition.y)
-            );
-            enemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
+            if(!selectedEnemy)
+            {
+                DecideOnEnemy();
+            }
             Vector2 backSpawnPosition = initialSpawnPoints[UnityEngine.Random.Range(0, initialSpawnPoints.Length)].position;
-            GameObject spawnedEnemy = Instantiate(enemy);
-            spawnedEnemy.transform.position = backSpawnPosition; //spawns enemy at spawn point
-
-            SpawnedEnemy newSpawn = new(spawnedEnemy.transform, targetPos);
-            newSpawn.ToggleScripts(false);
-            spawnedEnemiesNotInPosition.Add(newSpawn);
+            InstantiateEnemy(backSpawnPosition);
         }
+    }
+
+    public void DecideOnEnemy()
+    {
+        selectedEnemy = enemies[UnityEngine.Random.Range(0, enemies.Length)];
+    }
+
+    public void InstantiateEnemy(Vector2 backSpawnPosition)
+    {
+        Vector2 targetPos = new(
+            UnityEngine.Random.Range(minSpawnPosition.x, maxSpawnPosition.x),
+            UnityEngine.Random.Range(minSpawnPosition.y, maxSpawnPosition.y)
+        );
+        
+        GameObject spawnedEnemy = Instantiate(selectedEnemy);
+        spawnedEnemy.transform.position = backSpawnPosition; //spawns enemy at spawn point
+
+        SpawnedEnemy newSpawn = new(spawnedEnemy.transform, targetPos);
+        newSpawn.ToggleScripts(false);
+        spawnedEnemiesNotInPosition.Add(newSpawn);
     }
 
     void Update()
     {
         float step =  movementSpeed * Time.deltaTime; // calculate distance to move
-        foreach (SpawnedEnemy spawnedEnemy in spawnedEnemiesNotInPosition)
+        for (int i = spawnedEnemiesNotInPosition.Count - 1; i >= 0; i--)
         {
+            SpawnedEnemy spawnedEnemy = spawnedEnemiesNotInPosition[i];
+
             if (spawnedEnemy.CheckIfNotInPos())
             {
-                spawnedEnemy.enemyReference.position = Vector3.MoveTowards(spawnedEnemy.enemyReference.position, spawnedEnemy.targetPos, step);
+                spawnedEnemy.enemyReference.position =
+                    Vector3.MoveTowards(spawnedEnemy.enemyReference.position, spawnedEnemy.targetPos, step);
             }
             else
             {
-                spawnedEnemiesNotInPosition.Remove(spawnedEnemy);
+                spawnedEnemiesNotInPosition.RemoveAt(i);
                 spawnedEnemy.ToggleScripts(true);
             }
         }

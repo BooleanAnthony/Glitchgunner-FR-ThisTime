@@ -273,7 +273,7 @@ Transform:
   m_GameObject: {fileID: 21531647}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 3, z: 0}
+  m_LocalPosition: {x: 0.2, y: 2.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1143,9 +1143,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 922955026}
-  - {fileID: 1119228199}
-  - {fileID: 876413378}
   - {fileID: 21531648}
   - {fileID: 1904981644}
   - {fileID: 547223629}
@@ -1206,23 +1203,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 219810244}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e072a8fac125bf0479344553dfba6742, type: 3}
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5
-  maxSpawnRateInSeconds: 5
-  enemies:
-  - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
-  - {fileID: 27407864014962235, guid: 4c1fcd57ebbb1a846a73fe1e33b97451, type: 3}
-  initialSpawnPoints:
-  - {fileID: 922955026}
-  - {fileID: 1119228199}
-  - {fileID: 876413378}
-  - {fileID: 21531648}
-  minSpawnPosition: {x: 0.5, y: -4}
-  maxSpawnPosition: {x: 2.5, y: 4}
-  spawnedEnemiesNotInPosition: []
-  isActive: 0
+  directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
+  bulletLife: 1
+  spawnerType: 2
+  options: 0300000002000000
+  firePoint: {fileID: 21531648}
+  player: {fileID: 1283095809}
+  range: 10
+  firingSpeed: 1
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 4
+  spreadAngle: 60
+  audioPlayer: {fileID: 0}
 --- !u!1 &347960741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,8 +1928,9 @@ MonoBehaviour:
   timerBetweenModeChange: 5
   initialTargetPosition: {x: 5, y: 0}
   speed: 5
-  bulletAttack: {fileID: 1557382609}
-  hornetEnemySpawner: {fileID: 219810249}
+  bulletAttack: {fileID: 219810249}
+  dasherEnemySpawner: {fileID: 1535719639}
+  shooterEnemySpawner: {fileID: 1557382608}
 --- !u!1 &696533765
 GameObject:
   m_ObjectHideFlags: 0
@@ -2380,11 +2376,11 @@ Transform:
   m_GameObject: {fileID: 876413377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 3, z: 0}
+  m_LocalPosition: {x: 0.75, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 219810247}
+  m_Father: {fileID: 1535719635}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &922955025
 GameObject:
@@ -2411,11 +2407,11 @@ Transform:
   m_GameObject: {fileID: 922955025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.75, y: 1.5, z: 0}
+  m_LocalPosition: {x: -2.3, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 219810247}
+  m_Father: {fileID: 1557382607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934242982
 GameObject:
@@ -2541,11 +2537,11 @@ Transform:
   m_GameObject: {fileID: 1119228198}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 1.5, z: 0}
+  m_LocalPosition: {x: -2.2, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 219810247}
+  m_Father: {fileID: 1557382607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1283095805
 GameObject:
@@ -2954,6 +2950,7 @@ GameObject:
   - component: {fileID: 1535719636}
   - component: {fileID: 1535719638}
   - component: {fileID: 1535719637}
+  - component: {fileID: 1535719639}
   m_Layer: 0
   m_Name: Tail (W3)
   m_TagString: Untagged
@@ -2974,6 +2971,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 876413378}
   - {fileID: 43919309}
   m_Father: {fileID: 679155661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3094,6 +3092,29 @@ MonoBehaviour:
   text: {fileID: 43919310}
   shotgunPoint: {fileID: 363949128}
   invulnerable: 0
+--- !u!114 &1535719639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535719634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e072a8fac125bf0479344553dfba6742, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  maxSpawnRateInSeconds: 5
+  enemies:
+  - {fileID: 799339707613729474, guid: d8208db7892ce344dba772ede40ae343, type: 3}
+  initialSpawnPoints:
+  - {fileID: 876413378}
+  minSpawnPosition: {x: -1, y: -4}
+  maxSpawnPosition: {x: 1, y: 4}
+  spawnedEnemiesNotInPosition: []
+  selectedEnemy: {fileID: 0}
+  isActive: 0
 --- !u!1 &1557382604
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557382607}
   - component: {fileID: 1557382606}
-  - component: {fileID: 1557382609}
+  - component: {fileID: 1557382608}
   m_Layer: 6
   m_Name: Legs
   m_TagString: EnemyBoss
@@ -3180,10 +3201,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 922955026}
+  - {fileID: 1119228199}
   - {fileID: 934242983}
   m_Father: {fileID: 679155661}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1557382609
+--- !u!114 &1557382608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3192,21 +3215,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557382604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Script: {fileID: 11500000, guid: e072a8fac125bf0479344553dfba6742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
-  bulletLife: 1
-  spawnerType: 2
-  options: 0300000002000000
-  firePoint: {fileID: 934242983}
-  player: {fileID: 1283095809}
-  range: 10
-  firingSpeed: 3
-  difficultyManager: {fileID: 627654972}
-  pelletCount: 5
-  spreadAngle: 60
-  audioPlayer: {fileID: 2029633658}
+  movementSpeed: 5
+  maxSpawnRateInSeconds: 5
+  enemies:
+  - {fileID: 27407864014962235, guid: 4c1fcd57ebbb1a846a73fe1e33b97451, type: 3}
+  initialSpawnPoints:
+  - {fileID: 922955026}
+  - {fileID: 1119228199}
+  minSpawnPosition: {x: 0, y: -4}
+  maxSpawnPosition: {x: 2, y: 4}
+  spawnedEnemiesNotInPosition: []
+  selectedEnemy: {fileID: 0}
+  isActive: 0
 --- !u!1 &1600841505
 GameObject:
   m_ObjectHideFlags: 0

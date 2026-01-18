@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 public class PersistentCanvas : MonoBehaviour
 {
     private static PersistentCanvas instance;
-    private static string nextScene = "Testing Place";
 
     void Awake()
     {
