@@ -1055,6 +1055,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
   bulletLife: 1
   spawnerType: 2
+  options: 
   firePoint: {fileID: 922955026}
   player: {fileID: 1363399893}
   range: 10
@@ -1561,6 +1562,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
   bulletLife: 2
   spawnerType: 3
+  options: 
   firePoint: {fileID: 311216197}
   player: {fileID: 1363399893}
   range: 10
@@ -1616,6 +1618,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
   bulletLife: 2
   spawnerType: 2
+  options: 
   firePoint: {fileID: 333335864}
   player: {fileID: 1363399893}
   range: 10
@@ -2047,10 +2050,9 @@ GameObject:
   m_Component:
   - component: {fileID: 679155661}
   - component: {fileID: 679155659}
-  - component: {fileID: 679155663}
-  - component: {fileID: 679155664}
   - component: {fileID: 679155662}
   - component: {fileID: 679155665}
+  - component: {fileID: 679155666}
   m_Layer: 6
   m_Name: MiniBoss
   m_TagString: EnemyBoss
@@ -2076,8 +2078,6 @@ MonoBehaviour:
   question_text: {fileID: 1635583788}
   question_status: {fileID: 1600841507}
   nextScene: Main Menu
-  activator: {fileID: 679155663}
-  playerHealth: {fileID: 1363399894}
   jsonReader: {fileID: 573856537}
 --- !u!4 &679155661
 Transform:
@@ -2088,7 +2088,7 @@ Transform:
   m_GameObject: {fileID: 679155658}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: 0.5, z: 0}
+  m_LocalPosition: {x: 15, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2123,49 +2123,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &679155663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679155658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68b307c32300074b861bdbc0551e4c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scriptsToActivate:
-  - attackScript: {fileID: 679155664}
-    stage: 0
-  - attackScript: {fileID: 1416487775}
-    stage: 1
-  - attackScript: {fileID: 1267853354}
-    stage: 1
-  - attackScript: {fileID: 1114453318}
-    stage: 1
-  - attackScript: {fileID: 333335865}
-    stage: 1
-  - attackScript: {fileID: 219810249}
-    stage: 2
---- !u!114 &679155664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679155658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b4f8d1c9364e494284c4c50b8151d31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  head: {fileID: 261328918}
-  anim: {fileID: 679155662}
-  minAttackPos: {x: -7, y: 4}
-  maxAttackPos: {x: 0, y: -4}
-  moveSpeed: 10
-  cooldown: 10
 --- !u!114 &679155665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2180,6 +2137,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flickerDuration: 5
   flickerInterval: 0.1
+--- !u!114 &679155666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679155658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc0a138aafafacf43be1d02e1afce3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentAttackMode: 0
+  miniBoss: {fileID: 679155659}
+  timerBetweenModeChange: 10
+  initialTargetPosition: {x: 6, y: 0}
+  speed: 5
+  bulletAttack: {fileID: 0}
+  dasherEnemySpawner: {fileID: 0}
+  shooterEnemySpawner: {fileID: 0}
 --- !u!1 &922955025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2376,6 +2353,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
   bulletLife: 2
   spawnerType: 2
+  options: 
   firePoint: {fileID: 1114453317}
   player: {fileID: 1363399893}
   range: 10
@@ -2468,6 +2446,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
   bulletLife: 2
   spawnerType: 2
+  options: 
   firePoint: {fileID: 1267853353}
   player: {fileID: 1363399893}
   range: 10
@@ -2716,6 +2695,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
   bulletLife: 2
   spawnerType: 2
+  options: 
   firePoint: {fileID: 1416487774}
   player: {fileID: 1363399893}
   range: 10
@@ -3143,6 +3123,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
   bulletLife: 2
   spawnerType: 2
+  options: 
   firePoint: {fileID: 934242983}
   player: {fileID: 1363399893}
   range: 10
@@ -3801,6 +3782,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
   bulletLife: 2
   spawnerType: 3
+  options: 
   firePoint: {fileID: 1801316983}
   player: {fileID: 1363399893}
   range: 10
@@ -3856,6 +3838,7 @@ MonoBehaviour:
   directionalBullet: {fileID: 5112706201094048228, guid: bf1b414f1b86b42489dc123e4f8161de, type: 3}
   bulletLife: 2
   spawnerType: 3
+  options: 
   firePoint: {fileID: 1862619162}
   player: {fileID: 1363399893}
   range: 10
