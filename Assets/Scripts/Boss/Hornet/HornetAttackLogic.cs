@@ -20,8 +20,8 @@ public class HornetAttackLogic : MonoBehaviour
     [Header("AttackMode")]
     public BulletAttack bulletAttack;
     [Header("SpawnMode")]
-    public HornetEnemySpawner dasherEnemySpawner;
-    public HornetEnemySpawner shooterEnemySpawner;
+    public BossEnemySpawner dasherEnemySpawner;
+    public BossEnemySpawner shooterEnemySpawner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

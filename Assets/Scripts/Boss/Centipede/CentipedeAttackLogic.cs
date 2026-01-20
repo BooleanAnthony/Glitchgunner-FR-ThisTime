@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Text.RegularExpressions;
 using BossFights;
 using UnityEngine;
 
@@ -7,9 +8,9 @@ public class CentipedeAttackLogic : MonoBehaviour
     public enum AttackMode
     {
         Initial,
+        AttackLunge,
         Idle,
         AttackLaser,
-        AttackLunge,
         AttackFromBack
     }
     public AttackMode currentAttackMode;
@@ -19,10 +20,10 @@ public class CentipedeAttackLogic : MonoBehaviour
     public Vector2 initialTargetPosition;
     public float speed = 5f;
     [Header("AttackMode")]
-    public BulletAttack bulletAttack;
+    public GroupedBeamAttack groupedBeamAttack;
     [Header("SpawnMode")]
-    public HornetEnemySpawner dasherEnemySpawner;
-    public HornetEnemySpawner shooterEnemySpawner;
+    public BossEnemySpawner shielderEnemySpawner;
+    public BossEnemySpawner flingerEnemySpawner;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -42,23 +43,39 @@ public class CentipedeAttackLogic : MonoBehaviour
             {
                 timerBetweenModeChange *= 2;
             }
-            currentAttackMode = (AttackMode)Random.Range((int)AttackMode.Idle, (int)AttackMode.AttackFromBack + 1);
+            if (currentAttackMode == AttackMode.AttackLunge || currentAttackMode == AttackMode.AttackFromBack) //while lunging (which is AttackLunge or Attacking from the back post-lunge)
+            {
+                currentAttackMode = (AttackMode)Random.Range((int)AttackMode.Idle, (int)AttackMode.AttackFromBack + 1); // After lunging once, choose randomly between Idle, Laser, or AttackFromBack (prevents consecutive lunges)
+            }
+            else
+            {
+                currentAttackMode = (AttackMode)Random.Range((int)AttackMode.AttackLunge, (int)AttackMode.AttackLaser + 1); //can choose any form of attack, but cannot attack from the back
+            }
+            
             DisableAllScripts();
             if (currentAttackMode == AttackMode.AttackLaser)
             {
-                bulletAttack.enabled = true;
-                bulletAttack.RandomizeBulletType();
+                groupedBeamAttack.ActivateAllScripts(true);
+            }
+            if (currentAttackMode == AttackMode.Idle)
+            {
+                shielderEnemySpawner.enabled = true;
+                shielderEnemySpawner.isActive = true;
+                shielderEnemySpawner.DecideOnEnemy();
+                flingerEnemySpawner.enabled = true;
+                flingerEnemySpawner.isActive = true;
+                flingerEnemySpawner.DecideOnEnemy();
             }
         }
     }
 
     void DisableAllScripts()
     {
-        bulletAttack.enabled = false;
-        dasherEnemySpawner.enabled = false;
-        dasherEnemySpawner.isActive = false;
-        shooterEnemySpawner.enabled = false;
-        shooterEnemySpawner.isActive = false;
+        groupedBeamAttack.ActivateAllScripts(false);
+        shielderEnemySpawner.enabled = false;
+        shielderEnemySpawner.isActive = false;
+        flingerEnemySpawner.enabled = false;
+        flingerEnemySpawner.isActive = false;
     }
 
     // Update is called once per frame

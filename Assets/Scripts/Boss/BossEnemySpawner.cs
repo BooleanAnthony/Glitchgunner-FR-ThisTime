@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HornetEnemySpawner : MonoBehaviour
+public class BossEnemySpawner : MonoBehaviour
 {
     [Serializable]
     public class SpawnedEnemy
@@ -93,6 +93,12 @@ public class HornetEnemySpawner : MonoBehaviour
         for (int i = spawnedEnemiesNotInPosition.Count - 1; i >= 0; i--)
         {
             SpawnedEnemy spawnedEnemy = spawnedEnemiesNotInPosition[i];
+
+            if (spawnedEnemy.enemyReference == null)
+            {
+                spawnedEnemiesNotInPosition.RemoveAt(i);
+                continue;
+            }
 
             if (spawnedEnemy.CheckIfNotInPos())
             {
