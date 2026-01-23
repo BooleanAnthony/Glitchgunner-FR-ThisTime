@@ -2,6 +2,7 @@ using System.Collections;
 using System.Text.RegularExpressions;
 using BossFights;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class CentipedeAttackLogic : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class CentipedeAttackLogic : MonoBehaviour
     [Header("SpawnMode")]
     public BossEnemySpawner shielderEnemySpawner;
     public BossEnemySpawner flingerEnemySpawner;
+    [Header("Lunge")]
+    public LungeAttack lungeAttack;
+    public GroupedBeamAttack groupedBeamAttack_behind;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -41,6 +45,7 @@ public class CentipedeAttackLogic : MonoBehaviour
             print("Mode Change");
             if (currentAttackMode == AttackMode.Initial)
             {
+                lungeAttack.SetOriginalPos();
                 timerBetweenModeChange *= 2;
             }
             if (currentAttackMode == AttackMode.AttackLunge || currentAttackMode == AttackMode.AttackFromBack) //while lunging (which is AttackLunge or Attacking from the back post-lunge)
@@ -53,6 +58,19 @@ public class CentipedeAttackLogic : MonoBehaviour
             }
             
             DisableAllScripts();
+            if (currentAttackMode == AttackMode.AttackLunge)
+            {
+                StartCoroutine(lungeAttack.AttackRoutine());
+            }
+            else if (currentAttackMode == AttackMode.AttackFromBack)
+            {
+                groupedBeamAttack_behind.ActivateAllScripts(true);
+            }
+            else //if neither lunging or attacking from the back
+            {
+                StartCoroutine(lungeAttack.ReturnRoutine());
+            }
+
             if (currentAttackMode == AttackMode.AttackLaser)
             {
                 groupedBeamAttack.ActivateAllScripts(true);
@@ -66,12 +84,14 @@ public class CentipedeAttackLogic : MonoBehaviour
                 flingerEnemySpawner.isActive = true;
                 flingerEnemySpawner.DecideOnEnemy();
             }
+            
         }
     }
 
     void DisableAllScripts()
     {
         groupedBeamAttack.ActivateAllScripts(false);
+        groupedBeamAttack_behind.ActivateAllScripts(false);
         shielderEnemySpawner.enabled = false;
         shielderEnemySpawner.isActive = false;
         flingerEnemySpawner.enabled = false;

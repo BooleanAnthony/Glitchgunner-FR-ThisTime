@@ -51,12 +51,8 @@ public class BossEnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         ScheduleNextEnemySpawn();
-        if (!isActive)
-        {
-            return;
-        }
 
-        if (enemies.Length > 0)
+        if (enemies.Length > 0 && isActive)
         {
             if(!selectedEnemy)
             {

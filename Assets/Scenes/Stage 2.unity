@@ -119,6 +119,59 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3968606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3968607}
+  - component: {fileID: 3968608}
+  m_Layer: 6
+  m_Name: BeamAttack-Behind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3968607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 68932613}
+  - {fileID: 1990657089}
+  - {fileID: 442764492}
+  - {fileID: 1474980145}
+  m_Father: {fileID: 679155661}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3968608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3968606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3dae479777ee5b46a70308bbbfd6a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scriptsToActivate:
+  - {fileID: 68932614}
+  - {fileID: 1990657090}
+  - {fileID: 442764493}
+  - {fileID: 1474980146}
 --- !u!1 &43919308
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +359,7 @@ GameObject:
   - component: {fileID: 66791916}
   - component: {fileID: 66791917}
   m_Layer: 6
-  m_Name: BeamAttack
+  m_Name: BeamAttack-Wrap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,6 +401,62 @@ MonoBehaviour:
   - {fileID: 1267853354}
   - {fileID: 1114453318}
   - {fileID: 333335865}
+--- !u!1 &68932612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 68932613}
+  - component: {fileID: 68932614}
+  m_Layer: 6
+  m_Name: BeamPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &68932613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68932612}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -15, y: 2.75, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3968607}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &68932614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68932612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
+  bulletLife: 4
+  spawnerType: 0
+  options: 
+  firePoint: {fileID: 68932613}
+  player: {fileID: 1363399893}
+  range: 10
+  firingSpeed: 3
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 7
+  spreadAngle: 60
+  audioPlayer: {fileID: 1672708023}
 --- !u!1 &72813107
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,6 +468,8 @@ GameObject:
   - component: {fileID: 72813110}
   - component: {fileID: 72813109}
   - component: {fileID: 72813111}
+  - component: {fileID: 72813112}
+  - component: {fileID: 72813113}
   m_Layer: 6
   m_Name: Head
   m_TagString: EnemyBoss
@@ -466,11 +577,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -2.796523, y: -0.85958695}
+  m_Offset: {x: -1.8518152, y: -0.8065134}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -480,8 +591,36 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.614224, y: 1.0295177}
+  m_Size: {x: 3.5036392, y: 1.263041}
   m_EdgeRadius: 0
+--- !u!114 &72813112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72813107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb98ffc38c03164a963bdaa723235e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalPos: {x: 0, y: 0}
+  targetPoint: {x: 0, y: 0}
+  attackDuration: 1
+--- !u!114 &72813113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72813107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0820a4c1f398a36428b5b49df401feb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &74193931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  maxSpawnRateInSeconds: 5
+  maxSpawnRateInSeconds: 3.5
   enemies:
   - {fileID: 124363525266863462, guid: 8d939ea52374f174c9bf207f1e8593b4, type: 3}
   initialSpawnPoints:
@@ -1285,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &261328919
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1609,7 +1748,7 @@ MonoBehaviour:
   firePoint: {fileID: 333335864}
   player: {fileID: 1363399893}
   range: 10
-  firingSpeed: 7.5
+  firingSpeed: 5
   difficultyManager: {fileID: 627654972}
   pelletCount: 7
   spreadAngle: 60
@@ -1705,6 +1844,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &442764491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 442764492}
+  - component: {fileID: 442764493}
+  m_Layer: 6
+  m_Name: BeamPoint3
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &442764492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442764491}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -15, y: -1.5, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3968607}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &442764493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442764491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
+  bulletLife: 4
+  spawnerType: 0
+  options: 
+  firePoint: {fileID: 442764492}
+  player: {fileID: 1363399893}
+  range: 10
+  firingSpeed: 3
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 7
+  spreadAngle: 60
+  audioPlayer: {fileID: 1672708023}
 --- !u!1 &573856536
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +2066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &601841774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,6 +2275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 66791916}
+  - {fileID: 3968607}
   - {fileID: 1510788018}
   - {fileID: 219810247}
   - {fileID: 72813110}
@@ -2138,12 +2334,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentAttackMode: 0
   miniBoss: {fileID: 679155659}
-  timerBetweenModeChange: 5
+  timerBetweenModeChange: 4
   initialTargetPosition: {x: 6, y: 0}
   speed: 5
   groupedBeamAttack: {fileID: 66791917}
   shielderEnemySpawner: {fileID: 1557382609}
   flingerEnemySpawner: {fileID: 219810249}
+  lungeAttack: {fileID: 72813112}
+  groupedBeamAttack_behind: {fileID: 3968608}
 --- !u!1 &922955025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2517,7 @@ Transform:
   m_GameObject: {fileID: 1114453316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: -3, z: 0}
+  m_LocalPosition: {x: -15, y: -3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2344,7 +2542,7 @@ MonoBehaviour:
   firePoint: {fileID: 1114453317}
   player: {fileID: 1363399893}
   range: 10
-  firingSpeed: 7.5
+  firingSpeed: 5
   difficultyManager: {fileID: 627654972}
   pelletCount: 7
   spreadAngle: 60
@@ -2412,7 +2610,7 @@ Transform:
   m_GameObject: {fileID: 1267853352}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15, y: 3, z: 0}
+  m_LocalPosition: {x: -15, y: 3.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2437,7 +2635,7 @@ MonoBehaviour:
   firePoint: {fileID: 1267853353}
   player: {fileID: 1363399893}
   range: 10
-  firingSpeed: 7.5
+  firingSpeed: 5
   difficultyManager: {fileID: 627654972}
   pelletCount: 7
   spreadAngle: 60
@@ -2748,7 +2946,7 @@ MonoBehaviour:
   firePoint: {fileID: 1416487774}
   player: {fileID: 1363399893}
   range: 10
-  firingSpeed: 7.5
+  firingSpeed: 5
   difficultyManager: {fileID: 627654972}
   pelletCount: 7
   spreadAngle: 60
@@ -2784,6 +2982,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 219810247}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1474980144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1474980145}
+  - component: {fileID: 1474980146}
+  m_Layer: 6
+  m_Name: BeamPoint4
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1474980145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474980144}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -15, y: -2.75, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3968607}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1474980146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474980144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
+  bulletLife: 4
+  spawnerType: 0
+  options: 
+  firePoint: {fileID: 1474980145}
+  player: {fileID: 1363399893}
+  range: 10
+  firingSpeed: 3
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 7
+  spreadAngle: 60
+  audioPlayer: {fileID: 1672708023}
 --- !u!1 &1510788017
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,6 +4538,62 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924263099}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1990657088
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1990657089}
+  - component: {fileID: 1990657090}
+  m_Layer: 6
+  m_Name: BeamPoint2
+  m_TagString: Untagged
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1990657089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990657088}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -15, y: 1.5, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3968607}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1990657090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990657088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd7f56cd840b30f47b40d07a3acaaa83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  directionalBullet: {fileID: 1456927538009699116, guid: acd67582d53478a458871c6e38e80715, type: 3}
+  bulletLife: 4
+  spawnerType: 0
+  options: 
+  firePoint: {fileID: 1990657089}
+  player: {fileID: 1363399893}
+  range: 10
+  firingSpeed: 3
+  difficultyManager: {fileID: 627654972}
+  pelletCount: 7
+  spreadAngle: 60
+  audioPlayer: {fileID: 1672708023}
 --- !u!1 &2138814469
 GameObject:
   m_ObjectHideFlags: 0
