@@ -1,0 +1,3 @@
+at attack frame 5, change thruster to atk_thrust
+then do the spin
+after spin, change back to idle and normal thruster
