@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -149,10 +149,10 @@ TextureImporter:
       name: flinger_attack_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 13
-        width: 25
-        height: 38
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: flinger_attack_1
       rect:
         serializedVersion: 2
-        x: 88
-        y: 13
-        width: 25
-        height: 38
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: flinger_attack_2
       rect:
         serializedVersion: 2
-        x: 152
-        y: 13
-        width: 25
-        height: 38
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: flinger_attack_3
       rect:
         serializedVersion: 2
-        x: 216
-        y: 13
-        width: 25
-        height: 38
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,10 +237,10 @@ TextureImporter:
       name: flinger_attack_4
       rect:
         serializedVersion: 2
-        x: 263
-        y: 8
-        width: 55
-        height: 53
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,10 +259,10 @@ TextureImporter:
       name: flinger_attack_5
       rect:
         serializedVersion: 2
-        x: 322
-        y: 2
-        width: 60
-        height: 61
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +281,10 @@ TextureImporter:
       name: flinger_attack_6
       rect:
         serializedVersion: 2
-        x: 388
-        y: 6
-        width: 45
-        height: 55
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,10 +303,10 @@ TextureImporter:
       name: flinger_attack_7
       rect:
         serializedVersion: 2
-        x: 428
-        y: 19
-        width: 6
-        height: 6
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -321,99 +321,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: flinger_attack_8
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 29
-        width: 11
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 88ac65ff4f4f67550800000000000000
-      internalID: 6158378873568807560
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flinger_attack_9
-      rect:
-        serializedVersion: 2
-        x: 445
-        y: 1
-        width: 54
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e18e88c95cf131410800000000000000
-      internalID: 1446534838911297566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flinger_attack_10
-      rect:
-        serializedVersion: 2
-        x: 497
-        y: 24
-        width: 13
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 828466766d0fa6f30800000000000000
-      internalID: 4569729575569213480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flinger_attack_11
-      rect:
-        serializedVersion: 2
-        x: 500
-        y: 13
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d2a4279431e4e5c20800000000000000
-      internalID: 3197078630223202861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9ed5257ccead7a94dbdb3fe5e354c121
     internalID: 0
     vertices: []
     indices: 
@@ -422,7 +334,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flinger_attack_0: 5258117672879254720
+      flinger_attack_1: -2317013068266074196
+      flinger_attack_2: -1850776791440955151
+      flinger_attack_3: -3586707818172345984
+      flinger_attack_4: -1379825291271247599
+      flinger_attack_5: -2566177421284962553
+      flinger_attack_6: 656489340515366260
+      flinger_attack_7: 348604367773106967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

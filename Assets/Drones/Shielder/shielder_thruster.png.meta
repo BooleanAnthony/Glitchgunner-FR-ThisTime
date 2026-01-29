@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shielder_thruster_0: -4660958949510829786
+      shielder_thruster_1: 274809480780242531
+      shielder_thruster_2: -6803855735835238290
+      shielder_thruster_3: -5783074990220130954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

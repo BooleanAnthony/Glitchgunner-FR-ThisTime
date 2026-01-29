@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dasher_atk_thrust_0: 8618575883956393425
+      dasher_atk_thrust_1: 5473555663025389004
+      dasher_atk_thrust_2: 4453076537237163264
+      dasher_atk_thrust_3: -2631084839178604250
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

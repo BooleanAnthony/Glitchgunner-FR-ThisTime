@@ -46,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flinger_thruster_0: -7708246178957203367
+      flinger_thruster_1: 6855080566854910074
+      flinger_thruster_2: -4489827345408573054
+      flinger_thruster_3: 8242355748392917023
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

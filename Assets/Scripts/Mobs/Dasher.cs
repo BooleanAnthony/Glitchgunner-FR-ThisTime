@@ -58,6 +58,7 @@ namespace EnemyMob
 
             if (!isDashing)
             {
+                anim.SetBool("charging", true);
                 Vector3 pos = transform.position;
                 float targetY = player.position.y + yOffset;
                 pos.y = Mathf.MoveTowards(pos.y, targetY, alignSpeed * Time.deltaTime);

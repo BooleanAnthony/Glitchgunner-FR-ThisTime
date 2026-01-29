@@ -118,7 +118,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -197,20 +197,20 @@ TextureImporter:
       name: dasher_death_0
       rect:
         serializedVersion: 2
-        x: 127
-        y: 34
-        width: 32
-        height: 28
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b9778113152c4210800000000000000
-      internalID: 1318469554741410229
+      spriteID: 81c359ead2645d340a5abfc80c2f6895
+      internalID: 1886712637
       vertices: []
       indices: 
       edges: []
@@ -219,9 +219,9 @@ TextureImporter:
       name: dasher_death_1
       rect:
         serializedVersion: 2
-        x: 156
+        x: 64
         y: 0
-        width: 49
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 38797b2d78182f120800000000000000
-      internalID: 2446159967971415939
+      spriteID: 9a6b468c6827ecc4a9cdcd828aff5455
+      internalID: -1468105311
       vertices: []
       indices: 
       edges: []
@@ -241,20 +241,20 @@ TextureImporter:
       name: dasher_death_2
       rect:
         serializedVersion: 2
-        x: 191
-        y: 41
-        width: 16
-        height: 23
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5b06288a0cb1b56e0800000000000000
-      internalID: -1847852707830669131
+      spriteID: 9bf53caffcb56b4469d94a79ec7c219f
+      internalID: 978467562
       vertices: []
       indices: 
       edges: []
@@ -263,9 +263,9 @@ TextureImporter:
       name: dasher_death_3
       rect:
         serializedVersion: 2
-        x: 205
+        x: 192
         y: 0
-        width: 66
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9806b0eb0b0560ea0800000000000000
-      internalID: -5906945141216943991
+      spriteID: bb875652c119cda45a232271df3fbb5d
+      internalID: 100007623
       vertices: []
       indices: 
       edges: []
@@ -285,20 +285,20 @@ TextureImporter:
       name: dasher_death_4
       rect:
         serializedVersion: 2
-        x: 290
-        y: 1
-        width: 31
-        height: 63
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e728a5bc73f82f9c0800000000000000
-      internalID: -3894893257924377986
+      spriteID: ea4ee0113ab70a64693b267eafdf7331
+      internalID: -1427458111
       vertices: []
       indices: 
       edges: []
@@ -307,20 +307,20 @@ TextureImporter:
       name: dasher_death_5
       rect:
         serializedVersion: 2
-        x: 356
-        y: 34
-        width: 29
-        height: 30
+        x: 320
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e3b41da9473a4bdd0800000000000000
-      internalID: -2471170574310618306
+      spriteID: 89d9278a5c4dbdb4fa4ef21ed6b2e700
+      internalID: -1048335213
       vertices: []
       indices: 
       edges: []
@@ -329,20 +329,20 @@ TextureImporter:
       name: dasher_death_6
       rect:
         serializedVersion: 2
-        x: 422
-        y: 37
-        width: 27
-        height: 27
+        x: 384
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b67ffd47568b89d90800000000000000
-      internalID: -7090714867402803349
+      spriteID: 196ca4ef07ba68e41914c5207fbdf060
+      internalID: 1275457807
       vertices: []
       indices: 
       edges: []
@@ -351,20 +351,20 @@ TextureImporter:
       name: dasher_death_7
       rect:
         serializedVersion: 2
-        x: 488
-        y: 54
-        width: 19
-        height: 10
+        x: 448
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5eca7247dd515f610800000000000000
-      internalID: 1654252479009238245
+      spriteID: 2bf943bb31a28b9489f4e35710d1db64
+      internalID: -479785672
       vertices: []
       indices: 
       edges: []
@@ -373,438 +373,20 @@ TextureImporter:
       name: dasher_death_8
       rect:
         serializedVersion: 2
-        x: 557
-        y: 58
-        width: 15
-        height: 6
+        x: 512
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: f287f5a0f2be6d160800000000000000
-      internalID: 7050080853965109295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_9
-      rect:
-        serializedVersion: 2
-        x: 571
-        y: 54
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 209736be90c015160800000000000000
-      internalID: 7012399331535976706
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_10
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 35
-        width: 10
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fe4a42b8b7e30d9f0800000000000000
-      internalID: -445787662773345041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_11
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 26
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da6efb25c7a227a60800000000000000
-      internalID: 7670239828817995437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_12
-      rect:
-        serializedVersion: 2
-        x: 136
-        y: 50
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99a275230b4489540800000000000000
-      internalID: 5014833708626553497
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_13
-      rect:
-        serializedVersion: 2
-        x: 501
-        y: 42
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3dc32980daf7ad410800000000000000
-      internalID: 1502653806831353043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_14
-      rect:
-        serializedVersion: 2
-        x: 567
-        y: 47
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 57cd3ab01b6a30f80800000000000000
-      internalID: -8141480422021014411
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_15
-      rect:
-        serializedVersion: 2
-        x: 18
-        y: 15
-        width: 33
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 97743087470962180800000000000000
-      internalID: -9140459563797756039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_16
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 29
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 08bbfdaff82eace30800000000000000
-      internalID: 4524677883664251776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_17
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 35
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2d44138c1799ea4c0800000000000000
-      internalID: -4274310282358995758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_18
-      rect:
-        serializedVersion: 2
-        x: 131
-        y: 17
-        width: 24
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 594e11c60c06c1cd0800000000000000
-      internalID: -2586085706454408043
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_19
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 22
-        width: 21
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9a487c53e7c5c3eb0800000000000000
-      internalID: -4738811010762701655
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_20
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 12
-        width: 12
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed578511cf00c8f00800000000000000
-      internalID: 1120271489931179486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_21
-      rect:
-        serializedVersion: 2
-        x: 94
-        y: 5
-        width: 6
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 293f7ca10a57f15f0800000000000000
-      internalID: -783778479634648174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_22
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 10
-        width: 13
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a267b658f98889260800000000000000
-      internalID: 7104578630896547370
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_23
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 23
-        width: 26
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b1e9b9b919d13ab50800000000000000
-      internalID: 6603153989873409563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_24
-      rect:
-        serializedVersion: 2
-        x: 177
-        y: 18
-        width: 6
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5523a945c99ccaaa0800000000000000
-      internalID: -6148317717996096939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_25
-      rect:
-        serializedVersion: 2
-        x: 143
-        y: 2
-        width: 7
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 50e0bac57a4f1ee40800000000000000
-      internalID: 5684093204369706501
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_26
-      rect:
-        serializedVersion: 2
-        x: 165
-        y: 14
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b8cc9c3e8067ea780800000000000000
-      internalID: -8669862452088157045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dasher_death_27
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 2
-        width: 7
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da53a356482980330800000000000000
-      internalID: 3677350193079661997
+      spriteID: fa6279d8225792641aea58797bb5e28d
+      internalID: -1078428981
       vertices: []
       indices: 
       edges: []
@@ -813,7 +395,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 93c3cc30ad78977458cad69918f9ffd9
     internalID: 0
     vertices: []
     indices: 
@@ -822,7 +404,16 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dasher_death_0: 1886712637
+      dasher_death_1: -1468105311
+      dasher_death_2: 978467562
+      dasher_death_3: 100007623
+      dasher_death_4: -1427458111
+      dasher_death_5: -1048335213
+      dasher_death_6: 1275457807
+      dasher_death_7: -479785672
+      dasher_death_8: -1078428981
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
