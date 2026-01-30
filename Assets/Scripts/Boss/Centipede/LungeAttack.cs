@@ -3,6 +3,13 @@ using System.Collections;
 
 public class LungeAttack : MonoBehaviour
 {
+    public enum Direction
+    {
+        Top,
+        Bottom
+    }
+
+    public Direction targetDirection;
     public Vector2 originalPos;
     public Vector2 targetPoint;
     public float attackDuration = 1f;
@@ -32,7 +39,19 @@ public class LungeAttack : MonoBehaviour
     // Lunge forward
     public IEnumerator AttackRoutine()
     {
-        targetPoint = new Vector2(-15f, Random.Range(-5f, 5f));
+        targetDirection = (Direction)Random.Range(0, (int)Direction.Bottom + 1);
+        
+        Vector2 targetPoint = new(-15, 0);
+
+        if (targetDirection == Direction.Top)
+        {
+            targetPoint = new(-15, 2);
+        }
+        else if (targetDirection == Direction.Bottom)
+        {
+            targetPoint = new(-15, -2);
+        }
+        
         Debug.Log("Attack started towards " + targetPoint);
 
         yield return MoveRoutine(transform.localPosition, targetPoint);

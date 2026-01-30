@@ -27,7 +27,7 @@ public class CentipedeAttackLogic : MonoBehaviour
     public BossEnemySpawner flingerEnemySpawner;
     [Header("Lunge")]
     public LungeAttack lungeAttack;
-    public GroupedBeamAttack groupedBeamAttack_behind;
+    public CentipedeBackAttack groupedBeamAttack_behind;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
